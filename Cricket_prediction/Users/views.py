@@ -109,6 +109,8 @@ def Register(request):
 def IPL(request):
     return render(request , "Users/IPL.html")
 
+def Rankings(request):
+    return render(request , "Users/Rankings.html")
 
 
 from django.shortcuts import render, redirect
