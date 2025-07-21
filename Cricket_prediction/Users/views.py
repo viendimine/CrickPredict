@@ -295,5 +295,63 @@ def profile_view(request):
     return render(request , 'Users/Profile.html')
 
 
+# def Rankings(request):
+#     return render(request, "Users/Rankings.html")
+
+
+from django.shortcuts import render
+from playwright.sync_api import sync_playwright
+
 def Rankings(request):
-    return render(request, "Users/Rankings.html")
+    rankings = []
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        page = browser.new_page()
+        page.goto("https://www.icc-cricket.com/rankings/team-rankings/mens/test", timeout=60000)
+        page.wait_for_selector(".rankings-block__container", timeout=10000)
+
+        # Extract HTML content
+        html = page.content()
+        browser.close()
+
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html, "html.parser")
+
+    # Top team
+    banner = soup.select_one(".rankings-block__banner")
+    if banner:
+        try:
+            team = banner.select_one(".rankings-block__banner--team-name").text.strip()
+            matches = banner.select_one(".rankings-block__banner--matches").text.strip()
+            points = banner.select_one(".rankings-block__banner--points").text.strip()
+            rating = banner.select_one(".rankings-block__banner--rating").text.strip()
+
+            rankings.append({
+                "position": 1,
+                "team": team,
+                "matches": matches,
+                "points": points,
+                "rating": rating
+            })
+        except Exception as e:
+            print("❌ Error parsing top team:", e)
+
+    # Remaining teams
+    rows = soup.select(".table-body tr")
+    for i, row in enumerate(rows, start=2):
+        try:
+            cols = row.find_all("td")
+            if len(cols) >= 5:
+                rankings.append({
+                    "position": i,
+                    "team": cols[1].text.strip(),
+                    "matches": cols[2].text.strip(),
+                    "points": cols[3].text.strip(),
+                    "rating": cols[4].text.strip()
+                })
+        except Exception as e:
+            print("❌ Error parsing row:", e)
+
+    print("✅ Rankings parsed:", rankings)
+    return render(request, "Users/Rankings.html", {"rankings": rankings})
