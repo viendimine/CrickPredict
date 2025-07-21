@@ -9,8 +9,8 @@ urlpatterns = [
     path('logout/', logout_view, name='logout'),
     path('dashboard/',views.Dashboard , name="Dashboard"),
     path('json' ,views.Dashboard , name = "dashboard"),
-    path('dashboard/IPL/', views.IPL , name = "IPL"),
-    path('dashboard/Rankings', views.Rankings, name = "Rankings"),
+    path('IPL/', views.IPL , name = "IPL"),
+    path('Rankings/', views.Rankings, name = "Rankings"),
     
 
     # Dashboard routes

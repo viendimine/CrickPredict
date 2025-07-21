@@ -109,8 +109,8 @@ def Register(request):
 def IPL(request):
     return render(request , "Users/IPL.html")
 
-def Rankings(request):
-    return render(request , "Users/Rankings.html")
+# def Rankings(request):
+#     return render(request , "Users/Rankings.html")
 
 
 from django.shortcuts import render, redirect
@@ -293,3 +293,7 @@ def contest_detail(request, contest_id):
 @login_required
 def profile_view(request):
     return render(request , 'Users/Profile.html')
+
+
+def Rankings(request):
+    return render(request, "Users/Rankings.html")
