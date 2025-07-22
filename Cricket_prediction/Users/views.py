@@ -73,13 +73,79 @@ def Dashboard(request):
         if "2025" in league_year:
             all_leagues.append(leagues)
 
+    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/matches/recent"
+
+    payload = {}
+    headers = {
+        'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
+        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+        'x-apihub-endpoint': '8ff18bd6-7f60-45a1-bf9b-4f82b3e4c6ac'
+}
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+    previous_matches_data = response.json()
+
+    previous_matches = []
+
+    for type_match in previous_matches_data.get('typeMatches', []):
+        for series in type_match.get('seriesMatches', []):
+            matches = series.get('seriesAdWrapper', {}).get('matches', [])
+            for match in matches:
+                match_info = match.get('matchInfo', {})
+                if match_info.get('state') == 'Complete':
+                    previous_matches.append({
+                        'team1': match_info['team1']['teamName'],
+                        'team2': match_info['team2']['teamName'],
+                        'matchDesc': match_info['matchDesc'],
+                        'status': match_info['status'],
+                        'seriesName': match_info['seriesName'],
+                        'venue': match_info['venueInfo']['ground'],
+                        'city': match_info['venueInfo']['city'],
+                        'score1': match.get('matchScore', {}).get('team1Score', {}),
+                        'score2': match.get('matchScore', {}).get('team2Score', {}),
+                        'team1_img': match_info['team1']['imageId'],
+                        'team2_img': match_info['team2']['imageId'],
+                    })
+
+    print(previous_matches)
+
+
+
+    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
+
+    payload = {}
+    headers = {
+        'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
+        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+    data = response.json()
+    stories = []
+    for item in data.get("storyList", []):
+        story = item.get("story", {})
+        stories.append({
+            "headline": story.get("hline"),
+            "intro": story.get("intro"),
+            "context": story.get("context"),
+            "published": story.get("pubTime"),
+            "image_id": story.get("imageId"),
+            "caption": story.get("coverImage", {}).get("caption"),
+            "seoHeadline": story.get("seoHeadline"),
+            "source": story.get("source"),
+            })
+        
+    print(stories)
+
 
 # Then define context
     context = {
     "current_matches": current_matches,
     "upcoming_matches": upcoming_matches,
     "previous_matches": previous_matches,
-    "all_leagues": all_leagues 
+    "all_leagues": all_leagues,
+    "stories" : stories
 }
 
 
@@ -298,60 +364,71 @@ def profile_view(request):
 # def Rankings(request):
 #     return render(request, "Users/Rankings.html")
 
-
-from django.shortcuts import render
-from playwright.sync_api import sync_playwright
+import requests
 
 def Rankings(request):
-    rankings = []
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
-        page.goto("https://www.icc-cricket.com/rankings/team-rankings/mens/test", timeout=60000)
-        page.wait_for_selector(".rankings-block__container", timeout=10000)
+    import requests
 
-        # Extract HTML content
-        html = page.content()
-        browser.close()
+    import requests
 
-    from bs4 import BeautifulSoup
-    soup = BeautifulSoup(html, "html.parser")
+    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/team/2/stats?stateType=mostRuns"
 
-    # Top team
-    banner = soup.select_one(".rankings-block__banner")
-    if banner:
-        try:
-            team = banner.select_one(".rankings-block__banner--team-name").text.strip()
-            matches = banner.select_one(".rankings-block__banner--matches").text.strip()
-            points = banner.select_one(".rankings-block__banner--points").text.strip()
-            rating = banner.select_one(".rankings-block__banner--rating").text.strip()
+    payload = {}
+    headers = {
+    'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
+    'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+    'x-apihub-endpoint': '5a43a113-fb01-4376-a1af-1c8957a13de7'
+    }
 
-            rankings.append({
-                "position": 1,
-                "team": team,
-                "matches": matches,
-                "points": points,
-                "rating": rating
+    response = requests.request("GET", url, headers=headers, data=payload)
+    print(response.json())
+
+
+    # series_names = []
+    # for match_block in data['teamMatchesData']:
+    #     match_info = match_block['matchDetailsMap']['match'][0]['matchInfo']
+    #     series_name = match_info['seriesName']
+    #     if series_name not in series_names:
+    #         series_names.append(series_name)
+
+    # print(series_names)
+
+
+    return render(request , "Users/Rankings.html")
+
+
+def News(request):
+    
+
+    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
+
+    payload = {}
+    headers = {
+        'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
+        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+    data = response.json()
+    stories = []
+    for item in data.get("storyList", []):
+        story = item.get("story", {})
+        stories.append({
+            "headline": story.get("hline"),
+            "intro": story.get("intro"),
+            "context": story.get("context"),
+            "published": story.get("pubTime"),
+            "image_id": story.get("imageId"),
+            "caption": story.get("coverImage", {}).get("caption"),
+            "seoHeadline": story.get("seoHeadline"),
+            "source": story.get("source"),
             })
-        except Exception as e:
-            print("❌ Error parsing top team:", e)
+    print(stories)
 
-    # Remaining teams
-    rows = soup.select(".table-body tr")
-    for i, row in enumerate(rows, start=2):
-        try:
-            cols = row.find_all("td")
-            if len(cols) >= 5:
-                rankings.append({
-                    "position": i,
-                    "team": cols[1].text.strip(),
-                    "matches": cols[2].text.strip(),
-                    "points": cols[3].text.strip(),
-                    "rating": cols[4].text.strip()
-                })
-        except Exception as e:
-            print("❌ Error parsing row:", e)
 
-    print("✅ Rankings parsed:", rankings)
-    return render(request, "Users/Rankings.html", {"rankings": rankings})
+    return render(request, "Users/News.html",{
+    "stories": stories 
+})
+

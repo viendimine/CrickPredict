@@ -1,0 +1,13 @@
+{% comment %} <h2 style="padding: 15px;">Latest News</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 0 15px;">
+  {% for news in stories %}
+    <div style="width: 300px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{news.image_id}}/i.jpg?p=thumb" alt="news image" style="width: 100%; height: auto;">
+      <div style="padding: 10px;">
+        <h3 style="font-size: 16px; margin: 0 0 8px;">{{ news.headline }}</h3>
+        <p style="font-size: 14px; color: gray;">{{ news.context }}</p>
+        <p style="font-size: 13px;">{{ news.intro }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div> {% endcomment %}

@@ -11,6 +11,7 @@ urlpatterns = [
     path('json' ,views.Dashboard , name = "dashboard"),
     path('IPL/', views.IPL , name = "IPL"),
     path('Rankings/', views.Rankings, name = "Rankings"),
+    path("News/", views.News, name="News"),
     
 
     # Dashboard routes
