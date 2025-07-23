@@ -9,7 +9,6 @@ from datetime import datetime
 import pytz
 
 API_KEY = "5a292b2b-72c4-492c-bd88-399d2c8e37b3"
-
 def Dashboard(request):
     current_matches_url = f"https://api.cricapi.com/v1/currentMatches?apikey=5a292b2b-72c4-492c-bd88-399d2c8e37b3&offset=0"
     current_matches_response = requests.get(current_matches_url)
@@ -73,14 +72,16 @@ def Dashboard(request):
         if "2025" in league_year:
             all_leagues.append(leagues)
 
+
     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/matches/recent"
 
     payload = {}
     headers = {
-        'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
-        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-        'x-apihub-endpoint': '8ff18bd6-7f60-45a1-bf9b-4f82b3e4c6ac'
-}
+   'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
+   'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+   'x-apihub-endpoint': '8ff18bd6-7f60-45a1-bf9b-4f82b3e4c6ac'
+    }
+
 
     response = requests.request("GET", url, headers=headers, data=payload)
     previous_matches_data = response.json()
@@ -110,17 +111,18 @@ def Dashboard(request):
     print(previous_matches)
 
 
-
     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
 
     payload = {}
     headers = {
-        'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
-        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+    'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
+    'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+    'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
     }
 
     response = requests.request("GET", url, headers=headers, data=payload)
+
+    print(response.text)
     data = response.json()
     stories = []
     for item in data.get("storyList", []):
@@ -364,7 +366,6 @@ def profile_view(request):
 # def Rankings(request):
 #     return render(request, "Users/Rankings.html")
 
-import requests
 
 def Rankings(request):
 
@@ -401,11 +402,13 @@ def Rankings(request):
 def News(request):
     
 
+    import requests
+
     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
 
     payload = {}
     headers = {
-        'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
+        'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
         'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
         'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
     }
