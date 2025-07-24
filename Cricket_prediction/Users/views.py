@@ -547,3 +547,79 @@ def news_detail(request, news_id):
         return render(request, 'Users/news_detail.html', {'news': selected_news})
     else:
         return render(request, 'Users/news_detail.html', {'error': 'News article not found'})
+
+
+def scorecard(request):
+    live_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live"
+
+    headers = {
+	    "x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
+    }
+
+    live_response = requests.get(live_url, headers=headers)
+    
+    data = live_response.json()
+    scorecard = []
+
+    for type_block in data.get("typeMatches", []):
+        match_type = type_block.get("matchType", "Unknown")
+
+        for series in type_block.get("seriesMatches", []):
+            wrapper = series.get("seriesAdWrapper")
+            if not wrapper:
+                continue
+
+            series_id = wrapper.get("seriesId")
+            series_name = wrapper.get("seriesName")
+
+            for match in wrapper.get("matches", []):
+                match_info = match.get("matchInfo", {})
+                match_score = match.get("matchScore", {})
+
+                team1_inngs = match_score.get("team1Score", {}).get("inngs1", {})
+                team1_runs = team1_inngs.get("runs")
+                team1_wickets = team1_inngs.get("wickets")
+                team1_overs = team1_inngs.get("overs")
+
+                team2_inngs = match_score.get("team2Score", {}).get("inngs1", {})
+                team2_runs = team2_inngs.get("runs")
+                team2_wickets = team2_inngs.get("wickets")
+                team2_overs = team2_inngs.get("overs")
+
+                # Convert timestamp to readable date
+                start_timestamp = match_info.get("startDate")
+                if start_timestamp:
+                    start_time = datetime.utcfromtimestamp(int(start_timestamp) / 1000).strftime('%d %b %Y %I:%M %p')
+                else:
+                    start_time = "Not Announced"
+
+                scorecard.append({
+                    "series_id": series_id,
+                    "series_name": series_name,
+                    "match_id": match_info.get("matchId"),
+                    "start_time": start_time,
+                    "status": match_info.get("status"),
+                    "state": match_info.get("state"),
+                    "state_title": match_info.get("stateTitle"),
+
+                    "team1": match_info.get("team1", {}).get("teamName"),
+                    "team2": match_info.get("team2", {}).get("teamName"),
+                    "team1_sname": match_info.get("team1", {}).get("teamSName"),
+                    "team2_sname": match_info.get("team2", {}).get("teamSName"),
+                    "team1_img": match_info.get("team1", {}).get("imageId"),
+                    "team2_img": match_info.get("team2", {}).get("imageId"),
+
+                    "venue": match_info.get("venueInfo", {}).get("ground"),
+                    "city": match_info.get("venueInfo", {}).get("city"),
+
+                    "team1_runs": team1_runs,
+                    "team1_wickets": team1_wickets,
+                    "team1_overs": team1_overs,
+
+                    "team2_runs": team2_runs,
+                    "team2_wickets": team2_wickets,
+                    "team2_overs": team2_overs,
+                })
+
+    return render(request , "Users/scorecard.html",{'scorecard' : scorecard})

@@ -13,6 +13,7 @@ urlpatterns = [
     path('Rankings/', views.Rankings, name = "Rankings"),
     path("News/", views.News, name="News"),
     path('news/<int:news_id>/', views.news_detail, name='news_detail'),
+    path('dashboard/<int:match_id>/' ,views.scorecard , name='scorecard'),
     
 
     # Dashboard routes
