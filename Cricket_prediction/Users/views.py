@@ -369,34 +369,34 @@ def profile_view(request):
 
 def Rankings(request):
 
-    import requests
+    url = "https://cricket-live-line1.p.rapidapi.com/teamRanking/1"
 
-    import requests
-
-    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/team/2/stats?stateType=mostRuns"
-
-    payload = {}
     headers = {
-    'x-apihub-key': 'gQQQnzAtvub6mitBxA0lTfwRw-5isWb0hzSkGDT7F0Aup8T15L',
-    'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-    'x-apihub-endpoint': '5a43a113-fb01-4376-a1af-1c8957a13de7'
+	        "x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	        "x-rapidapi-host": "cricket-live-line1.p.rapidapi.com"
     }
 
-    response = requests.request("GET", url, headers=headers, data=payload)
-    print(response.json())
+    response = requests.get(url, headers=headers)
+    data = response.json()
+    raw_teams = data["data"]
+    teams = []
+    added_teams = set()
+
+    for team in raw_teams:
+        if team["team"] not in added_teams:
+            teams.append({
+                "rank": team["rank"],
+                "team": team["team"],
+                "rating": team["rating"],
+                "points": team["point"],
+                "flag": team["flag"]
+            })
+            added_teams.add(team["team"])
+    print(teams)
 
 
-    # series_names = []
-    # for match_block in data['teamMatchesData']:
-    #     match_info = match_block['matchDetailsMap']['match'][0]['matchInfo']
-    #     series_name = match_info['seriesName']
-    #     if series_name not in series_names:
-    #         series_names.append(series_name)
+    return render(request, "Users/Rankings.html", {"teams": teams})
 
-    # print(series_names)
-
-
-    return render(request , "Users/Rankings.html")
 
 
 def News(request):

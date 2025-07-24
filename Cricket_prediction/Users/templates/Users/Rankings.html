@@ -106,6 +106,46 @@
       transition-delay: 0s; /* Show immediately */
 }
 
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px;
+    font-family: sans-serif;
+    min-width: 1000px;
+    box-shadow: none;
+}
+
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: white;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: white;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -132,25 +172,33 @@
     </ul>
   </div>
 
-<h2>ICC Men's Test Team Rankings</h2>
-<table border="1" cellpadding="10">
-  <tr>
-    <th>Position</th>
-    <th>Team</th>
-    <th>Matches</th>
-    <th>Points</th>
-    <th>Rating</th>
-  </tr>
-  {% for row in rankings %}
-  <tr>
-    <td>{{ row.position }}</td>
-    <td>{{ row.team }}</td>
-    <td>{{ row.matches }}</td>
-    <td>{{ row.points }}</td>
-    <td>{{ row.rating }}</td>
-  </tr>
-  {% endfor %}
+<center><h2>Team Rankings</h2>
+<table border="1" class="styled-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Team</th>
+      <th>Points</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for team in teams %}
+    <tr>
+      <td >{{ team.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src="{{ team.flag }}" width="60" height="45" alt="{{ team.team }}" style="margin-right: 20px;">
+        {{ team.team }}
+      </div>
+      </td>
+      <td>{{ team.points }}</td>
+      <td>{{ team.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
 </table>
+</center>
+
 
 
 
