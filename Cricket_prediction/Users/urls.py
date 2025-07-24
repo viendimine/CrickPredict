@@ -12,6 +12,7 @@ urlpatterns = [
     path('IPL/', views.IPL , name = "IPL"),
     path('Rankings/', views.Rankings, name = "Rankings"),
     path("News/", views.News, name="News"),
+    path('news/<int:news_id>/', views.news_detail, name='news_detail'),
     
 
     # Dashboard routes

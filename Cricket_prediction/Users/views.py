@@ -108,7 +108,90 @@ def Dashboard(request):
                         'team2_img': match_info['team2']['imageId'],
                     })
 
-    print(previous_matches)
+    # print(previous_matches)
+
+    live_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live"
+
+    headers = {
+	    "x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
+    }
+
+    live_response = requests.get(live_url, headers=headers)
+    
+    data = live_response.json()
+    live_matches = []
+
+    for type_block in data.get("typeMatches", []):
+        match_type = type_block.get("matchType", "Unknown")
+
+        for series in type_block.get("seriesMatches", []):
+            wrapper = series.get("seriesAdWrapper")
+            if not wrapper:
+                continue
+
+            series_id = wrapper.get("seriesId")
+            series_name = wrapper.get("seriesName")
+
+            for match in wrapper.get("matches", []):
+                match_info = match.get("matchInfo", {})
+                match_score = match.get("matchScore", {})
+
+                # Team 1 score details
+                team1_inngs = match_score.get("team1Score", {}).get("inngs1", {})
+                team1_runs = team1_inngs.get("runs")
+                team1_wickets = team1_inngs.get("wickets")
+                team1_overs = team1_inngs.get("overs")
+
+                # Team 2 score details
+                team2_inngs = match_score.get("team2Score", {}).get("inngs1", {})
+                team2_runs = team2_inngs.get("runs")
+                team2_wickets = team2_inngs.get("wickets")
+                team2_overs = team2_inngs.get("overs")
+
+                # Convert timestamp to readable date
+                start_timestamp = match_info.get("startDate")
+                if start_timestamp:
+                    start_time = datetime.utcfromtimestamp(int(start_timestamp) / 1000).strftime('%d %b %Y %I:%M %p')
+                else:
+                    start_time = "Not Announced"
+
+                live_matches.append({
+                    "match_type": match_type,
+                    "series_id": series_id,
+                    "series_name": series_name,
+                    "match_id": match_info.get("matchId"),
+                    "match_desc": match_info.get("matchDesc"),
+                    "match_format": match_info.get("matchFormat"),
+                    "start_time": start_time,
+                    "status": match_info.get("status"),
+                    "state": match_info.get("state"),
+                    "state_title": match_info.get("stateTitle"),
+
+                    "team1": match_info.get("team1", {}).get("teamName"),
+                    "team2": match_info.get("team2", {}).get("teamName"),
+                    "team1_sname": match_info.get("team1", {}).get("teamSName"),
+                    "team2_sname": match_info.get("team2", {}).get("teamSName"),
+                    "team1_img": match_info.get("team1", {}).get("imageId"),
+                    "team2_img": match_info.get("team2", {}).get("imageId"),
+
+                    "venue": match_info.get("venueInfo", {}).get("ground"),
+                    "city": match_info.get("venueInfo", {}).get("city"),
+
+                    "team1_runs": team1_runs,
+                    "team1_wickets": team1_wickets,
+                    "team1_overs": team1_overs,
+
+                    "team2_runs": team2_runs,
+                    "team2_wickets": team2_wickets,
+                    "team2_overs": team2_overs,
+                })
+
+
+
+
+
+
 
 
     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
@@ -122,7 +205,7 @@ def Dashboard(request):
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    print(response.text)
+    # print(response.text)
     data = response.json()
     stories = []
     for item in data.get("storyList", []):
@@ -136,9 +219,10 @@ def Dashboard(request):
             "caption": story.get("coverImage", {}).get("caption"),
             "seoHeadline": story.get("seoHeadline"),
             "source": story.get("source"),
+            "news_id" :story.get("id")
             })
         
-    print(stories)
+    # print(stories)
 
 
 # Then define context
@@ -147,7 +231,8 @@ def Dashboard(request):
     "upcoming_matches": upcoming_matches,
     "previous_matches": previous_matches,
     "all_leagues": all_leagues,
-    "stories" : stories
+    "stories" : stories,
+    "live_matches" : live_matches
 }
 
 
@@ -164,7 +249,7 @@ def Dashboard(request):
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    print(response.text)
+    # print(response.text)
 
 
 
@@ -392,7 +477,7 @@ def Rankings(request):
                 "flag": team["flag"]
             })
             added_teams.add(team["team"])
-    print(teams)
+    # print(teams)
 
 
     return render(request, "Users/Rankings.html", {"teams": teams})
@@ -411,7 +496,7 @@ def News(request):
     response = requests.get(url, headers=headers)
 
     data = response.json()
-    print(data)
+    # print(data)
     stories = []
     for article in data['data']:
         title = article.get('title')
@@ -426,3 +511,39 @@ def News(request):
     "stories": stories 
 })
 
+def news_detail(request, news_id):
+    import requests
+
+    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
+
+    headers = {
+        'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
+        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+    }
+
+    response = requests.get(url, headers=headers)
+    data = response.json()
+
+    selected_news = None
+
+    for item in data.get("storyList", []):
+        story = item.get("story", {})
+        if story.get("id") == news_id:
+            selected_news = {
+                "headline": story.get("hline"),
+                "intro": story.get("intro"),
+                "context": story.get("context"),
+                "published": story.get("pubTime"),
+                "image_id": story.get("imageId"),
+                "caption": story.get("coverImage", {}).get("caption"),
+                "seoHeadline": story.get("seoHeadline"),
+                "source": story.get("source"),
+                "news_id": story.get("id")
+            }
+            break  # Stop after finding the first matching one
+
+    if selected_news:
+        return render(request, 'Users/news_detail.html', {'news': selected_news})
+    else:
+        return render(request, 'Users/news_detail.html', {'error': 'News article not found'})

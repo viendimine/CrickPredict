@@ -282,9 +282,65 @@
 </div>
 
 <!-- Live Matches Section (empty initially, to be populated when added in Django) -->
-<div class="match-slider-wrapper tab-content" id="live" style="display: none;">
-  <div style="text-align:center; color: gray; padding: 40px;">Live matches will be shown here</div>
+<div class="match-slider-wrapper tab-content" id="live">
+  <button class="slider-arrow left-arrow" onclick="scrollSlider('live', -1)">&#10094;</button>
+  <div class="match-card-container" id="liveSlider">
+    <br><br>
+    {% for match in live_matches %}
+    <div class="match-card">
+      <!-- Match Header -->
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <p style="font-size: 15px; color: black;">{{ match.series_name }}</p>
+          <p style="font-size: 12px; color: gray;">{{ match.venue|title }} • {{ match.city }}</p>
+        </div>
+      </div>
+
+      <!-- Team 1 -->
+      <div class="team-score">
+        <div>
+          <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{ match.team1_img }}/i.jpg?p=thumb" style="height: 25px; vertical-align: middle; margin-right: 5px;">
+          {{ match.team1 }}
+        </div>
+        <div>
+          {% if match.team1_runs %}
+            {{ match.team1_runs }}/{{ match.team1_wickets }} ({{ match.team1_overs }})
+          {% else %}
+            Yet to Bat
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Team 2 -->
+      <div class="team-score">
+        <div>
+          <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{ match.team2_img }}/i.jpg?p=thumb" style="height: 25px; vertical-align: middle; margin-right: 5px;">
+          {{ match.team2 }}
+        </div>
+        <div>
+          {% if match.team2_runs %}
+            {{ match.team2_runs }}/{{ match.team2_wickets }} ({{ match.team2_overs }})
+          {% else %}
+            Yet to Bat
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div style="color: red; font-size: 12px; text-align: center; margin-top: 5px;">
+        {{ match.status }}
+      </div>
+
+      <!-- Action -->
+      <div style="text-align: center; margin-top: 5px;">
+        <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;">Schedule</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider-arrow right-arrow" onclick="scrollSlider('live', 1)">&#10095;</button>
 </div>
+
 
 <h2 style="padding: 15px 15px;">Latest News</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 0 50px;">
@@ -292,7 +348,7 @@
     <div style="width: 335px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
       <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{news.image_id}}/i.jpg?p=thumb" alt="news image" style="width: 335px; height: auto;">
       <div style="padding: 10px;">
-        <h3 style="font-size: 16px; margin: 0 0 8px;">{{ news.headline }}</h3>
+        <h3 style="font-size: 16px; margin: 0 0 8px; font-weight: bold;"><a href="{% url 'news_detail' news.news_id %}" style="text-decoration: none; color: black; ">{{ news.headline }}</a></h3>
         <p style="font-size: 14px; color: gray;">{{ news.context }}</p>
         <p style="font-size: 13px;">{{ news.intro }}</p>
       </div>
@@ -320,6 +376,11 @@
     });
     document.getElementById(tabId).style.display = 'block';
   }
+
+  // 🚀 Add this to trigger the default tab on load
+  window.onload = function() {
+    showTab('completed'); // or 'live', if you want to show that by default
+  };
 </script>
 </body>
 </html>
