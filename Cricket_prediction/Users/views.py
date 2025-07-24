@@ -401,34 +401,25 @@ def Rankings(request):
 
 def News(request):
     
+    url = "https://cricket-live-line1.p.rapidapi.com/news"
 
-    import requests
-
-    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
-
-    payload = {}
     headers = {
-        'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
-        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+	    "x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	    "x-rapidapi-host": "cricket-live-line1.p.rapidapi.com"
     }
 
-    response = requests.request("GET", url, headers=headers, data=payload)
+    response = requests.get(url, headers=headers)
+
     data = response.json()
+    print(data)
     stories = []
-    for item in data.get("storyList", []):
-        story = item.get("story", {})
-        stories.append({
-            "headline": story.get("hline"),
-            "intro": story.get("intro"),
-            "context": story.get("context"),
-            "published": story.get("pubTime"),
-            "image_id": story.get("imageId"),
-            "caption": story.get("coverImage", {}).get("caption"),
-            "seoHeadline": story.get("seoHeadline"),
-            "source": story.get("source"),
-            })
-    print(stories)
+    for article in data['data']:
+        title = article.get('title')
+        image = article.get('image')
+        desciption = article.get('description')
+        content = article.get('content')
+        news_id = article.get('news_id')
+        stories.append(article)
 
 
     return render(request, "Users/News.html",{

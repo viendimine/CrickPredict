@@ -144,6 +144,23 @@
     color: #009879;
 }
 
+.tab-content {
+  display: none;
+}
+ .tab-button {
+    padding: 10px 15px;
+    background-color:  rgba(255, 239, 237, 0.96);
+    border: none;
+    cursor: pointer;
+    gap: 0px;
+    margin-right: 10px;
+    font-weight: none;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+  }
+  .tab-button:hover {
+    background-color: #f0f0f0;
+  }
+
 
 
 </style>
@@ -172,6 +189,13 @@
     </ul>
   </div>
 
+<div style="margin: 0px 30px;">
+  <button class="tab-button" onclick="showTab('ICC Mens T20Is Team Ranking')">ICC Men's T20Is Team Ranking</button>
+  <button class="tab-button" onclick="showTab('ICC Mens Test Team Ranking')">ICC Men's Test Team Ranking</button>
+  <button class="tab-button" onclick="showTab('ICC Mens ODIs Team Ranking')">ICC Men's ODIs Team Ranking</button>
+</div>
+
+<div class="tab-content" id ="ICC Mens T20Is Team Ranking">
 <center><h2>Team Rankings</h2>
 <table border="1" class="styled-table">
   <thead>
@@ -198,8 +222,25 @@
   </tbody>
 </table>
 </center>
+</div>
 
+<div class="tab-content" id="ICC Mens Test Team Ranking"><div>Virat Kohli</div></div>
+<div class="tab-content" id="ICC Mens ODIs Team Ranking"><div>Rohit Sharma</div></div>
 
+<script>
+    function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = 'none';
+    });
+    document.getElementById(tabId).style.display = 'block';
+  }
+
+  // Show default tab on page load
+  window.onload = function () {
+    showTab("ICC Mens T20Is Team Ranking");
+  }
+
+</script>
 
 
 
