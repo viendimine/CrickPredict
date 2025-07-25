@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'Users',
     'crispy_forms',
     'crispy_bootstrap4',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -153,4 +154,13 @@ CACHES = {
         'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
         'LOCATION': os.path.join(BASE_DIR, 'cache'),  # Make sure this folder exists
     }
+}
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }

@@ -73,14 +73,24 @@ def Dashboard(request):
             all_leagues.append(leagues)
 
 
-    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/matches/recent"
+#     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/matches/recent"
 
+#     payload = {}
+#     headers = {
+#    'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
+#    'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+#    'x-apihub-endpoint': '8ff18bd6-7f60-45a1-bf9b-4f82b3e4c6ac'
+#     }
+
+    url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
     payload = {}
+
     headers = {
-   'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
-   'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-   'x-apihub-endpoint': '8ff18bd6-7f60-45a1-bf9b-4f82b3e4c6ac'
+	"x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
     }
+
+    response = requests.get(url, headers=headers)
 
 
     response = requests.request("GET", url, headers=headers, data=payload)
@@ -193,17 +203,27 @@ def Dashboard(request):
 
 
 
+    #rajvishap52@gmail.com
+    # url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
+
+    # payload = {}
+    # headers = {
+    # 'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
+    # 'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+    # 'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+    # }
 
     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
 
     payload = {}
     headers = {
-    'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
-    'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-    'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
-    }
+        'x-apihub-key': 'oeP1UQOfy7TfWS-r4Hbe5BaIG9CeMlIulJ4c9vtrMkN0SmfU3L',
+        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
+        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+}
 
     response = requests.request("GET", url, headers=headers, data=payload)
+
 
     # print(response.text)
     data = response.json()
@@ -222,7 +242,7 @@ def Dashboard(request):
             "news_id" :story.get("id")
             })
         
-    # print(stories)
+    print(stories)
 
 
 # Then define context
