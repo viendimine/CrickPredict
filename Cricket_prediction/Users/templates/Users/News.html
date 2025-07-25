@@ -128,7 +128,7 @@
           </ul>
         </div>
       </li>
-      <li><a href="#" class="nav-link">About</a></li>
+      <li><a href="{% url 'News' %}" class="nav-link">News</a></li>
       <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
       <li><a href="IPL" class="nav-link">IPL 2025</a></li>
       <li><a href="#" class="nav-link">Profile</a></li>
@@ -144,7 +144,9 @@
     <img src="{{ news.image }}" alt="news image" style="width: 300px; height: 200px; object-fit: cover; border-right: 1px solid #eee;">
     <div style="padding: 12px; display: flex; flex-direction: column; justify-content: center;">
       <h3 style="font-size: 16px; margin: 0 0 8px; font-weight: bold;"><a href={{news.news_id}} style="text-decoration: none; color: black;" class="description">{{ news.title }}</a></h3>
-      <p style="font-size: 13px; color: #666; margin: 0 0 6px;">{{ news.summary }}</p>
+      <p style="font-size: 13px; color: #666; margin: 0 0 6px;">{{ news.description }}</p>
+      <p style="font-size: 13px; color: #666; margin: 0 0 6px;">{{ caption }}</p>
+      <p style="font-size: 13px; color: #666; margin: 0 0 6px;">{{ seoHeadline }}</p>
       <p style="font-size: 12px; color: #999;">{{ news.pub_date }}</p>
     </div>
   </div>

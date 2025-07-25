@@ -483,6 +483,7 @@ def Rankings(request):
 
     response = requests.get(url, headers=headers)
     data = response.json()
+    print(data)
     raw_teams = data["data"]
     teams = []
     added_teams = set()
@@ -500,7 +501,40 @@ def Rankings(request):
     # print(teams)
 
 
-    return render(request, "Users/Rankings.html", {"teams": teams})
+
+    url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/rankings/batsmen"
+
+    querystring = {"formatType":"test"}
+
+    headers = {
+	"x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
+    }
+
+    response = requests.get(url, headers=headers, params=querystring)
+    data = response.json()
+    # print(data)
+    raw_players = []
+    players = data.get("rank", [])
+    
+
+    for player in raw_players:
+        players.append({
+        "rank": player.get("rank"),
+        "name": player.get("name"),
+        "country": player.get("country"),
+        "rating": player.get("rating"),
+        "trend": player.get("trend"),
+        "faceImageId": player.get('faceImageId'),  # example image URL pattern
+    })
+        
+    print(players)
+
+
+    return render(request, "Users/Rankings.html", {
+        "teams": teams,
+        "players": players
+        })
 
 
 
@@ -536,14 +570,16 @@ def news_detail(request, news_id):
 
     url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
 
+    payload = {}
     headers = {
-        'x-apihub-key': 'QTljgrtqud7pAQA5XqGNZv6-GTwMg9b47tvuk4zrKmmzvx6kot',
+        'x-apihub-key': 'oeP1UQOfy7TfWS-r4Hbe5BaIG9CeMlIulJ4c9vtrMkN0SmfU3L',
         'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
         'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
-    }
+}
 
     response = requests.get(url, headers=headers)
     data = response.json()
+    print(data)
 
     selected_news = None
 
