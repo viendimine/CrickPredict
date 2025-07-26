@@ -847,3 +847,39 @@ def scorecard(request):
                 })
 
     return render(request , "Users/scorecard.html",{'scorecard' : scorecard})
+
+def team_details(request, team_name):
+    import json
+
+    with open("Users/Data/test.json", "r") as f:
+        data = json.load(f)
+
+    with open("Users/Data/Flags.json", "r") as f:
+        Flags = json.load(f)
+
+    test_data = []
+    selected_team_data = None
+
+    for team in data[:10]:
+        team_info = {
+            "rank": team["rank"],
+            "rating": team["rating"],
+            "points": team["points"],
+            "team": team["team"],
+            "image": Flags.get(team["team"], "")
+        }
+
+        test_data.append(team_info)
+
+        if team["team"].lower() == team_name.lower():
+            selected_team_data = team_info
+
+    return render(
+        request,
+        "Users/team_details.html",
+        {
+            'test_data': test_data,
+            'team': selected_team_data,       
+            'team_name': team_name           
+        }
+    )

@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgba(255, 239, 237, 0.96);
+      height: 100vh;
+    }
+
+    .header {
+      width: 99%;
+      height: 45px;
+      padding: 7px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .menu-bar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu-bar > li {
+      position: relative;
+      margin-right: 100px;
+    }
+
+    .menu-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 0px 15px;
+      display: block;
+    }
+    .menu-bar .nav-link {
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #f1f1f1;
+      padding: 10px 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s, border-bottom 0.3s;
+      position: relative;
+}
+
+.menu-bar .nav-link:hover {
+  color: #ffffff;
+}
+
+
+  .dropdown {
+       opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 40px;
+  left: -500px;
+  background-color: white;
+  color: black;
+  width: 1000px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 10px 15px;
+  z-index: 9999;
+
+  transition: opacity 0.3s ease, visibility 0s linear 1s;
+    }
+
+    .dropdown ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown ul li {
+      width: 24%;
+      padding: 5px 0;
+    }
+
+    .dropdown ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .menu-bar li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition-delay: 0s; /* Show immediately */
+}
+
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div>CrickPredict</div>
+    <ul class="menu-bar">
+      <li><a href="{% url 'Dashboard' %}" class="nav-link">Home</a></li>
+      <li>
+        <a href="#" class="nav-link">Series ▾</a>
+        <div class="dropdown">
+          <ul>
+            {% for league in all_leagues %}
+                <li><a href="#">{{ league.league_name }} , 2025</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      <li><a href="{% url 'News' %}" class="nav-link">News</a></li>
+      <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
+      <li><a href="{% url 'IPL' %}" class="nav-link">IPL 2025</a></li>
+      <li><a href="#" class="nav-link">Profile</a></li>
+      <li><a href="#" class="nav-link">Contests</a></li>
+    </ul>
+  </div>
+    <div>
+    {% if team.team == 'India' %}
+        <h2>🇮🇳 Welcome to Team India!</h2>
+        <p>India is currently ranked #1 in Tests.</p>
+
+    {% elif team.team == 'Australia' %}
+    <div style="flex: 1; max-width: 100%; overflow: hidden; position:absolute;">
+        <div style="display: flex; gap: 480px; background-color: #d2d7d6ff;">
+        <img src="{% static 'Team_Images/ACB.jpg' %}" alt="Team Australia"
+             style="width: 200px; height: 200px; margin-left:200px ;margin-top:30px " />
+
+        <img src="{% static 'Team_Images/Australia.jpg' %}" alt="Team Australia"
+             style="width: 50%; height: 60%; box-shadow: 0 4px 12px rgba(166, 23, 23, 0.3);" />
+        </div>
+    </div>
+    <center><div style="
+    background-color: #f1ebebff;
+    color: black;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    text-align: center;
+    position: absolute;
+    bottom: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    ">
+        <h2>🇦🇺 Welcome to Team Australia!</h2>
+        <p>Australia is known for its aggressive cricket and World Cup wins.</p>
+    </div>
+    </center>
+
+    {% elif team.team == 'England' %}
+        <h2>🏴 Welcome to Team England!</h2>
+        <p>England has revolutionized white-ball cricket.</p>
+
+    {% else %}
+        <h2>🏏 Welcome to {{ team.team }}</h2>
+        <p>No specific data available yet for {{ team.team }}.</p>
+    {% endif %}
+</div>
+
+
+
+
+</body>
+</html>
