@@ -546,7 +546,48 @@ def Rankings(request):
             "team": team["team"],
             "image": Flags.get(team["team"], "")
     }) 
+    ## ODI Women Team Ranking
 
+    with open("Users/Data/ODI_Women.json", "r") as f:
+        data = json.load(f)
+
+    with open("Users/Data/Flags.json", "r") as f:
+        Flags = json.load(f)
+    
+
+
+    ODI_Women_data = []
+    for team in data[:10]:
+        cleaned_team = team["team"].replace(" Women", "")
+        ODI_Women_data.append({
+            "rank": team["rank"],
+            "rating": team["rating"],
+            "points": team["points"],
+            "team": team["team"],
+            "image": Flags.get(cleaned_team, "")
+    }) 
+
+
+    ##T20Is Women Team Ranking
+
+    with open("Users/Data/T20Is_Women.json", "r") as f:
+        data = json.load(f)
+
+    with open("Users/Data/Flags.json", "r") as f:
+        Flags = json.load(f)
+    
+
+
+    T20Is_Women_data = []
+    for team in data[:10]:
+        cleaned_team = team["team"].replace(" Women", "")
+        T20Is_Women_data.append({
+            "rank": team["rank"],
+            "rating": team["rating"],
+            "points": team["points"],
+            "team": team["team"],
+            "image": Flags.get(cleaned_team, "")
+    }) 
 
     # print(test_data)
 
@@ -575,8 +616,10 @@ def Rankings(request):
         "name": player.get("player"),
         "country": player.get("team"),
         "points": player.get("points"),
+        "image": f"T20Is_Player_Images/{player.get('player')}.jpg",
     })
         
+    # print(T20Is_players)
     ### ODIS Batsmen Rankings
 
     with open("Users/Data/ODI_batters.json", "r") as f:
@@ -590,6 +633,7 @@ def Rankings(request):
         "name": player.get("player"),
         "country": player.get("team"),
         "points": player.get("points"),
+        "image": f"ODI_Player_Images/{player.get('player')}.jpg",
     })
         
 
@@ -606,6 +650,40 @@ def Rankings(request):
         "name": player.get("player"),
         "country": player.get("team"),
         "points": player.get("points"),
+        "image": f"Test_Player_Images/{player.get('player')}.jpg",
+    })
+        
+
+    ## ODI Women Batting Rankings
+
+    with open("Users/Data/ODI_Women_batters.json", "r") as f:
+        data = json.load(f)
+    ODI_Women_players = []
+    
+
+    for player in data:
+        ODI_Women_players.append({
+        "rank": player.get("rank"),
+        "name": player.get("name"),
+        "country": player.get("country"),
+        "rating": player.get("rating"),
+        "image": f"ODI_Women_Images/{player.get('name')}.jpg",
+    })
+        
+    ## T20Is Women Batting Rankings
+
+    with open("Users/Data/T20Is_Women_batters.json", "r") as f:
+        data = json.load(f)
+    T20Is_Women_players = []
+    
+
+    for player in data:
+        T20Is_Women_players.append({
+        "rank": player.get("rank"),
+        "name": player.get("name"),
+        "country": player.get("country"),
+        "rating": player.get("rating"),
+        "image": f"Test_Player_Images/{player.get('player')}.jpg",
     })
         
         
@@ -619,7 +697,11 @@ def Rankings(request):
         "T20Is_data": T20Is_data,
         "Test_players": Test_players,
         "T20Is_players" : T20Is_players,
-        "ODI_players" : ODI_players
+        "ODI_players" : ODI_players,
+        "ODI_Women_data" : ODI_Women_data,
+        "T20Is_Women_data" : T20Is_Women_data,
+        "ODI_Women_players" : ODI_Women_players,
+        "T20Is_Women_players" : T20Is_Women_players
         })
 
 
