@@ -1,5 +1,9 @@
 from django.shortcuts import render
 import requests
+import json
+from django.http import JsonResponse
+from django.conf import settings
+import os
 # Create your views here.
 
 def Homepage(request):
@@ -474,48 +478,96 @@ def profile_view(request):
 
 def Rankings(request):
 
-    url = "https://cricket-live-line1.p.rapidapi.com/teamRanking/1"
+    # url = "https://cricket-live-line1.p.rapidapi.com/teamRanking/1"
 
-    headers = {
-	        "x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
-	        "x-rapidapi-host": "cricket-live-line1.p.rapidapi.com"
-    }
+    # headers = {
+	# "x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	# "x-rapidapi-host": "cricket-live-line1.p.rapidapi.com"
+    # }
+    # data = response.json()
 
-    response = requests.get(url, headers=headers)
-    data = response.json()
+    # response = requests.get(url, headers=headers)
+
+    ### Test Rankings
+    with open("Users/Data/test.json", "r") as f:
+        data = json.load(f)
+
+    with open("Users/Data/Flags.json", "r") as f:
+        Flags = json.load(f)
+    
+
+
+    test_data = []
+    for team in data[:10]:
+        test_data.append({
+            "rank": team["rank"],
+            "rating": team["rating"],
+            "points": team["points"],
+            "team": team["team"],
+            "image": Flags.get(team["team"], "")
+    }) 
+        
+    ### ODIs Rankings
+
+    with open("Users/Data/ODI.json", "r") as f:
+        data = json.load(f)
+
+    with open("Users/Data/Flags.json", "r") as f:
+        Flags = json.load(f)
+    
+
+
+    ODI_data = []
+    for team in data[:10]:
+        ODI_data.append({
+            "rank": team["rank"],
+            "rating": team["rating"],
+            "points": team["points"],
+            "team": team["team"],
+            "image": Flags.get(team["team"], "")
+    }) 
+        
+    ### T20Is Ranking
+
+    with open("Users/Data/T20Is.json", "r") as f:
+        data = json.load(f)
+
+    with open("Users/Data/Flags.json", "r") as f:
+        Flags = json.load(f)
+    
+
+
+    T20Is_data = []
+    for team in data[:10]:
+        T20Is_data.append({
+            "rank": team["rank"],
+            "rating": team["rating"],
+            "points": team["points"],
+            "team": team["team"],
+            "image": Flags.get(team["team"], "")
+    }) 
+
+
+    # print(test_data)
+
+
+
+    # url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/rankings/batsmen"
+
+    # querystring = {"formatType":"test"}
+
+    # headers = {
+	# "x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	# "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
+    # }
+
+    # response = requests.get(url, headers=headers, params=querystring)
+
+    with open("Users/Data/players_rankings.json", "r") as f:
+        data = json.load(f)
     print(data)
-    raw_teams = data["data"]
-    teams = []
-    added_teams = set()
-
-    for team in raw_teams:
-        if team["team"] not in added_teams:
-            teams.append({
-                "rank": team["rank"],
-                "team": team["team"],
-                "rating": team["rating"],
-                "points": team["point"],
-                "flag": team["flag"]
-            })
-            added_teams.add(team["team"])
-    # print(teams)
-
-
-
-    url = "https://cricbuzz-cricket.p.rapidapi.com/stats/v1/rankings/batsmen"
-
-    querystring = {"formatType":"test"}
-
-    headers = {
-	"x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
-	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
-    }
-
-    response = requests.get(url, headers=headers, params=querystring)
-    data = response.json()
-    # print(data)
     raw_players = []
-    players = data.get("rank", [])
+    players = data.get("data", [])
     
 
     for player in raw_players:
@@ -525,14 +577,18 @@ def Rankings(request):
         "country": player.get("country"),
         "rating": player.get("rating"),
         "trend": player.get("trend"),
-        "faceImageId": player.get('faceImageId'),  # example image URL pattern
+        "faceImageId": player.get('faceImageId'),
+        "img" : player.get('img'), 
     })
         
-    print(players)
+    # print(players)
+
 
 
     return render(request, "Users/Rankings.html", {
-        "teams": teams,
+        "test_data": test_data,
+        "ODI_data": ODI_data,
+        "T20Is_data": T20Is_data,
         "players": players
         })
 

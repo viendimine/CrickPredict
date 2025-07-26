@@ -1,0 +1,86 @@
+{
+  "msg": "Data found.",
+  "status": true,
+  "data": [
+    {
+      "rating": 888,
+      "rank": 1,
+      "country": "ENG",
+      "name": "Joe Root",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1480893433_player.png",
+      "player_id": 2843
+    },
+    {
+      "rating": 867,
+      "rank": 2,
+      "country": "NZ",
+      "name": "Kane Williamson",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1229776744_player.png",
+      "player_id": 3143
+    },
+    {
+      "rating": 862,
+      "rank": 3,
+      "country": "ENG",
+      "name": "Harry Brook",
+      "img": "https://cricketchampion.co.in/webroot/img/players/722354347_player.png",
+      "player_id": 2308
+    },
+    {
+      "rating": 816,
+      "rank": 4,
+      "country": "AUS",
+      "name": "Steven Smith",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1646717446_player.png",
+      "player_id": 6137
+    },
+    {
+      "rating": 801,
+      "rank": 5,
+      "country": "IND",
+      "name": "Yashasvi Jaiswal",
+      "img": "https://cricketchampion.co.in/webroot/img/players/2066006286_player.png",
+      "player_id": 3133
+    },
+    {
+      "rating": 790,
+      "rank": 6,
+      "country": "SA",
+      "name": "Temba Bavuma",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1683205969_player.png",
+      "player_id": 2707
+    },
+    {
+      "rating": 781,
+      "rank": 7,
+      "country": "SL",
+      "name": "Kamindu Mendis",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1146835718_player.png",
+      "player_id": 3743
+    },
+    {
+      "rating": 779,
+      "rank": 8,
+      "country": "IND",
+      "name": "Rishabh Pant",
+      "img": "https://cricketchampion.co.in/webroot/img/players/700996851_player.png",
+      "player_id": 2343
+    },
+    {
+      "rating": 765,
+      "rank": 9,
+      "country": "IND",
+      "name": "Shubman Gill",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1203219197_player.png",
+      "player_id": 3086
+    },
+    {
+      "rating": 752,
+      "rank": 10,
+      "country": "ENG",
+      "name": "Jamie Smith",
+      "img": "https://cricketchampion.co.in/webroot/img/players/1790798667_player.png",
+      "player_id": 3478
+    }
+  ]
+}

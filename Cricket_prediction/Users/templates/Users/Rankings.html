@@ -108,23 +108,27 @@
 
 .styled-table {
     border-collapse: collapse;
-    margin: 25px 0;
-    font-size: 20px;
+    border-spacing: 0;          /* Removes gaps */
+    border-radius: 10px;
+    overflow: hidden;   
+    margin: 25px 30px;
+    font-size: 15px;
     font-family: sans-serif;
-    min-width: 1000px;
+    min-width: 420px;
+    max-width: 420px;
     box-shadow: none;
 }
 
 
 .styled-table thead tr {
-    background-color: #009879;
-    color: white;
+    background-color: #d2d7d6ff;
+    color: black;
     text-align: left;
 }
 
 .styled-table th,
 .styled-table td {
-    padding: 12px 15px;
+    padding: 8px 11px;
 }
 
 .styled-table tbody tr {
@@ -144,9 +148,9 @@
     color: #009879;
 }
 
-.tab-content {
+{% comment %} .tab-content {
   display: none;
-}
+} {% endcomment %}
  .tab-button {
     padding: 10px 15px;
     background-color:  rgba(245, 218, 214, 0.96);
@@ -160,6 +164,20 @@
   .tab-button:hover {
     background-color: #f0f0f0;
   }
+
+  .rankings-wrapper {
+  display: flex;
+  gap: 30px;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-content {
+  display: block !important; /* override tab hiding */
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+}
 
 
 
@@ -189,53 +207,111 @@
     </ul>
   </div>
 
-<div style="margin: 0px 30px;">
+{% comment %} <div style="margin: 0px 30px;">
   <button class="tab-button" onclick="showTab_Teams('ICC Mens T20Is Team Ranking')">ICC Men's T20Is </button>
   <button class="tab-button" onclick="showTab_Teams('ICC Mens Test Team Ranking')">ICC Men's Test </button>
   <button class="tab-button" onclick="showTab_Teams('ICC Mens ODIs Team Ranking')">ICC Men's ODIs </button>
+</div> {% endcomment %}
+
+
+<div class="rankings-wrapper">
+  <div class="tab-content" id="ICC Mens T20Is Team Ranking">
+    <h3>ICC Men's T20Is</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Team</th>
+          <th>Points</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in T20Is_data %}
+        <tr>
+          <td>{{ team.rank }}</td>
+          <td>
+            <div style="display: flex; align-items: center;">
+              <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              {{ team.team }}
+            </div>
+          </td>
+          <td>{{ team.points }}</td>
+          <td>{{ team.rating }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-content" id="ICC Mens Test Team Ranking">
+    <h3>ICC Men's Tests</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Team</th>
+          <th>Points</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in test_data %}
+        <tr>
+          <td>{{ team.rank }}</td>
+          <td>
+            <div style="display: flex; align-items: center;">
+              <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              {{ team.team }}
+            </div>
+          </td>
+          <td>{{ team.points }}</td>
+          <td>{{ team.rating }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tab-content" id="ICC Mens ODIs Team Ranking">
+    <h3>ICC Men's ODIs</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Team</th>
+          <th>Points</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in ODI_data %}
+        <tr>
+          <td>{{ team.rank }}</td>
+          <td>
+            <div style="display: flex; align-items: center;">
+              <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              {{ team.team }}
+            </div>
+          </td>
+          <td>{{ team.points }}</td>
+          <td>{{ team.rating }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 </div>
 
-<div class="tab-content" id ="ICC Mens T20Is Team Ranking">
-<center><h2>Team Rankings</h2>
-<table border="1" class="styled-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Team</th>
-      <th>Points</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for team in teams %}
-    <tr>
-      <td >{{ team.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src="{{ team.flag }}" width="60" height="45" alt="{{ team.team }}" style="margin-right: 20px;">
-        {{ team.team }}
-      </div>
-      </td>
-      <td>{{ team.points }}</td>
-      <td>{{ team.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</center>
-</div>
 
-<div class="tab-content" id="ICC Mens Test Team Ranking"><div>Virat Kohli</div></div>
-<div class="tab-content" id="ICC Mens ODIs Team Ranking"><div>Rohit Sharma</div></div>
-
-
+{% comment %} 
 <div style="margin: 0px 30px;">
   <button class="tab-button" onclick="showTab_Players('Tests Batsman')">Tests Batsman </button>
   <button class="tab-button" onclick="showTab_Players('T20Is Batsman')">T20Is Batsman </button>
   <button class="tab-button" onclick="showTab_Players('ODIs Batsman')">ODIs Batsman</button>
-</div>
+</div> {% endcomment %}
 
 <div class="tab-content" id ="Tests Batsman">
-<center><h2>Player's Ranking</h2>
 <table border="1" class="styled-table">
   <thead>
     <tr>
@@ -250,7 +326,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{player.faceImageId}}/{{player.name}}.jpg?d=low&p=gthumb" width="60" height="45" alt="{{ player.name }}" style="margin-right: 20px;">{{player.name}}
+      <img src={{player.img}} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -262,32 +338,12 @@
 </center>
 </div>
 
-<div class="tab-content" id="T20Is Batsman"><div>Virat Kohli</div></div>
-<div class="tab-content" id="ODIs Batsman"><div>Rohit Sharma</div></div>
 
 
 
 
 <script>
-  function showTab_Teams(tabId) {
-    document.querySelectorAll('#ICC\\ Mens\\ T20Is\\ Team\\ Ranking, #ICC\\ Mens\\ Test\\ Team\\ Ranking, #ICC\\ Mens\\ ODIs\\ Team\\ Ranking').forEach(tab => {
-      tab.style.display = 'none';
-    });
-    document.getElementById(tabId).style.display = 'block';
-  }
-
-  function showTab_Players(tabId) {
-    document.querySelectorAll('#Tests\\ Batsman, #T20Is\\ Batsman, #ODIs\\ Batsman').forEach(tab => {
-      tab.style.display = 'none';
-    });
-    document.getElementById(tabId).style.display = 'block';
-  }
-
-  // ✅ Show default tabs for both Teams and Players
-  window.onload = function () {
-    showTab_Teams("ICC Mens T20Is Team Ranking");
-    showTab_Players("Tests Batsman");
-  }
+ 
 </script>
 
 
