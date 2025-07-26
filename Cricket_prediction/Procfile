@@ -1,0 +1,1 @@
+web: gunicorn Cricket_prediction.wsgi:application --chdir Cricket_prediction

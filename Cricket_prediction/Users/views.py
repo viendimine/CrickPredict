@@ -610,7 +610,7 @@ def Rankings(request):
     T20Is_players = []
     
 
-    for player in data:
+    for player in data[:10]:
         T20Is_players.append({
         "rank": player.get("rank"),
         "name": player.get("player"),
@@ -627,7 +627,7 @@ def Rankings(request):
     ODI_players = []
     
 
-    for player in data:
+    for player in data[:10]:
         ODI_players.append({
         "rank": player.get("rank"),
         "name": player.get("player"),
@@ -644,7 +644,7 @@ def Rankings(request):
     Test_players = []
     
 
-    for player in data:
+    for player in data[:10]:
         Test_players.append({
         "rank": player.get("rank"),
         "name": player.get("player"),
@@ -661,7 +661,7 @@ def Rankings(request):
     ODI_Women_players = []
     
 
-    for player in data:
+    for player in data[:10]:
         ODI_Women_players.append({
         "rank": player.get("rank"),
         "name": player.get("name"),
@@ -677,13 +677,13 @@ def Rankings(request):
     T20Is_Women_players = []
     
 
-    for player in data:
+    for player in data[:10]:
         T20Is_Women_players.append({
         "rank": player.get("rank"),
         "name": player.get("name"),
         "country": player.get("country"),
         "rating": player.get("rating"),
-        "image": f"Test_Player_Images/{player.get('player')}.jpg",
+        "image": f"T20Is_Women_Images/{player.get('name')}.jpg",
     })
         
         
