@@ -259,7 +259,7 @@
           <td>
             <div style="display: flex; align-items: center;">
               <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
-              {{ team.team }}
+              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
           <td>{{ team.points }}</td>
@@ -410,7 +410,7 @@
 <div class="rankings-wrapper" id= "MensBatsmen">
   <div class="rankings-row">
   <div class="tab-content" >
-    <strong>MEN'S BATTING RANKINGS</strong>
+    <h3>ICC Men's T20Is</h3>
   <table border="1" class="styled-table">
   <thead>
     <tr>
@@ -439,6 +439,7 @@
 
 <div class="tab-content" >
   <br>
+  <h3>ICC Men's ODIs</h3>
   <table border="1" class="styled-table">
   <thead>
     <tr>
@@ -467,6 +468,7 @@
 
 <div class="tab-content" >
   <br>
+  <h3>ICC Men's Tests</h3>
   <table border="1" class="styled-table">
   <thead>
     <tr>
