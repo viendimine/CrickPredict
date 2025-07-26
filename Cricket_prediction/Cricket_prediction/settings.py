@@ -60,6 +60,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', # for hosting on render
+
 ]
 
 ROOT_URLCONF = 'Cricket_prediction.urls'
@@ -95,6 +97,11 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+import dj_database_url
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+}
+
 
 
 # Password validation
@@ -164,3 +171,10 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
     ]
 }
+
+ALLOWED_HOSTS = ['CrickPredict.onrender.com', 'localhost']
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
