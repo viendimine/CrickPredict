@@ -562,24 +562,52 @@ def Rankings(request):
     # }
 
     # response = requests.get(url, headers=headers, params=querystring)
+    ### T20Is Batsmen Rankings
 
-    with open("Users/Data/players_rankings.json", "r") as f:
+    with open("Users/Data/T20Is_batters.json", "r") as f:
         data = json.load(f)
-    print(data)
-    raw_players = []
-    players = data.get("data", [])
+    T20Is_players = []
     
 
-    for player in raw_players:
-        players.append({
+    for player in data:
+        T20Is_players.append({
         "rank": player.get("rank"),
-        "name": player.get("name"),
-        "country": player.get("country"),
-        "rating": player.get("rating"),
-        "trend": player.get("trend"),
-        "faceImageId": player.get('faceImageId'),
-        "img" : player.get('img'), 
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "points": player.get("points"),
     })
+        
+    ### ODIS Batsmen Rankings
+
+    with open("Users/Data/ODI_batters.json", "r") as f:
+        data = json.load(f)
+    ODI_players = []
+    
+
+    for player in data:
+        ODI_players.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "points": player.get("points"),
+    })
+        
+
+
+    ### Test Batsmen Rankings
+    with open("Users/Data/Test_batters.json", "r") as f:
+        data = json.load(f)
+    Test_players = []
+    
+
+    for player in data:
+        Test_players.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "points": player.get("points"),
+    })
+        
         
     # print(players)
 
@@ -589,7 +617,9 @@ def Rankings(request):
         "test_data": test_data,
         "ODI_data": ODI_data,
         "T20Is_data": T20Is_data,
-        "players": players
+        "Test_players": Test_players,
+        "T20Is_players" : T20Is_players,
+        "ODI_players" : ODI_players
         })
 
 

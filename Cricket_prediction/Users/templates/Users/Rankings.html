@@ -215,7 +215,7 @@
 
 
 <div class="rankings-wrapper">
-  <div class="tab-content" id="ICC Mens T20Is Team Ranking">
+  <div class="tab-content" >
     <h3>ICC Men's T20Is</h3>
     <table class="styled-table">
       <thead>
@@ -244,7 +244,7 @@
     </table>
   </div>
 
-  <div class="tab-content" id="ICC Mens Test Team Ranking">
+  <div class="tab-content">
     <h3>ICC Men's Tests</h3>
     <table class="styled-table">
       <thead>
@@ -273,7 +273,7 @@
     </table>
   </div>
 
-  <div class="tab-content" id="ICC Mens ODIs Team Ranking">
+  <div class="tab-content">
     <h3>ICC Men's ODIs</h3>
     <table class="styled-table">
       <thead>
@@ -311,8 +311,11 @@
   <button class="tab-button" onclick="showTab_Players('ODIs Batsman')">ODIs Batsman</button>
 </div> {% endcomment %}
 
-<div class="tab-content" id ="Tests Batsman">
-<table border="1" class="styled-table">
+
+<div class="rankings-wrapper">
+  <div class="tab-content" >
+    <strong>MEN'S BATTING RANKINGS</strong>
+  <table border="1" class="styled-table">
   <thead>
     <tr>
       <th>Rank</th>
@@ -322,7 +325,7 @@
     </tr>
   </thead>
   <tbody>
-    {% for player in players %}
+    {% for player in T20Is_players %}
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
@@ -330,12 +333,70 @@
       </div></td>
       <td>{{ player.country }}</td>
       
-      <td>{{ player.rating }}</td>
+      <td>{{ player.points }}</td>
     </tr>
     {% endfor %}
   </tbody>
 </table>
 </center>
+</div>
+
+<div class="tab-content" >
+  <br>
+  <table border="1" class="styled-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in ODI_players %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.img}} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.points }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+
+<div class="tab-content" >
+  <br>
+  <table border="1" class="styled-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in Test_players %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.img}} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.points }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+
 </div>
 
 
