@@ -264,7 +264,7 @@
           {%endfor%}
         </div>
       </div>
-      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" onclick="Player('{{player.name}}')">
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
           <div class="player-card-container">
             <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
@@ -776,6 +776,8 @@
         }
       });
     }
+
+   
 
     window.onload = function () {
       Australia('AllPlayers');

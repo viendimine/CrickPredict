@@ -875,9 +875,24 @@ def team_details(request, team_name):
             selected_team_data = team_info
 
     # print(test_data)
-
-    with open("Users/Data/Indian_Cricket_Players.json", "r") as f:
+    with open("Users/Data/team_rankings.json", "r") as f:
         data = json.load(f)
+
+    teams = []
+    for team_name in data['data']:
+        teams.append({
+            "name" :team_name.get("team")
+        })
+        
+    # print(teams)
+
+
+
+    for team in teams:
+        with open("Users/Data/{team.name}n_Cricket_Players.json", "r") as f:
+            data = json.load(f)
+
+    print(data)
 
     All_players = []
     Batting = []
