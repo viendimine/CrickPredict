@@ -174,7 +174,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-ALLOWED_HOSTS = ['crickpredict.onrender.com']
+ALLOWED_HOSTS = ['crickpredict.onrender.com', '127.0.0.1', 'localhost']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'

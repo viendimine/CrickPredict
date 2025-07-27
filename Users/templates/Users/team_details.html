@@ -227,6 +227,7 @@
       <li><a href="#" class="nav-link">Contests</a></li>
     </ul>
   </div>
+  
 
   <div>
     {% if team.team == 'India' %}
@@ -325,10 +326,50 @@
         <button class="tab-button team-tab" onclick="Australia('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players Content</div>
-      <div id="Batting" class="tab-content">Batting Content</div>
-      <div id="Bowling" class="tab-content">Bowling Content</div>
-      <div id="AllRounder" class="tab-content">All Rounder Content</div>
+      <div id="AllPlayers" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in Batting%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in Bowling%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in AllRounder%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
       <div id="News" class="tab-content">News Content</div>
       <div id="Matches" class="tab-content">Matches Content</div>
     </div>
@@ -356,10 +397,53 @@
         <button class="tab-button team-tab" onclick="England('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -387,10 +471,53 @@
         <button class="tab-button team-tab" onclick="NewZealand('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -418,10 +545,53 @@
         <button class="tab-button team-tab" onclick="WestIndies('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -449,10 +619,53 @@
         <button class="tab-button team-tab" onclick="SouthAfrica('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -481,10 +694,53 @@
         <button class="tab-button team-tab" onclick="Pakistan('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -513,10 +769,53 @@
         <button class="tab-button team-tab" onclick="SriLanka('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -545,10 +844,53 @@
         <button class="tab-button team-tab" onclick="Bangladesh('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -577,10 +919,128 @@
         <button class="tab-button team-tab" onclick="Afghanistan('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">All Players </div>
-      <div id="Batting" class="tab-content">Batting </div>
-      <div id="Bowling" class="tab-content">Bowling </div>
-      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+  {% elif team.team == 'Ireland' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ICB.jpg' %}" alt="Ireland Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Ireland.jpg' %}" alt="Ireland Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Ireland('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="Ireland('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="Ireland('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="Ireland('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="Ireland('News')">News</button>
+        <button class="tab-button team-tab" onclick="Ireland('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
+          {%for player in All_players%}
+            <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+          <div class="player-card-container">
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
@@ -777,6 +1237,24 @@
       });
     }
 
+    function Ireland(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
    
 
     window.onload = function () {
@@ -790,6 +1268,7 @@
       SriLanka('AllPlayers');
       Bangladesh('AllPlayers');
       Afghanistan('AllPlayers');
+      Ireland('AllPlayers')
     };
   </script>
 </body>
