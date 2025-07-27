@@ -1,0 +1,776 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgba(255, 239, 237, 0.96);
+      height: 100vh;
+    }
+
+    .header {
+      width: 99%;
+      height: 45px;
+      padding: 7px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .menu-bar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu-bar > li {
+      position: relative;
+      margin-right: 100px;
+    }
+
+    .menu-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 0px 15px;
+      display: block;
+    }
+
+    .menu-bar .nav-link {
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #f1f1f1;
+      padding: 10px 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s, border-bottom 0.3s;
+      position: relative;
+    }
+
+    .menu-bar .nav-link:hover {
+      color: #ffffff;
+    }
+
+    .dropdown {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      top: 40px;
+      left: -500px;
+      background-color: white;
+      color: black;
+      width: 1000px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      padding: 10px 15px;
+      z-index: 9999;
+      transition: opacity 0.3s ease, visibility 0s linear 1s;
+    }
+
+    .dropdown ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown ul li {
+      width: 24%;
+      padding: 5px 0;
+    }
+
+    .dropdown ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .menu-bar li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition-delay: 0s;
+    }
+
+    .tab-button {
+      padding: 10px 15px;
+      background-color: #f1ebebff;
+      border: none;
+      cursor: pointer;
+      gap: 0px;
+      margin-right: 10px;
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+    }
+
+    .tab-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .tab-button.active {
+      border-bottom: 3px solid #000;
+      font-weight: 600;
+      color: black;
+    }
+
+    .team-banner {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0px;
+  background-color: #89a39fff;
+}
+
+.team-logo-box, .team-image-box {
+  width: 50%;
+  height: 100%;
+}
+
+.team-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cad8d6ff; 
+}
+
+    .team-logo-box img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 20px; /* optional: adds space around */
+      box-sizing: border-box;
+    }
+
+    .team-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .team-banner img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-card {
+      background-color: #f1ebebff;
+      object-align : center;
+      color: black;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 1200px;
+      min-height: 500px;
+      width: 90%;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      text-align: left;
+      position: relative;
+      bottom: 50px;
+      left: 650px;
+      transform: translateX(-50%);
+    }
+
+    .tab-content {
+      display: none;
+      margin-top: 30px;
+    }
+
+    .player-card{
+      width:100px;
+      height:100px;
+      background-color: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>CrickPredict</div>
+    <ul class="menu-bar">
+      <li><a href="{% url 'Dashboard' %}" class="nav-link">Home</a></li>
+      <li>
+        <a href="#" class="nav-link">Series ▾</a>
+        <div class="dropdown">
+          <ul>
+            {% for league in all_leagues %}
+              <li><a href="#">{{ league.league_name }} , 2025</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      <li><a href="{% url 'News' %}" class="nav-link">News</a></li>
+      <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
+      <li><a href="{% url 'IPL' %}" class="nav-link">IPL 2025</a></li>
+      <li><a href="#" class="nav-link">Profile</a></li>
+      <li><a href="#" class="nav-link">Contests</a></li>
+    </ul>
+  </div>
+
+  <div>
+    {% if team.team == 'India' %}
+       <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/BCCI.jpg' %}" alt="India Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/India.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>  
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="India('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="India('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="India('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="India('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="India('News')">News</button>
+        <button class="tab-button team-tab" onclick="India('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in All_players%}
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+          {%endfor%}
+        </div>
+      </div>
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Batting%}
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+          {%endfor%}
+        </div></div>
+      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in Bowling%}
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+          {%endfor%}
+        </div> </div>
+      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+          {%for player in AllRounder%}
+            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
+      </div>
+    </div>
+          {%endfor%}
+        </div>
+       </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+{% elif team.team == 'Australia' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ACB.jpg' %}" alt="Australia Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Australia.jpg' %}" alt="Australia Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Australia('AllPlayers')">All players</button>
+        <button class="tab-button team-tab" onclick="Australia('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="Australia('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="Australia('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="Australia('News')">News</button>
+        <button class="tab-button team-tab" onclick="Australia('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players Content</div>
+      <div id="Batting" class="tab-content">Batting Content</div>
+      <div id="Bowling" class="tab-content">Bowling Content</div>
+      <div id="AllRounder" class="tab-content">All Rounder Content</div>
+      <div id="News" class="tab-content">News Content</div>
+      <div id="Matches" class="tab-content">Matches Content</div>
+    </div>
+  </center>
+
+    {% elif team.team == 'England' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ECB.jpg' %}" alt="England Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/England.jpg' %}" alt="England Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="England('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="England('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="England('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="England('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="England('News')">News</button>
+        <button class="tab-button team-tab" onclick="England('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+      {% elif team.team == 'New Zealand' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/NCB.jpg' %}" alt="New Zealand Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/NewZealand.jpg' %}" alt="New Zealand Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="NewZealand('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="NewZealand('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="NewZealand('News')">News</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+    {% elif team.team == 'West Indies' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/WICB.jpg' %}" alt="West Indies Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/WestIndies.jpg' %}" alt="West Indies Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="WestIndies('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="WestIndies('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="WestIndies('News')">News</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+  {% elif team.team == 'South Africa' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/SAB.jpg' %}" alt="South Africa Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/SouthAfrica.jpg' %}" alt="South Africa Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="SouthAfrica('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="SouthAfrica('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="SouthAfrica('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="SouthAfrica('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="SouthAfrica('News')">News</button>
+        <button class="tab-button team-tab" onclick="SouthAfrica('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+      {% elif team.team == 'Pakistan' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/PCB.jpg' %}" alt="Pakistan Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Pakistan.jpg' %}" alt="Pakistan Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Pakistan('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="Pakistan('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="Pakistan('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="Pakistan('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="Pakistan('News')">News</button>
+        <button class="tab-button team-tab" onclick="Pakistan('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+       {% elif team.team == 'Sri Lanka' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/SLCB.jpg' %}" alt="SriLanka Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/SriLanka.jpg' %}" alt="SriLanka Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="SriLanka('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="SriLanka('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="SriLanka('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="SriLanka('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="SriLanka('News')">News</button>
+        <button class="tab-button team-tab" onclick="SriLanka('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+  {% elif team.team == 'Bangladesh' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/BCB.jpg' %}" alt="Bangladesh Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Bangladesh.jpg' %}" alt="Bangladesh Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Bangladesh('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="Bangladesh('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="Bangladesh('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="Bangladesh('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="Bangladesh('News')">News</button>
+        <button class="tab-button team-tab" onclick="Bangladesh('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+   {% elif team.team == 'Afghanistan' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/AFCB.jpg' %}" alt="Afghanistan Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Afghanistan.jpg' %}" alt="Afghanistan Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Afghanistan('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="Afghanistan('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="Afghanistan('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="Afghanistan('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="Afghanistan('News')">News</button>
+        <button class="tab-button team-tab" onclick="Afghanistan('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+
+
+
+    {% else %}
+      <h2>🏏 Welcome to {{ team.team }}</h2>
+      <p>No specific data available yet for {{ team.team }}.</p>
+    {% endif %}
+  </div>
+
+  <script>
+    function Australia(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+    function India(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function England(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function NewZealand(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function WestIndies(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function SouthAfrica(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function Pakistan(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function SriLanka(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+     function Bangladesh(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+
+     function Afghanistan(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    window.onload = function () {
+      Australia('AllPlayers');
+      India('AllPlayers');
+      England('AllPlayers');
+      NewZealand('AllPlayers');
+      WestIndies('AllPlayers');
+      SouthAfrica('AllPlayers');
+      Pakistan('AllPlayers');
+      SriLanka('AllPlayers');
+      Bangladesh('AllPlayers');
+      Afghanistan('AllPlayers');
+    };
+  </script>
+</body>
+</html>
