@@ -1,0 +1,14 @@
+[
+  { "rank": 1, "team": "Australia", "rating": 124, "points": 3732 },
+  { "rank": 2, "team": "South Africa", "rating": 115, "points": 2873 },
+  { "rank": 3, "team": "England", "rating": 113, "points": 3839 },
+  { "rank": 4, "team": "India", "rating": 105, "points": 2837 },
+  { "rank": 5, "team": "New Zealand", "rating": 95, "points": 2094 },
+  { "rank": 6, "team": "Sri Lanka", "rating": 88, "points": 2364 },
+  { "rank": 7, "team": "Pakistan", "rating": 78, "points": 1705 },
+  { "rank": 8, "team": "West Indies", "rating": 72, "points": 1865 },
+  { "rank": 9, "team": "Bangladesh", "rating": 61, "points": 1648 },
+  { "rank": 10, "team": "Ireland", "rating": 30, "points": 152 },
+  { "rank": 11, "team": "Afghanistan", "rating": 21, "points": 104 },
+  { "rank": 12, "team": "Zimbabwe", "rating": 10, "points": 137 }
+]
