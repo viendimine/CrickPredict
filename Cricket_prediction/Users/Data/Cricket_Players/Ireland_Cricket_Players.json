@@ -1,0 +1,62 @@
+{
+  "Batsmen": [
+    { "name": "Andrew Balbirnie" },
+    { "name": "Harry Tector" },
+    { "name": "Morgan Topping" },
+    { "name": "Cade Carmichael" },
+    { "name": "Ross Adair" }
+  ],
+  "All Rounders": [
+    { "name": "Paul Stirling" },
+    { "name": "George Dockrell" },
+    { "name": "Matthew Humphreys" },
+    { "name": "Fionn Hand" },
+    { "name": "Gareth Delany" },
+    { "name": "Andy McBrine" },
+    { "name": "Jordan Neill" }
+  ],
+  "Wicket Keepers": [
+    { "name": "Lorcan Tucker" },
+    { "name": "Peter Moor" },
+    { "name": "Stephen Doheny" },
+    { "name": "Neil Rock" }
+  ],
+  "Bowlers": [
+    { "name": "Joshua Little" },
+    { "name": "Thomas Mayes" },
+    { "name": "Craig Young" },
+    { "name": "Benjamin White" },
+    { "name": "Gavin Hoey" },
+    { "name": "Barry McCarthy" },
+    { "name": "Liam McCarthy" },
+    { "name": "Mark Adair" },
+    { "name": "Graham Hume" }
+  ],
+  "All Players": [
+    { "name": "Andrew Balbirnie" },
+    { "name": "Harry Tector" },
+    { "name": "Morgan Topping" },
+    { "name": "Cade Carmichael" },
+    { "name": "Ross Adair" },
+    { "name": "Paul Stirling" },
+    { "name": "George Dockrell" },
+    { "name": "Matthew Humphreys" },
+    { "name": "Fionn Hand" },
+    { "name": "Gareth Delany" },
+    { "name": "Andy McBrine" },
+    { "name": "Jordan Neill" },
+    { "name": "Lorcan Tucker" },
+    { "name": "Peter Moor" },
+    { "name": "Stephen Doheny" },
+    { "name": "Neil Rock" },
+    { "name": "Joshua Little" },
+    { "name": "Thomas Mayes" },
+    { "name": "Craig Young" },
+    { "name": "Benjamin White" },
+    { "name": "Gavin Hoey" },
+    { "name": "Barry McCarthy" },
+    { "name": "Liam McCarthy" },
+    { "name": "Mark Adair" },
+    { "name": "Graham Hume" }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  { "rank": 1, "player": "Travis Head", "team": "Australia", "points": 847 },
+  { "rank": 2, "player": "Abhishek Sharma", "team": "India", "points": 829 },
+  { "rank": 3, "player": "Tilak Varma", "team": "India", "points": 804 },
+  { "rank": 4, "player": "Philip Salt", "team": "England", "points": 791 },
+  { "rank": 5, "player": "Jos Buttler", "team": "England", "points": 772 },
+  { "rank": 6, "player": "Suryakumar Yadav", "team": "India", "points": 739 },
+  { "rank": 7, "player": "Pathum Nissanka", "team": "Sri Lanka", "points": 736 },
+  { "rank": 8, "player": "Tim Seifert", "team": "New Zealand", "points": 716 },
+  { "rank": 9, "player": "Yashasvi Jaiswal", "team": "India", "points": 673 },
+  { "rank": 10, "player": "Shai Hope", "team": "West Indies", "points": 670 },
+  { "rank": 11, "player": "Kusal Perera", "team": "Sri Lanka", "points": 665 },
+  { "rank": 12, "player": "Reeza Hendricks", "team": "South Africa", "points": 662 },
+  { "rank": 13, "player": "Babar Azam", "team": "Pakistan", "points": 648 },
+  { "rank": 14, "player": "Mohammad Rizwan", "team": "Pakistan", "points": 641 },
+  { "rank": 15, "player": "Josh Inglis", "team": "Australia", "points": 639 }
+]

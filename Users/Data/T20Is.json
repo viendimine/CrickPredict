@@ -1,0 +1,22 @@
+[
+  { "rank": 1, "team": "India", "matches": 59, "points": 15589, "rating": 264 },
+  { "rank": 2, "team": "England", "matches": 43, "points": 11104, "rating": 258 },
+  { "rank": 3, "team": "Australia", "matches": 45, "points": 11228, "rating": 249 },
+  { "rank": 4, "team": "West Indies", "matches": 46, "points": 11368, "rating": 247 },
+  { "rank": 5, "team": "New Zealand", "matches": 52, "points": 12715, "rating": 245 },
+  { "rank": 6, "team": "South Africa", "matches": 35, "points": 8529, "rating": 244 },
+  { "rank": 7, "team": "Pakistan", "matches": 53, "points": 12816, "rating": 242 },
+  { "rank": 8, "team": "Sri Lanka", "matches": 43, "points": 10078, "rating": 234 },
+  { "rank": 9, "team": "Bangladesh", "matches": 44, "points": 10195, "rating": 232 },
+  { "rank": 10, "team": "Afghanistan", "matches": 36, "points": 8311, "rating": 231 },
+  { "rank": 11, "team": "Ireland", "matches": 55, "points": 11849, "rating": 215 },
+  { "rank": 12, "team": "Zimbabwe", "matches": 38, "points": 8137, "rating": 214 },
+  { "rank": 13, "team": "Namibia", "matches": 34, "points": 6954, "rating": 205 },
+  { "rank": 14, "team": "Scotland", "matches": 29, "points": 5765, "rating": 199 },
+  { "rank": 15, "team": "UAE", "matches": 37, "points": 7167, "rating": 194 },
+  { "rank": 16, "team": "Netherlands", "matches": 29, "points": 5397, "rating": 186 },
+  { "rank": 17, "team": "Nepal", "matches": 48, "points": 8702, "rating": 181 },
+  { "rank": 18, "team": "PNG", "matches": 35, "points": 5964, "rating": 170 },
+  { "rank": 19, "team": "USA", "matches": 32, "points": 5295, "rating": 165 },
+  { "rank": 20, "team": "Oman", "matches": 31, "points": 4952, "rating": 160 }
+]
