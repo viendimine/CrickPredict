@@ -851,7 +851,7 @@ def scorecard(request):
 def team_details(request, team_name):
     import json
 
-    with open("Users/Data/test.json", "r") as f:
+    with open("Users/Data/T20Is.json", "r") as f:
         data = json.load(f)
 
     with open("Users/Data/Flags.json", "r") as f:
@@ -874,12 +874,50 @@ def team_details(request, team_name):
         if team["team"].lower() == team_name.lower():
             selected_team_data = team_info
 
+    # print(test_data)
+
+    with open("Users/Data/Indian_Cricket_Players.json", "r") as f:
+        data = json.load(f)
+
+    All_players = []
+    Batting = []
+    Bowling = []
+    AllRounder = []
+    for player in data['All Players']:
+        All_players.append({
+            "name" : player.get("name"),
+            "image": f"BCCI_Players/{player.get('name')}.jpg",
+        })
+    
+    for Batter in data['Batsmen']:
+        Batting.append({
+            "name" : Batter.get("name"),
+            "image": f"BCCI_Players/{Batter.get('name')}.jpg",
+        })
+    for Bowler in data['Bowlers']:
+        Bowling.append({
+            "name" : Bowler.get("name"),
+            "image": f"BCCI_Players/{Bowler.get('name')}.jpg",
+        })
+    for AllRounder_players in data['All Rounders']:
+        AllRounder.append({
+            "name" : AllRounder_players.get("name"),
+            "image": f"BCCI_Players/{AllRounder_players.get('name')}.jpg",
+        })
+    print(Batting)
+    # print(All_players)
+
+
     return render(
         request,
         "Users/team_details.html",
         {
             'test_data': test_data,
             'team': selected_team_data,       
-            'team_name': team_name           
+            'team_name': team_name,
+            'All_players' : All_players,
+            "Batting" : Batting ,
+            "Bowling" : Bowling,
+            "AllRounder" : AllRounder,
         }
     )

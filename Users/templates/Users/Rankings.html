@@ -288,7 +288,7 @@
           <td>
             <div style="display: flex; align-items: center;">
               <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
-              {{ team.team }}
+              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
           <td>{{ team.points }}</td>
@@ -317,7 +317,7 @@
           <td>
             <div style="display: flex; align-items: center;">
               <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
-              {{ team.team }}
+              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
           <td>{{ team.points }}</td>
