@@ -34,7 +34,6 @@ SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -53,14 +52,14 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware', # for hosting on render
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
+    'django.middleware.security.SecurityMiddleware',
 
 ]
 
@@ -151,6 +150,8 @@ STATIC_URL = 'static/'
 
 BASE_DIR / "Users/static",
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -172,8 +173,7 @@ REST_FRAMEWORK = {
     ]
 }
 
-ALLOWED_HOSTS = ['CrickPredict.onrender.com', 'localhost']
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['crickpredict.onrender.com', '127.0.0.1', 'localhost']
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'

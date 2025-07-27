@@ -1,0 +1,180 @@
+{
+  "Batsmen": [
+    {
+      "name": "David Miller"
+    },
+    {
+      "name": "Rassie van der Dussen"
+    },
+    {
+      "name": "Tony de Zorzi"
+    },
+    {
+      "name": "Dewald Brevis"
+    },
+    {
+      "name": "Aiden Markram"
+    },
+    {
+      "name": "Temba Bavuma"
+    },
+    {
+      "name": "Reeza Hendricks"
+    },
+    {
+      "name": "Zubayr Hamza"
+    }
+  ],
+  "All Rounders": [
+    {
+      "name": "Senuran Muthusamy"
+    },
+    {
+      "name": "Marco Jansen"
+    },
+    {
+      "name": "Corbin Bosch"
+    },
+    {
+      "name": "Codi Yusuf"
+    },
+    {
+      "name": "Lesego Senokwane"
+    },
+    {
+      "name": "Wiaan Mulder"
+    },
+    {
+      "name": "Prenelan Subrayen"
+    }
+  ],
+  "Wicket Keepers": [
+    {
+      "name": "David Bedingham"
+    },
+    {
+      "name": "Tristan Stubbs"
+    },
+    {
+      "name": "Lhuan-dre Pretorius"
+    },
+    {
+      "name": "Ryan Rickelton"
+    },
+    {
+      "name": "Kyle Verreynne"
+    },
+    {
+      "name": "Matthew Breetzke"
+    }
+  ],
+  "Bowlers": [
+    {
+      "name": "Kagiso Rabada"
+    },
+    {
+      "name": "Nandre Burger"
+    },
+    {
+      "name": "Keshav Maharaj"
+    },
+    {
+      "name": "Lizaad Williams"
+    },
+    {
+      "name": "Lungi Ngidi"
+    },
+    {
+      "name": "Gerald Coetzee"
+    },
+    {
+      "name": "Kwena Maphaka"
+    }
+  ],
+  "All Players": [
+    {
+      "name": "David Miller"
+    },
+    {
+      "name": "Rassie van der Dussen"
+    },
+    {
+      "name": "Tony de Zorzi"
+    },
+    {
+      "name": "Dewald Brevis"
+    },
+    {
+      "name": "Aiden Markram"
+    },
+    {
+      "name": "Temba Bavuma"
+    },
+    {
+      "name": "Reeza Hendricks"
+    },
+    {
+      "name": "Zubayr Hamza"
+    },
+    {
+      "name": "Senuran Muthusamy"
+    },
+    {
+      "name": "Marco Jansen"
+    },
+    {
+      "name": "Corbin Bosch"
+    },
+    {
+      "name": "Codi Yusuf"
+    },
+    {
+      "name": "Lesego Senokwane"
+    },
+    {
+      "name": "Wiaan Mulder"
+    },
+    {
+      "name": "Prenelan Subrayen"
+    },
+    {
+      "name": "David Bedingham"
+    },
+    {
+      "name": "Tristan Stubbs"
+    },
+    {
+      "name": "Lhuan-dre Pretorius"
+    },
+    {
+      "name": "Ryan Rickelton"
+    },
+    {
+      "name": "Kyle Verreynne"
+    },
+    {
+      "name": "Matthew Breetzke"
+    },
+    {
+      "name": "Kagiso Rabada"
+    },
+    {
+      "name": "Nandre Burger"
+    },
+    {
+      "name": "Keshav Maharaj"
+    },
+    {
+      "name": "Lizaad Williams"
+    },
+    {
+      "name": "Lungi Ngidi"
+    },
+    {
+      "name": "Gerald Coetzee"
+    },
+    {
+      "name": "Kwena Maphaka"
+    }
+  ]
+}
