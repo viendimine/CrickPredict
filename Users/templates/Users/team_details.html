@@ -109,16 +109,18 @@
 
     .tab-button {
       padding: 10px 15px;
-      background-color: #f1ebebff;
+      background-color: #d7c6c6ff;
       border: none;
+      border-radius: 2px;
       cursor: pointer;
-      gap: 0px;
+      gap: -10px;
       margin-right: 10px;
       font-family: 'Segoe UI', 'Poppins', sans-serif;
     }
 
     .tab-button:hover {
-      background-color: #f0f0f0;
+      background-color: #666565ff;
+      border-radius: 5px;
     }
 
     .tab-button.active {
@@ -167,7 +169,7 @@
     }
 
     .team-card {
-      background-color: #f1ebebff;
+      background-color: #d7c6c6ff;
       object-align : center;
       color: black;
       border-radius: 15px;
@@ -188,11 +190,19 @@
       margin-top: 30px;
     }
 
-    .player-card{
-      width:100px;
-      height:100px;
-      background-color: blue;
-    }
+    .player-card-container {
+      width: 180px;
+      height: 200px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 10 5px 8px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.1s ease;
+}
+
+.player-card-container:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.52);
+}
   </style>
 </head>
 <body>
@@ -242,40 +252,48 @@
       </div>
 
       <div id="AllPlayers" class="tab-content">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
           {%for player in All_players%}
+            <div class="player-card-container">
             <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
                 <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
             <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
       </div>
     </div>
+    </div>
           {%endfor%}
         </div>
       </div>
-      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
+      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" onclick="Player('{{player.name}}')">
           {%for player in Batting%}
+          <div class="player-card-container">
             <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
                 <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
             <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
       </div>
+    </div>
     </div>
           {%endfor%}
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
+          <div class="player-card-container">
             <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
                 <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
             <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
       </div>
     </div>
+    </div>
           {%endfor%}
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
+          <div class="player-card-container">
             <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
                 <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
             <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
       </div>
+    </div>
     </div>
           {%endfor%}
         </div>

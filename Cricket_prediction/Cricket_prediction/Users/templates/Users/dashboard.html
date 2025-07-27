@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: rgba(255, 239, 237, 0.96);
+      height: 100vh;
+    }
+
+    .header {
+      width: 99%;
+      height: 45px;
+      padding: 7px;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      border-radius: 7px;
+      position: relative;
+      z-index: 1000;
+    }
+
+    .menu-bar {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu-bar > li {
+      position: relative;
+      margin-right: 100px;
+    }
+
+    .menu-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 0px 15px;
+      display: block;
+    }
+    .menu-bar .nav-link {
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      color: #f1f1f1;
+      padding: 10px 5px;
+      text-decoration: none;
+      display: inline-block;
+      transition: color 0.3s, border-bottom 0.3s;
+      position: relative;
+}
+
+.menu-bar .nav-link:hover {
+  color: #ffffff;
+}
+
+
+  .dropdown {
+       opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 40px;
+  left: -500px;
+  background-color: white;
+  color: black;
+  width: 1000px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  padding: 10px 15px;
+  z-index: 9999;
+
+  transition: opacity 0.3s ease, visibility 0s linear 1s;
+    }
+
+    .dropdown ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown ul li {
+      width: 24%;
+      padding: 5px 0;
+    }
+
+    .dropdown ul li a {
+      color: black;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .menu-bar li:hover .dropdown {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transition-delay: 0s; /* Show immediately */
+}
+
+    .match-slider-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: visible;
+      padding: 10px 30px;
+      box-sizing: border-box;
+      z-index: 1;
+    }
+
+    .match-card-container {
+      display: flex;
+      align:center;
+      flex-wrap: nowrap;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 15px 5px;
+    }
+
+    .match-card-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .match-card {
+      flex: 0 0 340px;
+      height: 200px;
+      background-color: white;
+      border-radius: 7px;
+      padding: 15px;
+      box-shadow: none;
+      font-family: Arial, sans-serif;
+    }
+
+    .team-score {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .team-score img {
+      width: 24px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      z-index: 2;
+    }
+
+    .left-arrow {
+      left: 0;
+    }
+
+    .right-arrow {
+      right: 0;
+    }
+
+    .tab-button {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    gap: 0px;
+    margin-right: 10px;
+    font-weight: none;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+  }
+  .tab-button:hover {
+    background-color: #f0f0f0;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>CrickPredict</div>
+    <ul class="menu-bar">
+      <li><a href="{% url 'Dashboard' %}" class="nav-link">Home</a></li>
+      <li>
+        <a href="#" class="nav-link">Series ▾</a>
+        <div class="dropdown">
+          <ul>
+            {% for league in all_leagues %}
+                <li><a href="#">{{ league.league_name }} , 2025</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </li>
+      <li><a href="{% url 'News' %}" class="nav-link">News</a></li>
+      <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
+      <li><a href="{% url 'IPL' %}" class="nav-link">IPL 2025</a></li>
+      <li><a href="#" class="nav-link">Profile</a></li>
+      <li><a href="#" class="nav-link">Contests</a></li>
+    </ul>
+  </div>
+
+  <!-- Tabs for Match Categories -->
+<div style="margin: 0px 30px;">
+  <button class="tab-button" onclick="showTab('completed')">Completed</button>
+  <button class="tab-button" onclick="showTab('upcoming')">Upcoming</button>
+  <button class="tab-button" onclick="showTab('live')">Live</button>
+</div>
+
+<!-- Completed Matches Section -->
+<div class="match-slider-wrapper tab-content" id="completed">
+  <button class="slider-arrow left-arrow" onclick="scrollSlider('completed', -1)">&#10094;</button>
+  <div class="match-card-container" id="completedSlider">
+    <br><br>
+    {% for match in previous_matches %}
+    <div class="match-card">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <p style="font-size: 15px; color:black;">{{ match.seriesName }}</p>
+          <p style="font-size: 12px; color: gray;">{{ match.venue|title }} • {{ match.city }}</p>
+        </div>
+      </div>
+      <div class="team-score">
+        <div><img src="https://static.cricbuzz.com/a/img/v1/i1/c{{match.team1_img}}/i.jpg?p=thumb">{{ match.team1 }}</div>
+        <div>{% if match.score1 and match.score1|length > 0 %}{{ match.score1.inngs1.runs }}/{{ match.score1.inngs1.wickets }} ({{ match.score1.inngs1.overs }}){% else %}Yet to Bat{% endif %}</div>
+      </div>
+      <div class="team-score">
+        <div><img src="https://static.cricbuzz.com/a/img/v1/i1/c{{match.team2_img}}/i.jpg?p=thumb">{{ match.team2 }}</div>
+        <div>{% if match.score2 and match.score2.inngs1.runs|length > 0 %}{{ match.score2.inngs1.runs }}/{{ match.score2.inngs1.wickets }} ({{ match.score2.inngs1.overs }}){% else %}Yet to Bat{% endif %}</div>
+      </div>
+      <div style="color: red; font-size: 12px; text-align: center">{{ match.status }}</div>
+      <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;">Schedule</a>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider-arrow right-arrow" onclick="scrollSlider('completed', 1)">&#10095;</button>
+</div>
+
+<!-- Upcoming Matches Section -->
+<div class="match-slider-wrapper tab-content" id="upcoming" style="display: none;">
+  <button class="slider-arrow left-arrow" onclick="scrollSlider('upcoming', -1)">&#10094;</button>
+  <div class="match-card-container" id="upcomingSlider">
+    <br><br>
+    {% for match in upcoming_matches %}
+    <div class="match-card">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <p style="font-size: 15px; color:black;">{{ match.name }}</p>
+          <p style="font-size: 12px; color: gray;">{{ match.matchType|title }} • {{ match.venue }}</p>
+        </div>
+      </div>
+      <div class="team-score">
+        <div><img src="{{ match.teamInfo.0.img }}">{{ match.teams.0 }}</div>
+        <div>{% if match.score and match.score|length > 0 %}{{ match.score.0.r }}/{{ match.score.0.w }} ({{ match.score.0.o }}){% else %}Yet to Bat{% endif %}</div>
+      </div>
+      <div class="team-score">
+        <div><img src="{{ match.teamInfo.1.img }}">{{ match.teams.1 }}</div>
+        <div>{% if match.score and match.score|length > 1 %}{{ match.score.1.r }}/{{ match.score.1.w }} ({{ match.score.1.o }}){% else %}Yet to Bat{% endif %}</div>
+      </div>
+      <div style="color: red; font-size: 12px; text-align: center">{{ match.status }}</div>
+      <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;">Schedule</a>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider-arrow right-arrow" onclick="scrollSlider('upcoming', 1)">&#10095;</button>
+</div>
+
+<!-- Live Matches Section (empty initially, to be populated when added in Django) -->
+<div class="match-slider-wrapper tab-content" id="live">
+  <button class="slider-arrow left-arrow" onclick="scrollSlider('live', -1)">&#10094;</button>
+  <div class="match-card-container" id="liveSlider">
+    <br><br>
+    {% for match in live_matches %}
+    <div class="match-card">
+      <!-- Match Header -->
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          <p style="font-size: 15px; color: black;">{{ match.series_name }}</p>
+          <p style="font-size: 12px; color: gray;">{{ match.venue|title }} • {{ match.city }}</p>
+        </div>
+      </div>
+
+      <!-- Team 1 -->
+      <div class="team-score">
+        <div>
+          <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{ match.team1_img }}/i.jpg?p=thumb" style="height: 25px; vertical-align: middle; margin-right: 5px;">
+          {{ match.team1 }}
+        </div>
+        <div>
+          {% if match.team1_runs %}
+            {{ match.team1_runs }}/{{ match.team1_wickets }} ({{ match.team1_overs }})
+          {% else %}
+            Yet to Bat
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Team 2 -->
+      <div class="team-score">
+        <div>
+          <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{ match.team2_img }}/i.jpg?p=thumb" style="height: 25px; vertical-align: middle; margin-right: 5px;">
+          {{ match.team2 }}
+        </div>
+        <div>
+          {% if match.team2_runs %}
+            {{ match.team2_runs }}/{{ match.team2_wickets }} ({{ match.team2_overs }})
+          {% else %}
+            Yet to Bat
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Status -->
+      <div style="color: red; font-size: 12px; text-align: center; margin-top: 5px;">
+        {{ match.status }}
+      </div>
+
+      <!-- Action -->
+      <div style="text-align: center; margin-top: 5px;">
+        <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;"><a href ="{%url 'scorecard' match.match_id %}" style="text-decoration: none; font-weight : light;" >Scorecard</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider-arrow right-arrow" onclick="scrollSlider('live', 1)">&#10095;</button>
+</div>
+
+
+<h2 style="padding: 15px 15px;">Latest News</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 0 50px;">
+  {% for news in stories %}
+    <div style="width: 335px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+      <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{news.image_id}}/i.jpg?p=thumb" alt="news image" style="width: 335px; height: auto;">
+      <div style="padding: 10px;">
+        <h3 style="font-size: 16px; margin: 0 0 8px; font-weight: bold;"><a href="{% url 'news_detail' news.news_id %}" style="text-decoration: none; color: black; ">{{ news.headline }}</a></h3>
+        <p style="font-size: 14px; color: gray;">{{ news.context }}</p>
+        <p style="font-size: 13px;">{{ news.intro }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
+
+
+
+<script>
+  function scrollSlider(type, direction) {
+    const container = document.getElementById(type + "Slider");
+    const scrollAmount = 320;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.style.display = 'none';
+    });
+    document.getElementById(tabId).style.display = 'block';
+  }
+
+  // 🚀 Add this to trigger the default tab on load
+  window.onload = function() {
+    showTab('completed'); // or 'live', if you want to show that by default
+  };
+</script>
+</body>
+</html>
