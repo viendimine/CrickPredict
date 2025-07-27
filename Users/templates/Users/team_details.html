@@ -128,17 +128,39 @@
     }
 
     .team-banner {
-      display: flex;
-      gap: 440px;
-      height: 300px;
-      overflow: hidden;
-      background-color: #d2d7d6ff;
-      align-items: center;
-      padding: 30px 200px 0 200px;
-      position: absolute;
-      width: 1110px;
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0px;
+  background-color: #89a39fff;
+}
+
+.team-logo-box, .team-image-box {
+  width: 50%;
+  height: 100%;
+}
+
+.team-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cad8d6ff; 
+}
+
+    .team-logo-box img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 20px; /* optional: adds space around */
+      box-sizing: border-box;
     }
 
+    .team-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
     .team-banner img {
       height: 100%;
       object-fit: cover;
@@ -191,9 +213,14 @@
 
   <div>
     {% if team.team == 'India' %}
-  <div class="team-banner">
-    <img src="{% static 'Team_Images/BCCI.jpg' %}" alt="Team India" style="width: 200px; object-fit: contain; margin-top: -30px;" />
-    <img src="{% static 'Team_Images/India.jpg' %}" alt="Team India" style="width: 65%; height:120%;" />
+       <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/BCCI.jpg' %}" alt="India Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/India.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>  
   </div>
 
   <center>
@@ -217,9 +244,14 @@
   </center>
 
 {% elif team.team == 'Australia' %}
-  <div class="team-banner">
-    <img src="{% static 'Team_Images/ACB.jpg' %}" style="width: 200px; object-fit: contain; margin-top: -30px;" />
-    <img src="{% static 'Team_Images/Australia.jpg' %}" alt="Team Australia" style="width: 65%; height:120%;" />
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ACB.jpg' %}" alt="Australia Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Australia.jpg' %}" alt="Australia Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
   </div>
 
   <center>
@@ -243,9 +275,14 @@
   </center>
 
     {% elif team.team == 'England' %}
-      <div class="team-banner">
-    <img src="{% static 'Team_Images/ECB.jpg' %}" alt="Team England" style="width: 200px; object-fit: contain; margin-top: -30px;" />
-    <img src="{% static 'Team_Images/England.jpg' %}" alt="Team England" style="width: 65%; height:120%;" />
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ECB.jpg' %}" alt="England Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/England.jpg' %}" alt="England Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
   </div>
 
   <center>
@@ -267,6 +304,72 @@
       <div id="Matches" class="tab-content">Matches </div>
     </div>
   </center>
+
+      {% elif team.team == 'New Zealand' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/NCB.jpg' %}" alt="New Zealand Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/NewZealand.jpg' %}" alt="New Zealand Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="NewZealand('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="NewZealand('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="NewZealand('News')">News</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+      {% elif team.team == 'West Indies' %}
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/WICB.jpg' %}" alt="West Indies Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/WestIndies.jpg' %}" alt="West Indies Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
+  </div>
+
+  <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="WestIndies('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="WestIndies('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="WestIndies('News')">News</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content">All Players </div>
+      <div id="Batting" class="tab-content">Batting </div>
+      <div id="Bowling" class="tab-content">Bowling </div>
+      <div id="AllRounder" class="tab-content">All Rounder </div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
+
+
+
+
 
 
     {% else %}
@@ -329,10 +432,48 @@
       });
     }
 
+    function NewZealand(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function WestIndies(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
     window.onload = function () {
       Australia('AllPlayers');
       India('AllPlayers');
       England('AllPlayers');
+      NewZealand('AllPlayers');
+      WestIndies('AllPlayers');
     };
   </script>
 </body>
