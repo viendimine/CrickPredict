@@ -191,8 +191,8 @@
     }
 
     .player-card-container {
-      width: 180px;
-      height: 200px;
+      width: 150px;
+      height: 180px;
       background: white;
       border-radius: 8px;
       overflow: hidden;
@@ -256,8 +256,8 @@
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;" class="player-card">
           {%for player in All_players%}
             <div class="player-card-container">
-            <div style="width: 180px; height: 200px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
-                <img src="{% static player.image %}" alt="news image" style="width: 180px; height: 160px;">
+            <div style="width: 150px; height: 180px; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px;">
             <div style="padding: 18px; background : #c8bcbcff; color: black; height:80px;"> <div style="margin-top:-15px;"><center>{{player.name}}</center></div>
       </div>
     </div>
@@ -972,7 +972,7 @@
   </center>
 
 
-  {% elif team.team == 'Ireland' %}
+  {% elif team.team == "Ireland" %}
      <div class="team-banner">
     <div class="team-logo-box">
       <img src="{% static 'Team_Images/ICB.jpg' %}" alt="Ireland Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
