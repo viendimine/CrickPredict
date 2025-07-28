@@ -686,7 +686,83 @@ def Rankings(request):
         "image": f"T20Is_Women_Images/{player.get('name')}.jpg",
     })
         
+    # ODI Men Bowling Rankings
+    with open("Users/Data/ODI_bowlers.json", "r") as f:
+        data = json.load(f)
+    ODI_bowlers = []
+    
+
+    for player in data[:10]:
+        ODI_bowlers.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "rating": player.get("points"),
+        "image": player.get("image"),
+    })
         
+    # T20Is Men Bowling Rankings
+    with open("Users/Data/T20Is_bowlers.json", "r") as f:
+        data = json.load(f)
+    T20Is_bowlers = []
+    
+
+    for player in data[:10]:
+        T20Is_bowlers.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+       "country": player.get("team"),
+        "rating": player.get("points"),
+        "image": player.get("image"),
+    })
+    print(T20Is_bowlers)
+        
+    
+    # Test Men Bowling Rankings
+    with open("Users/Data/Test_bowlers.json", "r") as f:
+        data = json.load(f)
+    Test_bowlers = []
+    
+
+    for player in data[:10]:
+        Test_bowlers.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "rating": player.get("points"),
+        "image": player.get("image"),
+    })
+        
+    # ODI Women Bowling Rankings
+    with open("Users/Data/ODI_Women_bowlers.json", "r") as f:
+        data = json.load(f)
+    ODI_Women_bowlers = []
+    
+
+    for player in data[:10]:
+        ODI_Women_bowlers.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "rating": player.get("points"),
+        "image": player.get("image"),
+    })
+        
+
+    # T20Is Women Bowling Rankings
+    with open("Users/Data/T20Is_Women_bowlers.json", "r") as f:
+        data = json.load(f)
+    T20Is_Women_bowlers = []
+    
+
+    for player in data[:10]:
+        T20Is_Women_bowlers.append({
+        "rank": player.get("rank"),
+        "name": player.get("player"),
+        "country": player.get("team"),
+        "rating": player.get("points"),
+        "image": player.get("image"),
+    })
     # print(players)
 
 
@@ -701,7 +777,12 @@ def Rankings(request):
         "ODI_Women_data" : ODI_Women_data,
         "T20Is_Women_data" : T20Is_Women_data,
         "ODI_Women_players" : ODI_Women_players,
-        "T20Is_Women_players" : T20Is_Women_players
+        "T20Is_Women_players" : T20Is_Women_players,
+        "ODI_bowlers": ODI_bowlers,
+        "T20Is_bowlers" : T20Is_bowlers,
+        "Test_bowlers" : Test_bowlers,
+        "ODI_Women_bowlers" : ODI_Women_bowlers,
+        "T20Is_Women_bowlers" : T20Is_Women_bowlers
         })
 
 

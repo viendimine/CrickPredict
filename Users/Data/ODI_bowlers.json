@@ -1,0 +1,107 @@
+[
+  {
+    "rank": 1,
+    "player": "Maheesh Theekshana",
+    "team": "Sri Lanka",
+    "points": 671,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c594214/maheesh-theekshana.jpg"
+  },
+  {
+    "rank": 2,
+    "player": "Kuldeep Yadav",
+    "team": "India",
+    "points": 650,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616525/kuldeep-yadav.jpg"
+  },
+  {
+    "rank": 3,
+    "player": "Keshav Maharaj",
+    "team": "South Africa",
+    "points": 648,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c619870/keshav-maharaj.jpg"
+  },
+  {
+    "rank": 4,
+    "player": "Bernard Scholtz",
+    "team": "Namibia",
+    "points": 644,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c244629/bernard-scholtz.jpg"
+  },
+  {
+    "rank": 5,
+    "player": "Rashid Khan",
+    "team": "Afghanistan",
+    "points": 640,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616553/rashid-khan.jpg"
+  },
+  {
+    "rank": 6,
+    "player": "Mitchell Santner",
+    "team": "New Zealand",
+    "points": 637,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616427/mitchell-santner.jpg"
+  },
+  {
+    "rank": 7,
+    "player": "Matt Henry",
+    "team": "New Zealand",
+    "points": 622,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616431/matt-henry.jpg"
+  },
+  {
+    "rank": 8,
+    "player": "Wanindu Hasaranga",
+    "team": "Sri Lanka",
+    "points": 619,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c244676/wanindu-hasaranga.jpg"
+  },
+  {
+    "rank": 9,
+    "player": "Ravindra Jadeja",
+    "team": "India",
+    "points": 616,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616520/ravindra-jadeja.jpg"
+  },
+  {
+    "rank": 10,
+    "player": "Adam Zampa",
+    "team": "Australia",
+    "points": 614,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c619887/adam-zampa.jpg"
+  },
+  {
+    "rank": 11,
+    "player": "Josh Hazlewood",
+    "team": "Australia",
+    "points": 603,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c352459/josh-hazlewood.jpg"
+  },
+  {
+    "rank": 12,
+    "player": "Shaheen Afridi",
+    "team": "Pakistan",
+    "points": 601,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616446/shaheen-afridi.jpg"
+  },
+  {
+    "rank": 13,
+    "player": "Mohammed Shami",
+    "team": "India",
+    "points": 596,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616526/mohammed-shami.jpg"
+  },
+  {
+    "rank": 14,
+    "player": "Mohammed Siraj",
+    "team": "India",
+    "points": 593,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c591952/mohammed-siraj.jpg"
+  },
+  {
+    "rank": 15,
+    "player": "Mohammad Nabi",
+    "team": "Afghanistan",
+    "points": 590,
+    "image": "https://static.cricbuzz.com/a/img/v1/50x50/i1/c616550/mohammad-nabi.jpg"
+  }
+]

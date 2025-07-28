@@ -425,7 +425,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -438,7 +438,6 @@
 </div>
 
 <div class="tab-content" >
-  <br>
   <h3>ICC Men's ODIs</h3>
   <table border="1" class="styled-table">
   <thead>
@@ -454,7 +453,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+     <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -467,7 +466,6 @@
 </div>
 
 <div class="tab-content" >
-  <br>
   <h3>ICC Men's Tests</h3>
   <table border="1" class="styled-table">
   <thead>
@@ -483,7 +481,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -516,7 +514,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -544,7 +542,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="60" height="45" alt="{{ player.name }}" style="margin-right: 0px;">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -557,6 +555,170 @@
 </div>
 </div>
 </div>
+
+
+<div style="margin: 0px 30px;">
+  <button class="tab-button bwoler-tab " onclick="showTab_Bowlers('MensBowler')">Men's Bowling </button>
+  <button class="tab-button bowler-tab" onclick="showTab_Bowlers('WomensBowler')">Women's Bowling </button>
+</div>
+
+
+<div class="rankings-wrapper" id= "MensBowler">
+  <div class="rankings-row">
+  <div class="tab-content" >
+    <h3>ICC Men's T20Is</h3>
+  <table border="1" class="styled-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in T20Is_bowlers %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+
+<div class="tab-content" >
+  <h3>ICC Men's ODIs</h3>
+  <table border="1" class="styled-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in ODI_bowlers %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+
+<div class="tab-content" >
+  <h3>ICC Men's Tests</h3>
+  <table border="1" class="styled-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in Test_bowlers %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+
+</div>
+</div>
+
+<div class="rankings-wrapper" id= "WomensBowler">
+  <div class="rankings-row align-left">
+  <div class="tab-content" >
+    <strong>WOMEN'S Bowling RANKINGS</strong>
+  <table border="1" class="styled-table women-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in T20Is_Women_bowlers %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+
+<div class="tab-content" >
+  <br>
+  <table border="1" class="styled-table women-table">
+  <thead>
+    <tr>
+      <th>Rank</th>
+      <th>Name</th>
+      <th>Country</th>
+      <th>Rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for player in ODI_Women_bowlers %}
+    <tr>
+      <td >{{ player.rank }}</td>
+      <td><div style="display: flex; align-items: center;">
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      </div></td>
+      <td>{{ player.country }}</td>
+      
+      <td>{{ player.rating }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</center>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -595,10 +757,28 @@ function showTab_Batters(tabId) {
   });
 }
 
+function showTab_Bowlers(tabId) {
+  // Hide both batsmen tabs
+  document.getElementById('MensBowler').style.display = 'none';
+  document.getElementById('WomensBowler').style.display = 'none';
+
+  // Show selected
+  document.getElementById(tabId).style.display = 'block';
+
+  // Update button state only for batter tabs
+  document.querySelectorAll('.bowler-tab').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('onclick').includes(tabId)) {
+      btn.classList.add('active');
+    }
+  });
+}
+
 // On load, show both Men's sections
 window.onload = function () {
   showTab_Teams('MensTeam');
   showTab_Batters('MensBatsmen');
+  showTab_Bowlers('MensBowler');
 };
 
 </script>
