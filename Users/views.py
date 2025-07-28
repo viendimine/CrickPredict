@@ -305,9 +305,40 @@ def IPL(request):
                     "nrr": team["nrr"],
                     "image": f"IPL/{team['team']}.jpg",
                 })
-    print(all_stats)
+    # print(all_stats)
 
-    return render(request , "Users/IPL.html",{"all_stats":all_stats})
+    with open("Users/Data/IPL/2024.json", "r") as f:
+        data = json.load(f)
+
+    print(data)
+    matches = []
+    for match in data['matches']:
+        matches.append(
+            {
+                "match_no" : match['match_no'],
+                "date": match['date'],
+                "venue" : match['venue'],
+                "team1" : match['team1'],
+                "team2" : match['team2'],
+                "score1" : match['score_team1'],
+                "score2" : match['score_team2'],
+                "result" : match['result'],
+                "image1": f"IPL/{match['team1']}.jpg",
+                "image2": f"IPL/{match['team2']}.jpg"
+            }
+        )
+    matches.reverse()
+
+    print(matches)
+
+
+
+
+    return render(request , "Users/IPL.html",{
+        "all_stats":all_stats ,
+        "matches" : matches
+        }
+    )
 
 # def Rankings(request):
 #     return render(request , "Users/Rankings.html")

@@ -183,13 +183,6 @@
       transform: translateX(-50%);
     }
 
-    .tab-content {
-  display: none;
-  flex: 1;
-  min-width: 300px;
-  max-width: 450px;
-}
-
     .player-card{
       width:100px;
       height:100px;
@@ -241,6 +234,87 @@
     color: #f4fcfbff;
 }
 
+
+ .match-slider-wrapper {
+  position: relative;
+  width: 100%;            /* wrapper takes full visible width */
+  overflow: hidden;       /* hides overflow */
+  padding: 10px 30px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.tab-content {
+  display: none;
+  flex: 1;
+  top: 20px;
+  left: -20px;
+  min-width: 1200px;
+  max-width: 2000px;
+}
+
+.match-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 15px 5px;
+}
+
+.match-card-container::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar */
+}
+
+.match-card {
+  flex: 0 0 calc(25% - 12px); /* 4 cards per view with gap */
+  min-width: 300px;
+  max-width: 350px;
+  background-color: white;
+  border-radius: 7px;
+  padding: 10px;
+  height: 200px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+    .team-score {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+
+    .team-score img {
+      width: 24px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    .slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 5;
+}
+
+.left-arrow {
+  left: 5px;
+}
+
+.right-arrow {
+  right: 5px; 
+}
 
 </style>
 </head>
@@ -326,12 +400,62 @@
       </tbody>
     </table>
   </div>
+
+
+    <div id="Matches" class="match-slider-wrapper tab-content" style=" width: 1000px;" >
+      <button class="slider-arrow left-arrow" onclick="scrollSlider('completed', -1)">&#10094;</button>
+      <div class="match-card-container" id="completedSlider">
+    {% for match in matches %}
+    <div class="match-card">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+          {% if match.match_no == 74 %}
+            <p style="font-size: 15px; color:black;">IPL 2025 • Final</p>
+
+          {% elif match.match_no == 73 %}
+            <p style="font-size: 15px; color:black;">IPL 2025 • Qualifier 2</p>
+
+          {% elif match.match_no == 72 %}
+            <p style="font-size: 15px; color:black;">IPL 2025 • Eliminator</p>
+
+          {% elif match.match_no == 71 %}
+            <p style="font-size: 15px; color:black;">IPL 2025 • Qualifier 1</p>
+
+          {% else %}
+            <p style="font-size: 15px; color:black;">IPL 2025 • Match No. {{match.match_no}}</p>
+          {% endif %}
+          <p style="font-size: 12px; color: gray;">{{ match.venue|title }} • {{ match.date }}</p>
+        </div>
+      </div>
+      <div class="team-score">
+        <div><img src="{% static match.image1 %}" style="height:30px ; width:30px; margin-right: 5px;">{{ match.team1 }}</div>
+        <div>{{match.score1}}</div>
+      </div>
+      <div class="team-score">
+        <div><img src="{% static match.image2 %}" style="height:30px ; width:30px; margin-right: 5px;">{{ match.team2 }}</div>
+        <div>{{match.score2}}</div>
+      </div>
+      <div style="color: red; font-size: 12px; text-align: center">{{ match.result }}</div>
+      <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;">Scorecard</a>
+    </div>
+    {% endfor %}
+  </div>
+  <button class="slider-arrow right-arrow" onclick="scrollSlider('completed', 1)">&#10095;</button>
 </div>
 </div>
 </div>
 </center>
 
   <script>
+    function scrollSlider(type, direction) {
+    const container = document.getElementById(type + "Slider");
+    const scrollAmount = 320;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+
     function IPL(tabId) {
       const sections = ['Home', 'Stats', 'News', 'Matches', 'Winners'];
       sections.forEach(id => {
