@@ -999,7 +999,10 @@ def team_details(request, team_name):
     Bowling = build_player_list(data.get("Bowlers", []))
     AllRounder = build_player_list(data.get("All Rounders", []))
 
-    print(All_players)
+    # print(All_players)
+
+
+    
 
 
     return render(
@@ -1015,3 +1018,8 @@ def team_details(request, team_name):
             'AllRounder': AllRounder
         }
     )
+
+from django.http import HttpResponse
+
+def player_details(request, player_name):
+    return render(request , "Users/player_details.html")

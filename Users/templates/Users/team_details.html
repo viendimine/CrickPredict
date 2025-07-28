@@ -246,8 +246,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                     <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -257,8 +259,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -268,7 +272,9 @@
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -277,8 +283,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -316,8 +324,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -327,8 +337,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -337,8 +349,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -347,8 +361,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -386,8 +402,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -397,8 +415,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -407,8 +427,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -417,8 +439,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -456,8 +480,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -467,8 +493,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -477,8 +505,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -487,8 +517,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -526,8 +558,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -537,8 +571,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -547,8 +583,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -557,8 +595,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -596,8 +636,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -607,8 +649,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -617,8 +661,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -627,8 +673,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -667,8 +715,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -678,8 +728,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -688,8 +740,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -698,8 +752,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -738,8 +794,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -749,8 +807,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -759,8 +819,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -769,8 +831,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -809,8 +873,10 @@
           {%for player in All_players%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -820,8 +886,10 @@
           {%for player in Batting%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -830,8 +898,10 @@
           {%for player in Bowling%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -840,8 +910,10 @@
           {%for player in AllRounder%}
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+                <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
+                  <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -881,7 +953,9 @@
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -892,7 +966,9 @@
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -902,7 +978,9 @@
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -912,7 +990,9 @@
             <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
                 <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    {{ player.name }}
+    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
+  {{ player.name }}
+</a>
   </div>
     </div>
           {%endfor%}
@@ -925,10 +1005,6 @@
 
 
 
-
-    {% else %}
-      <h2>🏏 Welcome to {{ team.team }}</h2>
-      <p>No specific data available yet for {{ team.team }}.</p>
     {% endif %}
   </div>
 
