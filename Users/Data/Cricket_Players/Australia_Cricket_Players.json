@@ -1,75 +1,10 @@
-{
-  "Batsmen": [
-<<<<<<< HEAD
-    { "name": "Steven Smith" },
-    { "name": "Marnus Labuschagne" },
-    { "name": "Travis Head" },
-    { "name": "Usman Khawaja" },
-    { "name": "Matthew Short" }
-  ],
-  "All Rounders": [
-    { "name": "Cameron Green" },
-    { "name": "Sam Konstas" },
-    { "name": "Beau Webster" },
-    { "name": "Aaron Hardie" },
-    { "name": "Glenn Maxwell" },
-    { "name": "Mitchell Marsh" }
-  ],
-  "Wicket Keepers": [
-    { "name": "Alex Carey" },
-    { "name": "Josh Inglis" }
-  ],
-  "Bowlers": [
-    { "name": "Pat Cummins" },
-    { "name": "Nathan Lyon" },
-    { "name": "Mitchell Starc" },
-    { "name": "Adam Zampa" },
-    { "name": "Sean Abbott" },
-    { "name": "Josh Hazlewood" },
-    { "name": "Xavier Bartlett" },
-    { "name": "Scott Boland" },
-    { "name": "Nathan Ellis" },
-    { "name": "Matthew Kuhnemann" },
-    { "name": "Lance Morris" },
-    { "name": "Todd Murphy" },
-    { "name": "Jhye Richardson" }
-  ],
-  "All Players": [
-    { "name": "Steven Smith" },
-    { "name": "Marnus Labuschagne" },
-    { "name": "Travis Head" },
-    { "name": "Usman Khawaja" },
-    { "name": "Matthew Short" },
-    { "name": "Cameron Green" },
-    { "name": "Sam Konstas" },
-    { "name": "Beau Webster" },
-    { "name": "Aaron Hardie" },
-    { "name": "Glenn Maxwell" },
-    { "name": "Mitchell Marsh" },
-    { "name": "Alex Carey" },
-    { "name": "Josh Inglis" },
-    { "name": "Pat Cummins" },
-    { "name": "Nathan Lyon" },
-    { "name": "Mitchell Starc" },
-    { "name": "Adam Zampa" },
-    { "name": "Sean Abbott" },
-    { "name": "Josh Hazlewood" },
-    { "name": "Xavier Bartlett" },
-    { "name": "Scott Boland" },
-    { "name": "Nathan Ellis" },
-    { "name": "Matthew Kuhnemann" },
-    { "name": "Lance Morris" },
-    { "name": "Todd Murphy" },
-    { "name": "Jhye Richardson" }
-  ]
-}
-=======
     {
-      "name": "Steven Smith",
+      "Batsmen":[
+      {"name": "Steven Smith",
       "name_id": "steven-smith",
       "image_id": "619873",
       "image": "https://static.cricbuzz.com/a/img/v1/i1/c619873/steven-smith.jpg?d=low&p=gthumb"
-    },
+      },
     {
       "name": "Marnus Labuschagne",
       "name_id": "marnus-labuschagne",
@@ -386,4 +321,3 @@
     }
   ]
 }
->>>>>>> 41c0f55 (Added all Team Players Images)

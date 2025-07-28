@@ -1,90 +1,5 @@
 {
   "Batsmen": [
-<<<<<<< HEAD
-    { "name": "Shubman Gill" },
-    { "name": "Yashasvi Jaiswal" },
-    { "name": "Sai Sudharsan" },
-    { "name": "Rohit Sharma" },
-    { "name": "Virat Kohli" },
-    { "name": "Suryakumar Yadav" },
-    { "name": "Shreyas Iyer" },
-    { "name": "Rinku Singh" },
-    { "name": "Tilak Verma" },
-    { "name": "Ruturaj Gaikwad" },
-    { "name": "Rajat Patidar" },
-    { "name": "Sanju Samson" },
-    { "name": "Abhimanyu Easwaran" },
-    { "name": "Karun Nair" }
-  ],
-  "All Rounders": [
-    { "name": "Nitish Kumar Reddy" },
-    { "name": "Hardik Pandya" },
-    { "name": "Shivam Dube" },
-    { "name": "Abhishek Sharma" },
-    { "name": "Ravindra Jadeja" },
-    { "name": "Shardul Thakur" },
-    { "name": "Washington Sundar" },
-    { "name": "Axar Patel" }
-  ],
-  "Wicket Keepers": [
-    { "name": "Rishabh Pant" },
-    { "name": "KL Rahul" },
-    { "name": "Dhruv Jurel" },
-    { "name": "Sanju Samson" },
-    { "name": "Ishan Kishan" }
-  ],
-  "Bowlers": [
-    { "name": "Mohammed Siraj" },
-    { "name": "Jasprit Bumrah" },
-    { "name": "T Natarajan" },
-    { "name": "Avesh Khan" },
-    { "name": "Kuldeep Yadav" },
-    { "name": "Arshdeep Singh" },
-    { "name": "Harshit Rana" },
-    { "name": "Navi Bashir" },
-    { "name": "Mukesh Kumar" },
-    { "name": "Varun Chakravarthy" }
-  ],
-  "All Players": [
-    { "name": "Abhimanyu Easwaran" },
-    { "name": "Abhishek Sharma" },
-    { "name": "Arshdeep Singh" },
-    { "name": "Avesh Khan" },
-    { "name": "Axar Patel" },
-    { "name": "Dhruv Jurel" },
-    { "name": "Hardik Pandya" },
-    { "name": "Harshit Rana" },
-    { "name": "Ishan Kishan" },
-    { "name": "Jasprit Bumrah" },
-    { "name": "KL Rahul" },
-    { "name": "Karun Nair" },
-    { "name": "Kuldeep Yadav" },
-    { "name": "Mohammed Siraj" },
-    { "name": "Mukesh Kumar" },
-    { "name": "Navi Bashir" },
-    { "name": "Nitish Kumar Reddy" },
-    { "name": "Rajat Patidar" },
-    { "name": "Ravindra Jadeja" },
-    { "name": "Rinku Singh" },
-    { "name": "Rishabh Pant" },
-    { "name": "Rohit Sharma" },
-    { "name": "Ruturaj Gaikwad" },
-    { "name": "Sai Sudharsan" },
-    { "name": "Sanju Samson" },
-    { "name": "Shardul Thakur" },
-    { "name": "Shivam Dube" },
-    { "name": "Shreyas Iyer" },
-    { "name": "Shubman Gill" },
-    { "name": "Suryakumar Yadav" },
-    { "name": "T Natarajan" },
-    { "name": "Tilak Verma" },
-    { "name": "Varun Chakravarthy" },
-    { "name": "Virat Kohli" },
-    { "name": "Washington Sundar" },
-    { "name": "Yashasvi Jaiswal" }
-  ]
-}
-=======
     {
       "name": "Shubman Gill",
       "name_id": "shubman-gill",
@@ -539,4 +454,3 @@
     }
   ]
 }
->>>>>>> 41c0f55 (Added all Team Players Images)
