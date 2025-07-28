@@ -193,6 +193,49 @@
       height:100px;
       background-color: blue;
     }
+
+    .styled-table {
+    border-collapse: collapse;
+    border-spacing: 0;          /* Removes gaps */
+    border-radius: 10px;
+    overflow: hidden;   
+    margin: 10px 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    min-width: 420px;
+    max-width: 420px;
+    box-shadow: #030303ff 2px;
+}
+
+
+.styled-table thead tr {
+    background-color: #d2d7d6ff;
+    color: black;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 8px 11px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: white;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #eef6f4ff;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #f4fcfbff;
+}
+
   </style>
 </head>
 <body>
@@ -217,5 +260,47 @@
       <li><a href="#" class="nav-link">Contests</a></li>
     </ul>
   </div>
+
+    <div class="tab-content">
+    <h3>IPL</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Team</th>
+          <th>Matches</th>
+          <th>Win</th>
+          <th>Loss</th>
+          <th>Draw</th>
+          <th>Points</th>
+          <th>Net Run Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in all_stats %}
+        <tr>
+            {% if team.year == '2025' %}
+                <td>{{ team.rank }}</td>
+          <td>
+            <div style="display: flex; align-items: center;">
+              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
+            </div>
+          </td>
+          <td>{{ team.gp }}</td>
+          <td>{{ team.w }}</td>
+          <td>{{ team.l }}</td>
+          <td>{{ team.nr }}</td>
+          <td>{{ team.pts }}</td>
+          <td>{{ team.nrr }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+
+
+  
   </body>
 </html>

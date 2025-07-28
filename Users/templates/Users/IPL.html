@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -106,6 +107,140 @@
       transition-delay: 0s; /* Show immediately */
 }
 
+.tab-button {
+      padding: 10px 15px;
+      background-color: #f1ebebff;
+      border: none;
+      cursor: pointer;
+      gap: 0px;
+      margin-right: 10px;
+      font-family: 'Segoe UI', 'Poppins', sans-serif;
+    }
+
+    .tab-button:hover {
+      background-color: #f0f0f0;
+    }
+
+    .tab-button.active {
+      border-bottom: 3px solid #000;
+      font-weight: 600;
+      color: black;
+    }
+
+ .team-banner {
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0px;
+  background-color: #89a39fff;
+}
+
+.team-logo-box, .team-image-box {
+  width: 50%;
+  height: 100%;
+}
+
+.team-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cad8d6ff; 
+}
+
+    .team-logo-box img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 20px; /* optional: adds space around */
+      box-sizing: border-box;
+    }
+
+    .team-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .team-banner img {
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-card {
+      background-color: #f1ebebff;
+      object-align : center;
+      color: black;
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 1200px;
+      min-height: 500px;
+      width: 90%;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.33);
+      text-align: left;
+      position: relative;
+      bottom: 50px;
+      left: 650px;
+      transform: translateX(-50%);
+    }
+
+    .tab-content {
+  display: none;
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+}
+
+    .player-card{
+      width:100px;
+      height:100px;
+      background-color: blue;
+    }
+
+    .styled-table {
+    border-collapse: collapse;
+    border-spacing: 0;          /* Removes gaps */
+    border-radius: 10px;
+    overflow: hidden;   
+    margin: 10px 30px;
+    font-size: 15px;
+    font-family: sans-serif;
+    min-width: 420px;
+    max-width: 420px;
+    box-shadow: #030303ff 2px;
+}
+
+
+.styled-table thead tr {
+    background-color: #d2d7d6ff;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 8px 11px;
+    text-decoration: none;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: white;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #eef6f4ff;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #f4fcfbff;
+}
+
 
 </style>
 </head>
@@ -133,7 +268,92 @@
     </ul>
   </div>
 
-  
+  <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/IPL.jpg' %}" alt="India Logo" style="width: 350px; object-fit: contain; margin-top: -30px;"/>
+
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/RCB.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>  
+
+   <center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="IPL('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="IPL('Stats')">Stats</button>
+        <button class="tab-button team-tab" onclick="IPL('News')">News</button>
+        <button class="tab-button team-tab" onclick="IPL('Matches')">Matches</button>
+        <button class="tab-button team-tab" onclick="IPL('Winners')">Winners</button>
+      </div>
+
+  <div id="Stats" class="tab-content">
+    <h3>IPL</h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Team</th>
+          <th>GP</th>
+          <th>W</th>
+          <th>L</th>
+          <th>NR</th>
+          <th>PTS</th>
+          <th>NRR</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for team in all_stats %}
+        <tr>
+            {% if team.year == '2025' %}
+                <td style="margin-right:10px;">{{ team.rank }}</td>
+          <td>
+            <div style="display: flex; align-items: center;">
+              <img src="{% static team.image %}" style="height:30px ; width:30px; margin-right: 5px;">
+              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
+            </div>
+          </td>
+          <td>{{ team.gp }}</td>
+          <td>{{ team.w }}</td>
+          <td>{{ team.l }}</td>
+          <td>{{ team.nr }}</td>
+          <td>{{ team.pts }}</td>
+          <td>{{ team.nrr }}</td>
+          {%endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+</center>
+
+  <script>
+    function IPL(tabId) {
+      const sections = ['Home', 'Stats', 'News', 'Matches', 'Winners'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    window.onload = function () {
+      IPL('Home')
+    }
+  </script>
 </body>
 </html>
 

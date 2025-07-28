@@ -284,7 +284,30 @@ def Register(request):
 
 
 def IPL(request):
-    return render(request , "Users/IPL.html")
+
+    with open("Users/Data/IPL/points_table.json", "r") as f:
+        data = json.load(f)
+
+    all_stats = []  # ✅ List to collect all team stats
+
+    for year, info in data.items():
+        if isinstance(info, dict) and info.get("stats"):
+            for team in info["stats"]:
+                all_stats.append({
+                    "year": year,
+                    "rank": team["rank"],
+                    "team": team["team"],
+                    "gp": team["gp"],
+                    "w": team["w"],
+                    "l": team["l"],
+                    "nr": team["nr"],
+                    "pts": team["pts"],
+                    "nrr": team["nrr"],
+                    "image": f"IPL/{team['team']}.jpg",
+                })
+    print(all_stats)
+
+    return render(request , "Users/IPL.html",{"all_stats":all_stats})
 
 # def Rankings(request):
 #     return render(request , "Users/Rankings.html")
@@ -1000,9 +1023,6 @@ def team_details(request, team_name):
     AllRounder = build_player_list(data.get("All Rounders", []))
 
     # print(All_players)
-
-
-    
 
 
     return render(

@@ -118,7 +118,7 @@
     font-family: sans-serif;
     min-width: 420px;
     max-width: 420px;
-    box-shadow: none;
+    box-shadow: #030303ff 2px;
 }
 
 
@@ -227,7 +227,7 @@
       </li>
       <li><a href="{% url 'News' %}" class="nav-link">News</a></li>
       <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
-      <li><a href="IPL" class="nav-link">IPL 2025</a></li>
+      <li><a href="/IPL/" class="nav-link">IPL 2025</a></li>
       <li><a href="#" class="nav-link">Profile</a></li>
       <li><a href="#" class="nav-link">Contests</a></li>
     </ul>
@@ -393,6 +393,7 @@
 </div>
 </div>
 
+{% comment %} <hr style="border: 1px solid black; margin: 10px 50px;"> {% endcomment %}
 
 {% comment %} 
 <div style="margin: 0px 30px;">
@@ -425,7 +426,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -453,7 +454,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-     <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+     <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -481,7 +482,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -514,7 +515,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -542,7 +543,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -581,7 +582,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -609,7 +610,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -637,7 +638,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -670,7 +671,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -698,7 +699,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 0px; border-radius:100px">{{player.name}}
+      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
       </div></td>
       <td>{{ player.country }}</td>
       
