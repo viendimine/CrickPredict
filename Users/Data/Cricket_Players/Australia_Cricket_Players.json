@@ -1,0 +1,389 @@
+{
+  "Batsmen": [
+<<<<<<< HEAD
+    { "name": "Steven Smith" },
+    { "name": "Marnus Labuschagne" },
+    { "name": "Travis Head" },
+    { "name": "Usman Khawaja" },
+    { "name": "Matthew Short" }
+  ],
+  "All Rounders": [
+    { "name": "Cameron Green" },
+    { "name": "Sam Konstas" },
+    { "name": "Beau Webster" },
+    { "name": "Aaron Hardie" },
+    { "name": "Glenn Maxwell" },
+    { "name": "Mitchell Marsh" }
+  ],
+  "Wicket Keepers": [
+    { "name": "Alex Carey" },
+    { "name": "Josh Inglis" }
+  ],
+  "Bowlers": [
+    { "name": "Pat Cummins" },
+    { "name": "Nathan Lyon" },
+    { "name": "Mitchell Starc" },
+    { "name": "Adam Zampa" },
+    { "name": "Sean Abbott" },
+    { "name": "Josh Hazlewood" },
+    { "name": "Xavier Bartlett" },
+    { "name": "Scott Boland" },
+    { "name": "Nathan Ellis" },
+    { "name": "Matthew Kuhnemann" },
+    { "name": "Lance Morris" },
+    { "name": "Todd Murphy" },
+    { "name": "Jhye Richardson" }
+  ],
+  "All Players": [
+    { "name": "Steven Smith" },
+    { "name": "Marnus Labuschagne" },
+    { "name": "Travis Head" },
+    { "name": "Usman Khawaja" },
+    { "name": "Matthew Short" },
+    { "name": "Cameron Green" },
+    { "name": "Sam Konstas" },
+    { "name": "Beau Webster" },
+    { "name": "Aaron Hardie" },
+    { "name": "Glenn Maxwell" },
+    { "name": "Mitchell Marsh" },
+    { "name": "Alex Carey" },
+    { "name": "Josh Inglis" },
+    { "name": "Pat Cummins" },
+    { "name": "Nathan Lyon" },
+    { "name": "Mitchell Starc" },
+    { "name": "Adam Zampa" },
+    { "name": "Sean Abbott" },
+    { "name": "Josh Hazlewood" },
+    { "name": "Xavier Bartlett" },
+    { "name": "Scott Boland" },
+    { "name": "Nathan Ellis" },
+    { "name": "Matthew Kuhnemann" },
+    { "name": "Lance Morris" },
+    { "name": "Todd Murphy" },
+    { "name": "Jhye Richardson" }
+  ]
+}
+=======
+    {
+      "name": "Steven Smith",
+      "name_id": "steven-smith",
+      "image_id": "619873",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619873/steven-smith.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Marnus Labuschagne",
+      "name_id": "marnus-labuschagne",
+      "image_id": "619875",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619875/marnus-labuschagne.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Travis Head",
+      "name_id": "travis-head",
+      "image_id": "619876",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619876/travis-head.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Usman Khawaja",
+      "name_id": "usman-khawaja",
+      "image_id": "332905",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332905/usman-khawaja.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Matthew Short",
+      "name_id": "matthew-short",
+      "image_id": "619877",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619877/matthew-short.jpg?d=low&p=gthumb"
+    }
+  ],
+  "All Rounders": [
+    {
+      "name": "Cameron Green",
+      "name_id": "cameron-green",
+      "image_id": "352451",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352451/cameron-green.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Sam Konstas",
+      "name_id": "sam-konstas",
+      "image_id": "594938",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c594938/sam-konstas.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Beau Webster",
+      "name_id": "beau-webster",
+      "image_id": "178326",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c178326/beau-webster.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Aaron Hardie",
+      "name_id": "aaron-hardie",
+      "image_id": "619878",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619878/aaron-hardie.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Glenn Maxwell",
+      "name_id": "glenn-maxwell",
+      "image_id": "619879",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619879/glenn-maxwell.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Mitchell Marsh",
+      "name_id": "mitchell-marsh",
+      "image_id": "352452",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352452/mitchell-marsh.jpg?d=low&p=gthumb"
+    }
+  ],
+  "Wicket Keepers": [
+    {
+      "name": "Alex Carey",
+      "name_id": "alex-carey",
+      "image_id": "619880",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619880/alex-carey.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Josh Inglis",
+      "name_id": "josh-inglis",
+      "image_id": "619881",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619881/josh-inglis.jpg?d=low&p=gthumb"
+    }
+  ],
+  "Bowlers": [
+    {
+      "name": "Pat Cummins",
+      "name_id": "pat-cummins",
+      "image_id": "352460",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352460/pat-cummins.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Nathan Lyon",
+      "name_id": "nathan-lyon",
+      "image_id": "332913",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332913/nathan-lyon.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Mitchell Starc",
+      "name_id": "mitchell-starc",
+      "image_id": "352462",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352462/mitchell-starc.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Adam Zampa",
+      "name_id": "adam-zampa",
+      "image_id": "619887",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619887/adam-zampa.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Sean Abbott",
+      "name_id": "sean-abbott",
+      "image_id": "619882",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619882/sean-abbott.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Josh Hazlewood",
+      "name_id": "josh-hazlewood",
+      "image_id": "352459",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352459/josh-hazlewood.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Xavier Bartlett",
+      "name_id": "xavier-bartlett",
+      "image_id": "174146",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c174146/xavier-bartlett.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Scott Boland",
+      "name_id": "scott-boland",
+      "image_id": "332914",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332914/scott-boland.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Nathan Ellis",
+      "name_id": "nathan-ellis",
+      "image_id": "619885",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619885/nathan-ellis.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Matthew Kuhnemann",
+      "name_id": "matthew-kuhnemann",
+      "image_id": "178330",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c178330/matthew-kuhnemann.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Lance Morris",
+      "name_id": "lance-morris",
+      "image_id": "598552",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c598552/lance-morris.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Todd Murphy",
+      "name_id": "todd-murphy",
+      "image_id": "332916",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332916/todd-murphy.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Jhye Richardson",
+      "name_id": "jhye-richardson",
+      "image_id": "594939",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c594939/jhye-richardson.jpg?d=low&p=gthumb"
+    }
+  ],
+  "All Players": [
+    {
+      "name": "Steven Smith",
+      "name_id": "steven-smith",
+      "image_id": "619873",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619873/steven-smith.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Marnus Labuschagne",
+      "name_id": "marnus-labuschagne",
+      "image_id": "619875",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619875/marnus-labuschagne.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Travis Head",
+      "name_id": "travis-head",
+      "image_id": "619876",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619876/travis-head.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Usman Khawaja",
+      "name_id": "usman-khawaja",
+      "image_id": "332905",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332905/usman-khawaja.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Matthew Short",
+      "name_id": "matthew-short",
+      "image_id": "619877",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619877/matthew-short.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Cameron Green",
+      "name_id": "cameron-green",
+      "image_id": "352451",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352451/cameron-green.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Sam Konstas",
+      "name_id": "sam-konstas",
+      "image_id": "594938",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c594938/sam-konstas.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Beau Webster",
+      "name_id": "beau-webster",
+      "image_id": "178326",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c178326/beau-webster.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Aaron Hardie",
+      "name_id": "aaron-hardie",
+      "image_id": "619878",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619878/aaron-hardie.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Glenn Maxwell",
+      "name_id": "glenn-maxwell",
+      "image_id": "619879",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619879/glenn-maxwell.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Mitchell Marsh",
+      "name_id": "mitchell-marsh",
+      "image_id": "352452",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352452/mitchell-marsh.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Alex Carey",
+      "name_id": "alex-carey",
+      "image_id": "619880",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619880/alex-carey.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Josh Inglis",
+      "name_id": "josh-inglis",
+      "image_id": "619881",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619881/josh-inglis.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Pat Cummins",
+      "name_id": "pat-cummins",
+      "image_id": "352460",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352460/pat-cummins.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Nathan Lyon",
+      "name_id": "nathan-lyon",
+      "image_id": "332913",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332913/nathan-lyon.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Mitchell Starc",
+      "name_id": "mitchell-starc",
+      "image_id": "352462",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352462/mitchell-starc.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Adam Zampa",
+      "name_id": "adam-zampa",
+      "image_id": "619887",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619887/adam-zampa.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Sean Abbott",
+      "name_id": "sean-abbott",
+      "image_id": "619882",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619882/sean-abbott.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Josh Hazlewood",
+      "name_id": "josh-hazlewood",
+      "image_id": "352459",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c352459/josh-hazlewood.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Xavier Bartlett",
+      "name_id": "xavier-bartlett",
+      "image_id": "174146",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c174146/xavier-bartlett.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Scott Boland",
+      "name_id": "scott-boland",
+      "image_id": "332914",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332914/scott-boland.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Nathan Ellis",
+      "name_id": "nathan-ellis",
+      "image_id": "619885",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c619885/nathan-ellis.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Matthew Kuhnemann",
+      "name_id": "matthew-kuhnemann",
+      "image_id": "178330",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c178330/matthew-kuhnemann.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Lance Morris",
+      "name_id": "lance-morris",
+      "image_id": "598552",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c598552/lance-morris.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Todd Murphy",
+      "name_id": "todd-murphy",
+      "image_id": "332916",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c332916/todd-murphy.jpg?d=low&p=gthumb"
+    },
+    {
+      "name": "Jhye Richardson",
+      "name_id": "jhye-richardson",
+      "image_id": "594939",
+      "image": "https://static.cricbuzz.com/a/img/v1/i1/c594939/jhye-richardson.jpg?d=low&p=gthumb"
+    }
+  ]
+}
+>>>>>>> 41c0f55 (Added all Team Players Images)

@@ -1,0 +1,273 @@
+{
+  "Batsmen": [
+<<<<<<< HEAD
+    { "name": "Kane Williamson" },
+    { "name": "Mark Chapman" },
+    { "name": "Will Young" },
+    { "name": "Finn Allen" },
+    { "name": "Henry Nicholls" }
+  ],
+  "All Rounders": [
+    { "name": "Muhammad Abbas" },
+    { "name": "Daryl Mitchell" },
+    { "name": "Rachin Ravindra" },
+    { "name": "Mitchell Santner" },
+    { "name": "Michael Bracewell" },
+    { "name": "Glenn Phillips" },
+    { "name": "Zakary Foulkes" },
+    { "name": "Nathan Smith" }
+  ],
+  "Wicket Keepers": [
+    { "name": "Devon Conway" },
+    { "name": "Tom Blundell" },
+    { "name": "Tom Latham" },
+    { "name": "Tim Seifert" },
+    { "name": "Mitchell Hey" }
+  ],
+  "Bowlers": [
+    { "name": "Lockie Ferguson" },
+    { "name": "Jacob Duffy" },
+    { "name": "Kyle Jamieson" },
+    { "name": "Ben Sears" },
+    { "name": "Adithya Ashok" },
+    { "name": "Matt Henry" },
+    { "name": "William O'Rourke" }
+  ],
+  "All Players": [
+    { "name": "Kane Williamson" },
+    { "name": "Mark Chapman" },
+    { "name": "Will Young" },
+    { "name": "Finn Allen" },
+    { "name": "Henry Nicholls" },
+    { "name": "Muhammad Abbas" },
+    { "name": "Daryl Mitchell" },
+    { "name": "Rachin Ravindra" },
+    { "name": "Mitchell Santner" },
+    { "name": "Michael Bracewell" },
+    { "name": "Glenn Phillips" },
+    { "name": "Zakary Foulkes" },
+    { "name": "Nathan Smith" },
+    { "name": "Devon Conway" },
+    { "name": "Tom Blundell" },
+    { "name": "Tom Latham" },
+    { "name": "Tim Seifert" },
+    { "name": "Mitchell Hey" },
+    { "name": "Lockie Ferguson" },
+    { "name": "Jacob Duffy" },
+    { "name": "Kyle Jamieson" },
+    { "name": "Ben Sears" },
+    { "name": "Adithya Ashok" },
+    { "name": "Matt Henry" },
+    { "name": "William O'Rourke" }
+=======
+    {
+      "name": "Kane Williamson",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616418/kane-williamson.jpg"
+    },
+    {
+      "name": "Finn Allen",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c594254/finn-allen.jpg"
+    },
+    {
+      "name": "Mark Chapman",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616435/mark-chapman.jpg"
+    },
+    {
+      "name": "Henry Nicholls",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170745/henry-nicholls.jpg"
+    },
+    {
+      "name": "Will Young",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616420/will-young.jpg"
+    }
+  ],
+  "All Rounders": [
+    {
+      "name": "Muhammad Abbas",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/muhammad-abbas.jpg"
+    },
+    {
+      "name": "Michael Bracewell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616430/michael-bracewell.jpg"
+    },
+    {
+      "name": "Daryl Mitchell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616424/daryl-mitchell.jpg"
+    },
+    {
+      "name": "Glenn Phillips",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616433/glenn-phillips.jpg"
+    },
+    {
+      "name": "Rachin Ravindra",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c655385/rachin-ravindra.jpg"
+    },
+    {
+      "name": "Zakary Foulkes",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/zakary-foulkes.jpg"
+    },
+    {
+      "name": "Mitchell Santner",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616427/mitchell-santner.jpg"
+    },
+    {
+      "name": "Nathan Smith",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616429/nathan-smith.jpg"
+    }
+  ],
+  "Wicket Keepers": [
+    {
+      "name": "Devon Conway",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616434/devon-conway.jpg"
+    },
+    {
+      "name": "Tim Seifert",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c154935/tim-seifert.jpg"
+    },
+    {
+      "name": "Tom Blundell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170757/tom-blundell.jpg"
+    },
+    {
+      "name": "Mitchell Hay",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/mitchell-hay.jpg"
+    },
+    {
+      "name": "Tom Latham",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616421/tom-latham.jpg"
+    }
+  ],
+  "Bowlers": [
+    {
+      "name": "Lockie Ferguson",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616422/lockie-ferguson.jpg"
+    },
+    {
+      "name": "Adithya Ashok",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c226324/adithya-ashok.jpg"
+    },
+    {
+      "name": "Jacob Duffy",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616417/jacob-duffy.jpg"
+    },
+    {
+      "name": "Matt Henry",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616431/matt-henry.jpg"
+    },
+    {
+      "name": "Kyle Jamieson",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616419/kyle-jamieson.jpg"
+    },
+    {
+      "name": "William ORourke",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616423/william-orourke.jpg"
+    },
+    {
+      "name": "Ben Sears",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/ben-sears.jpg"
+    }
+  ],
+  "All Players": [
+    {
+      "name": "Kane Williamson",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616418/kane-williamson.jpg"
+    },
+    {
+      "name": "Finn Allen",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c594254/finn-allen.jpg"
+    },
+    {
+      "name": "Mark Chapman",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616435/mark-chapman.jpg"
+    },
+    {
+      "name": "Henry Nicholls",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170745/henry-nicholls.jpg"
+    },
+    {
+      "name": "Will Young",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616420/will-young.jpg"
+    },
+    {
+      "name": "Muhammad Abbas",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/muhammad-abbas.jpg"
+    },
+    {
+      "name": "Michael Bracewell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616430/michael-bracewell.jpg"
+    },
+    {
+      "name": "Daryl Mitchell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616424/daryl-mitchell.jpg"
+    },
+    {
+      "name": "Glenn Phillips",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616433/glenn-phillips.jpg"
+    },
+    {
+      "name": "Rachin Ravindra",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c655385/rachin-ravindra.jpg"
+    },
+    {
+      "name": "Zakary Foulkes",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/zakary-foulkes.jpg"
+    },
+    {
+      "name": "Mitchell Santner",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616427/mitchell-santner.jpg"
+    },
+    {
+      "name": "Nathan Smith",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616429/nathan-smith.jpg"
+    },
+    {
+      "name": "Devon Conway",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616434/devon-conway.jpg"
+    },
+    {
+      "name": "Tim Seifert",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c154935/tim-seifert.jpg"
+    },
+    {
+      "name": "Tom Blundell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170757/tom-blundell.jpg"
+    },
+    {
+      "name": "Mitchell Hay",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/mitchell-hay.jpg"
+    },
+    {
+      "name": "Tom Latham",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616421/tom-latham.jpg"
+    },
+    {
+      "name": "Lockie Ferguson",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616422/lockie-ferguson.jpg"
+    },
+    {
+      "name": "Adithya Ashok",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c226324/adithya-ashok.jpg"
+    },
+    {
+      "name": "Jacob Duffy",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616417/jacob-duffy.jpg"
+    },
+    {
+      "name": "Matt Henry",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616431/matt-henry.jpg"
+    },
+    {
+      "name": "Kyle Jamieson",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616419/kyle-jamieson.jpg"
+    },
+    {
+      "name": "William ORourke",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616423/william-orourke.jpg"
+    },
+    {
+      "name": "Ben Sears",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/ben-sears.jpg"
+    }
+>>>>>>> 41c0f55 (Added all Team Players Images)
+  ]
+}

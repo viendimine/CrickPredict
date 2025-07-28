@@ -851,7 +851,7 @@ def scorecard(request):
 def team_details(request, team_name):
     import json
 
-    with open("Users/Data/T20Is.json", "r") as f:
+    with open("Users/Data/test.json", "r") as f:
         data = json.load(f)
 
     with open("Users/Data/Flags.json", "r") as f:
@@ -874,50 +874,71 @@ def team_details(request, team_name):
         if team["team"].lower() == team_name.lower():
             selected_team_data = team_info
 
+<<<<<<< HEAD
+=======
     # print(test_data)
 
-    with open("Users/Data/Indian_Cricket_Players.json", "r") as f:
+    with open("Users/Data/Cricket_Players/India_Cricket_Players.json", "r") as f:
         data = json.load(f)
 
-    All_players = []
-    Batting = []
-    Bowling = []
-    AllRounder = []
-    for player in data['All Players']:
-        All_players.append({
-            "name" : player.get("name"),
-            "image": f"BCCI_Players/{player.get('name')}.jpg",
-        })
+    with open("Users/Data/Country_CricketBoard.json", "r") as f:
+        countries = json.load(f)
+
     
-    for Batter in data['Batsmen']:
-        Batting.append({
-            "name" : Batter.get("name"),
-            "image": f"BCCI_Players/{Batter.get('name')}.jpg",
-        })
-    for Bowler in data['Bowlers']:
-        Bowling.append({
-            "name" : Bowler.get("name"),
-            "image": f"BCCI_Players/{Bowler.get('name')}.jpg",
-        })
-    for AllRounder_players in data['All Rounders']:
-        AllRounder.append({
-            "name" : AllRounder_players.get("name"),
-            "image": f"BCCI_Players/{AllRounder_players.get('name')}.jpg",
-        })
-    print(Batting)
-    # print(All_players)
+    country_info = next((c for c in countries if c["name"].lower() == team_name.lower()), None)
+    if not country_info:
+        return render(request, "Users/team_details.html", {"error": "Country not found."})
+
+    country_name = country_info["name"]
+    cricket_board = country_info.get("CB", "Unknown")
+    file_path = f"Users/Data/Cricket_Players/{country_name}_Cricket_Players.json"
+
+   
+    if not os.path.exists(file_path) or os.path.getsize(file_path) == 0:
+        return render(request, "Users/team_details.html", {"error": "Player data missing for this country."})
+
+    try:
+        with open(file_path, "r", encoding='utf-8') as f:
+            data = json.load(f)
+    except json.JSONDecodeError:
+        return render(request, "Users/team_details.html", {"error": "Invalid JSON for this country."})
+
+    
+    def build_player_list(player_list):
+        result = []
+        for p in player_list:
+            name = p["name"] if isinstance(p, dict) and "name" in p else p
+            image = p["image"]
+            result.append({
+                "name": name,
+                "image" : image,
+            })
+        return result
+
+    All_players = build_player_list(data.get("All Players", []))
+    Batting = build_player_list(data.get("Batsmen", []))
+    Bowling = build_player_list(data.get("Bowlers", []))
+    AllRounder = build_player_list(data.get("All Rounders", []))
+
+    print(All_players)
 
 
+>>>>>>> 41c0f55 (Added all Team Players Images)
     return render(
         request,
         "Users/team_details.html",
         {
             'test_data': test_data,
+<<<<<<< HEAD
             'team': selected_team_data,       
+            'team_name': team_name           
+=======
+            'team': selected_team_data,
             'team_name': team_name,
-            'All_players' : All_players,
-            "Batting" : Batting ,
-            "Bowling" : Bowling,
-            "AllRounder" : AllRounder,
+            'All_players': All_players,
+            'Batting': Batting,
+            'Bowling': Bowling,
+            'AllRounder': AllRounder
+>>>>>>> 41c0f55 (Added all Team Players Images)
         }
     )

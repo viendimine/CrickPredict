@@ -1,0 +1,233 @@
+{
+  "Batsmen": [
+<<<<<<< HEAD
+    {
+      "name": "Najmul Hossain Shanto"
+    },
+    {
+      "name": "Towhid Hridoy"
+    },
+    {
+      "name": "Soumya Sarkar"
+    },
+    {
+      "name": "Mominul Haque"
+    },
+    {
+      "name": "Shadman Islam"
+    },
+    {
+      "name": "Tanzid Hasan Tamim"
+    }
+  ],
+  "All Rounders": [
+    {
+      "name": "Mahmudullah"
+    },
+    {
+      "name": "Mehidy Hasan Miraz"
+    },
+    {
+      "name": "Mahedi Hasan"
+    }
+  ],
+  "Wicket Keepers": [
+    {
+      "name": "Litton Das"
+    },
+    {
+      "name": "Jaker Ali"
+    },
+    {
+      "name": "Mahidul Islam Ankon"
+    },
+    {
+      "name": "Mushfiqur Rahim"
+    },
+    {
+      "name": "Anamul Haque"
+    }
+  ],
+  "Bowlers": [
+    {
+      "name": "Taskin Ahmed"
+    },
+    {
+      "name": "Mustafizur Rahman"
+    },
+    {
+      "name": "Nahid Rana"
+    },
+    {
+      "name": "Rishad Hossain"
+    },
+    {
+      "name": "Nasum Ahmed"
+    },
+    {
+      "name": "Nayeem Hasan"
+    },
+    {
+      "name": "Taijul Islam"
+    },
+    {
+      "name": "Hasan Mahmud"
+    },
+    {
+      "name": "Shoriful Islam"
+    },
+    {
+      "name": "Tanzim Hasan Sakib"
+    },
+    {
+      "name": "Khaled Ahmed"
+    },
+    {
+      "name": "Ebadot Hossain"
+    }
+  ],
+  "All Players" :[
+    {
+      "name": "Najmul Hossain Shanto"
+    },
+    {
+      "name": "Towhid Hridoy"
+    },
+    {
+      "name": "Soumya Sarkar"
+    },
+    {
+      "name": "Mominul Haque"
+    },
+    {
+      "name": "Shadman Islam"
+    },
+    {
+      "name": "Tanzid Hasan Tamim"
+    },
+    {
+      "name": "Mahmudullah"
+    },
+    {
+      "name": "Mehidy Hasan Miraz"
+    },
+    {
+      "name": "Mahedi Hasan"
+    },
+    {
+      "name": "Litton Das"
+    },
+    {
+      "name": "Jaker Ali"
+    },
+    {
+      "name": "Mahidul Islam Ankon"
+    },
+    {
+      "name": "Mushfiqur Rahim"
+    },
+    {
+      "name": "Anamul Haque"
+    },
+    {
+      "name": "Taskin Ahmed"
+    },
+    {
+      "name": "Mustafizur Rahman"
+    },
+    {
+      "name": "Nahid Rana"
+    },
+    {
+      "name": "Rishad Hossain"
+    },
+    {
+      "name": "Nasum Ahmed"
+    },
+    {
+      "name": "Nayeem Hasan"
+    },
+    {
+      "name": "Taijul Islam"
+    },
+    {
+      "name": "Hasan Mahmud"
+    },
+    {
+      "name": "Shoriful Islam"
+    },
+    {
+      "name": "Tanzim Hasan Sakib"
+    },
+    {
+      "name": "Khaled Ahmed"
+    },
+    {
+      "name": "Ebadot Hossain"
+    }
+  ]
+}
+=======
+    {"name": "Najmul Hossain Shanto", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616472/najmul-hossain-shanto.jpg"},
+    {"name": "Mominul Haque", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c148275/mominul-haque.jpg"},
+    {"name": "Towhid Hridoy", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616468/towhid-hridoy.jpg"},
+    {"name": "Shadman Islam", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c165699/shadman-islam.jpg"},
+    {"name": "Soumya Sarkar", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616460/soumya-sarkar.jpg"},
+    {"name": "Tanzid Hasan Tamim", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616469/tanzid-hasan-tamim.jpg"}
+  ],
+  "All Rounders": [
+    {"name": "Mahmudullah", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616462/mahmudullah.jpg"},
+    {"name": "Mahedi Hasan", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351902/mahedi-hasan.jpg"},
+    {"name": "Mehidy Hasan Miraz", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616461/mehidy-hasan-miraz.jpg"}
+  ],
+  "Wicket Keepers": [
+    {"name": "Litton Das", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351896/litton-das.jpg"},
+    {"name": "Mushfiqur Rahim", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616471/mushfiqur-rahim.jpg"},
+    {"name": "Jaker Ali", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616470/jaker-ali.jpg"},
+    {"name": "Anamul Haque", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c155747/anamul-haque.jpg"},
+    {"name": "Mahidul Islam Ankon", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c691148/mahidul-islam-ankon.jpg"}
+  ],
+  "Bowlers": [
+    {"name": "Taskin Ahmed", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616466/taskin-ahmed.jpg"},
+    {"name": "Taijul Islam", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c148279/taijul-islam.jpg"},
+    {"name": "Mustafizur Rahman", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616463/mustafizur-rahman.jpg"},
+    {"name": "Hasan Mahmud", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351926/hasan-mahmud.jpg"},
+    {"name": "Nahid Rana", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616465/nahid-rana.jpg"},
+    {"name": "Shoriful Islam", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351921/shoriful-islam.jpg"},
+    {"name": "Rishad Hossain", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616457/rishad-hossain.jpg"},
+    {"name": "Tanzim Hasan Sakib", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616464/tanzim-hasan-sakib.jpg"},
+    {"name": "Nasum Ahmed", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616467/nasum-ahmed.jpg"},
+    {"name": "Khaled Ahmed", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/khaled-ahmed.jpg"},
+    {"name": "Nayeem Hasan", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/nayeem-hasan.jpg"},
+    {"name": "Ebadot Hossain", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244918/ebadot-hossain.jpg"}
+  ],
+  "All Players": [
+    {"name": "Najmul Hossain Shanto", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616472/najmul-hossain-shanto.jpg"},
+    {"name": "Mominul Haque", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c148275/mominul-haque.jpg"},
+    {"name": "Towhid Hridoy", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616468/towhid-hridoy.jpg"},
+    {"name": "Shadman Islam", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c165699/shadman-islam.jpg"},
+    {"name": "Soumya Sarkar", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616460/soumya-sarkar.jpg"},
+    {"name": "Tanzid Hasan Tamim", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616469/tanzid-hasan-tamim.jpg"},
+    {"name": "Mahmudullah", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616462/mahmudullah.jpg"},
+    {"name": "Mahedi Hasan", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351902/mahedi-hasan.jpg"},
+    {"name": "Mehidy Hasan Miraz", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616461/mehidy-hasan-miraz.jpg"},
+    {"name": "Litton Das", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351896/litton-das.jpg"},
+    {"name": "Mushfiqur Rahim", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616471/mushfiqur-rahim.jpg"},
+    {"name": "Jaker Ali", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616470/jaker-ali.jpg"},
+    {"name": "Anamul Haque", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c155747/anamul-haque.jpg"},
+    {"name": "Mahidul Islam Ankon", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c691148/mahidul-islam-ankon.jpg"},
+    {"name": "Taskin Ahmed", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616466/taskin-ahmed.jpg"},
+    {"name": "Taijul Islam", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c148279/taijul-islam.jpg"},
+    {"name": "Mustafizur Rahman", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616463/mustafizur-rahman.jpg"},
+    {"name": "Hasan Mahmud", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351926/hasan-mahmud.jpg"},
+    {"name": "Nahid Rana", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616465/nahid-rana.jpg"},
+    {"name": "Shoriful Islam", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351921/shoriful-islam.jpg"},
+    {"name": "Rishad Hossain", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616457/rishad-hossain.jpg"},
+    {"name": "Tanzim Hasan Sakib", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616464/tanzim-hasan-sakib.jpg"},
+    {"name": "Nasum Ahmed", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616467/nasum-ahmed.jpg"},
+    {"name": "Khaled Ahmed", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/khaled-ahmed.jpg"},
+    {"name": "Nayeem Hasan", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/nayeem-hasan.jpg"},
+    {"name": "Ebadot Hossain", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244918/ebadot-hossain.jpg"}
+  ]
+}
+>>>>>>> 41c0f55 (Added all Team Players Images)

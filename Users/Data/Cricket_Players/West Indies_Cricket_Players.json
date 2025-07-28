@@ -1,0 +1,333 @@
+{
+  "Batsmen": [
+<<<<<<< HEAD
+    { "name": "Brandon King" },
+    { "name": "Kraigg Brathwaite" },
+    { "name": "Rovman Powell" },
+    { "name": "Evin Lewis" },
+    { "name": "Alick Athanaze" },
+    { "name": "Kavem Hodge" },
+    { "name": "Shimron Hetmyer" }
+  ],
+  "All Rounders": [
+    { "name": "Keacy Carty" },
+    { "name": "Sherfane Rutherford" },
+    { "name": "Gudakesh Motie" },
+    { "name": "Romario Shepherd" },
+    { "name": "Andre Russell" },
+    { "name": "Justin Greaves" },
+    { "name": "John Campbell" },
+    { "name": "Roston Chase" },
+    { "name": "Jason Holder" }
+  ],
+  "Wicket Keepers": [
+    { "name": "Shai Hope" },
+    { "name": "Johnson Charles" },
+    { "name": "Jewel Andrew" },
+    { "name": "Joshua Da Silva" },
+    { "name": "Andre Fletcher" },
+    { "name": "Amir Jangoo" }
+  ],
+  "Bowlers": [
+    { "name": "Alzarri Joseph" },
+    { "name": "Jayden Seales" },
+    { "name": "Terrance Hinds" },
+    { "name": "Shamar Springer" },
+    { "name": "Jediah Blades" },
+    { "name": "Shamar Joseph" },
+    { "name": "Akeal Hosein" },
+    { "name": "Obed McCoy" },
+    { "name": "Matthew Forde" }
+  ],
+  "All Players": [
+    { "name": "Brandon King" },
+    { "name": "Kraigg Brathwaite" },
+    { "name": "Rovman Powell" },
+    { "name": "Evin Lewis" },
+    { "name": "Alick Athanaze" },
+    { "name": "Kavem Hodge" },
+    { "name": "Shimron Hetmyer" },
+    { "name": "Keacy Carty" },
+    { "name": "Sherfane Rutherford" },
+    { "name": "Gudakesh Motie" },
+    { "name": "Romario Shepherd" },
+    { "name": "Andre Russell" },
+    { "name": "Justin Greaves" },
+    { "name": "John Campbell" },
+    { "name": "Roston Chase" },
+    { "name": "Jason Holder" },
+    { "name": "Shai Hope" },
+    { "name": "Johnson Charles" },
+    { "name": "Jewel Andrew" },
+    { "name": "Joshua Da Silva" },
+    { "name": "Andre Fletcher" },
+    { "name": "Amir Jangoo" },
+    { "name": "Alzarri Joseph" },
+    { "name": "Jayden Seales" },
+    { "name": "Terrance Hinds" },
+    { "name": "Shamar Springer" },
+    { "name": "Jediah Blades" },
+    { "name": "Shamar Joseph" },
+    { "name": "Akeal Hosein" },
+    { "name": "Obed McCoy" },
+    { "name": "Matthew Forde" }
+=======
+    {
+      "name": "Brandon King",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244662/brandon-king.jpg"
+    },
+    {
+      "name": "Alick Athanaze",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583422/alick-athanaze.jpg"
+    },
+    {
+      "name": "Kraigg Brathwaite",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583417/kraigg-brathwaite.jpg"
+    },
+    {
+      "name": "Kavem Hodge",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583420/kavem-hodge.jpg"
+    },
+    {
+      "name": "Rovman Powell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244832/rovman-powell.jpg"
+    },
+    {
+      "name": "Shimron Hetmyer",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c171232/shimron-hetmyer.jpg"
+    },
+    {
+      "name": "Evin Lewis",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244670/evin-lewis.jpg"
+    }
+  ],
+  "All Rounders": [
+    {
+      "name": "Keacy Carty",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583413/keacy-carty.jpg"
+    },
+    {
+      "name": "Justin Greaves",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583423/justin-greaves.jpg"
+    },
+    {
+      "name": "Sherfane Rutherford",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c594230/sherfane-rutherford.jpg"
+    },
+    {
+      "name": "John Campbell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c159961/john-campbell.jpg"
+    },
+    {
+      "name": "Gudakesh Motie",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c599390/gudakesh-motie.jpg"
+    },
+    {
+      "name": "Roston Chase",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c593804/roston-chase.jpg"
+    },
+    {
+      "name": "Romario Shepherd",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c593798/romario-shepherd.jpg"
+    },
+    {
+      "name": "Jason Holder",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c601745/jason-holder.jpg"
+    },
+    {
+      "name": "Andre Russell",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170821/andre-russell.jpg"
+    }
+  ],
+  "Wicket Keepers": [
+    {
+      "name": "Shai Hope",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170814/shai-hope.jpg"
+    },
+    {
+      "name": "Joshua Da Silva",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583418/joshua-da-silva.jpg"
+    },
+    {
+      "name": "Johnson Charles",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244679/johnson-charles.jpg"
+    },
+    {
+      "name": "Andre Fletcher",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c146338/andre-fletcher.jpg"
+    },
+    {
+      "name": "Jewel Andrew",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jewel-andrew.jpg"
+    },
+    {
+      "name": "Amir Jangoo",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/amir-jangoo.jpg"
+    }
+  ],
+  "Bowlers": [
+    {
+      "name": "Alzarri Joseph",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c599386/alzarri-joseph.jpg"
+    },
+    {
+      "name": "Shamar Joseph",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c597839/shamar-joseph.jpg"
+    },
+    {
+      "name": "Jayden Seales",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c537812/jayden-seales.jpg"
+    },
+    {
+      "name": "Akeal Hosein",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244660/akeal-hosein.jpg"
+    },
+    {
+      "name": "Terrance Hinds",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/terrance-hinds.jpg"
+    },
+    {
+      "name": "Obed McCoy",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244723/obed-mccoy.jpg"
+    },
+    {
+      "name": "Shamar Springer",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c157847/shamar-springer.jpg"
+    },
+    {
+      "name": "Matthew Forde",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c699395/matthew-forde.jpg"
+    },
+    {
+      "name": "Jediah Blades",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jediah-blades.jpg"
+    }
+  ],
+  "All Players": [
+    {
+    "name": "Brandon King",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244662/brandon-king.jpg"
+  },
+  {
+    "name": "Alick Athanaze",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583422/alick-athanaze.jpg"
+  },
+  {
+    "name": "Kraigg Brathwaite",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583417/kraigg-brathwaite.jpg"
+  },
+  {
+    "name": "Kavem Hodge",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583420/kavem-hodge.jpg"
+  },
+  {
+    "name": "Rovman Powell",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244832/rovman-powell.jpg"
+  },
+  {
+    "name": "Shimron Hetmyer",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c171232/shimron-hetmyer.jpg"
+  },
+  {
+    "name": "Evin Lewis",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244670/evin-lewis.jpg"
+  },
+  {
+    "name": "Keacy Carty",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583413/keacy-carty.jpg"
+  },
+  {
+    "name": "Justin Greaves",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583423/justin-greaves.jpg"
+  },
+  {
+    "name": "Sherfane Rutherford",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c594230/sherfane-rutherford.jpg"
+  },
+  {
+    "name": "John Campbell",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c159961/john-campbell.jpg"
+  },
+  {
+    "name": "Gudakesh Motie",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c599390/gudakesh-motie.jpg"
+  },
+  {
+    "name": "Roston Chase",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c593804/roston-chase.jpg"
+  },
+  {
+    "name": "Romario Shepherd",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c593798/romario-shepherd.jpg"
+  },
+  {
+    "name": "Jason Holder",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c601745/jason-holder.jpg"
+  },
+  {
+    "name": "Andre Russell",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170821/andre-russell.jpg"
+  },
+  {
+    "name": "Shai Hope",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c170814/shai-hope.jpg"
+  },
+  {
+    "name": "Joshua Da Silva",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c583418/joshua-da-silva.jpg"
+  },
+  {
+    "name": "Johnson Charles",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244679/johnson-charles.jpg"
+  },
+  {
+    "name": "Andre Fletcher",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c146338/andre-fletcher.jpg"
+  },
+  {
+    "name": "Jewel Andrew",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jewel-andrew.jpg"
+  },
+  {
+    "name": "Amir Jangoo",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/amir-jangoo.jpg"
+  },
+  {
+    "name": "Alzarri Joseph",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c599386/alzarri-joseph.jpg"
+  },
+  {
+    "name": "Shamar Joseph",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c597839/shamar-joseph.jpg"
+  },
+  {
+    "name": "Jayden Seales",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c537812/jayden-seales.jpg"
+  },
+  {
+    "name": "Akeal Hosein",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244660/akeal-hosein.jpg"
+  },
+  {
+    "name": "Terrance Hinds",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/terrance-hinds.jpg"
+  },
+  {
+    "name": "Obed McCoy",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244723/obed-mccoy.jpg"
+  },
+  {
+    "name": "Shamar Springer",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c157847/shamar-springer.jpg"
+  },
+  {
+    "name": "Matthew Forde",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c699395/matthew-forde.jpg"
+  },
+  {
+    "name": "Jediah Blades",
+    "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jediah-blades.jpg"
+  }
+>>>>>>> 41c0f55 (Added all Team Players Images)
+  ]
+}

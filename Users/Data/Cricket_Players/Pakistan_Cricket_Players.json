@@ -1,0 +1,422 @@
+{
+  "Batsmen": [
+<<<<<<< HEAD
+    { "name": "Imam-ul-Haq" },
+    { "name": "Babar Azam" },
+    { "name": "Saim Ayub" },
+    { "name": "Khushdil Shah" },
+    { "name": "Abdullah Shafique" },
+    { "name": "Omar Yousuf" },
+    { "name": "Muhammad Huraira" },
+    { "name": "Shan Masood" },
+    { "name": "Fakhar Zaman" },
+    { "name": "Haseebullah Khan" },
+    { "name": "Tayyab Tahir" },
+    { "name": "Abdul Samad" }
+  ],
+  "All Rounders": [
+    { "name": "Saud Shakeel" },
+    { "name": "Salman Agha" },
+    { "name": "Hussain Talat" },
+    { "name": "Faheem Ashraf" },
+    { "name": "Junaid Khan" },
+    { "name": "Afan Khan" },
+    { "name": "Noman Ali" },
+    { "name": "Shadab Khan" }
+  ],
+  "Wicket Keepers": [
+    { "name": "Rohail Nazir" },
+    { "name": "Sahibzada Farhan" },
+    { "name": "Usman Khan" },
+    { "name": "Muhammad Rizwan" },
+    { "name": "Muhammad Haris" }
+  ],
+  "Bowlers": [
+    { "name": "Abrar Ahmed" },
+    { "name": "Muhammad Ali" },
+    { "name": "Kadeer Ali" },
+    { "name": "Naseem Shah" },
+    { "name": "Abbas Afridi" },
+    { "name": "Muhammad Wasim Jr" },
+    { "name": "Shaheen Afridi" },
+    { "name": "Sajid Khan" },
+    { "name": "Khurram Shahzad" },
+    { "name": "Haris Rauf" },
+    { "name": "Hasan Ali" },
+    { "name": "Araf Jawad" },
+    { "name": "Sufiyan Muqeem" },
+    { "name": "Muhammad Hasnain" }
+  ],
+  "All Players": [
+    { "name": "Imam-ul-Haq" },
+    { "name": "Babar Azam" },
+    { "name": "Saim Ayub" },
+    { "name": "Khushdil Shah" },
+    { "name": "Abdullah Shafique" },
+    { "name": "Omar Yousuf" },
+    { "name": "Muhammad Huraira" },
+    { "name": "Shan Masood" },
+    { "name": "Fakhar Zaman" },
+    { "name": "Haseebullah Khan" },
+    { "name": "Tayyab Tahir" },
+    { "name": "Abdul Samad" },
+    { "name": "Saud Shakeel" },
+    { "name": "Salman Agha" },
+    { "name": "Hussain Talat" },
+    { "name": "Faheem Ashraf" },
+    { "name": "Junaid Khan" },
+    { "name": "Afan Khan" },
+    { "name": "Noman Ali" },
+    { "name": "Shadab Khan" },
+    { "name": "Rohail Nazir" },
+    { "name": "Sahibzada Farhan" },
+    { "name": "Usman Khan" },
+    { "name": "Muhammad Rizwan" },
+    { "name": "Muhammad Haris" },
+    { "name": "Abrar Ahmed" },
+    { "name": "Muhammad Ali" },
+    { "name": "Kadeer Ali" },
+    { "name": "Naseem Shah" },
+    { "name": "Abbas Afridi" },
+    { "name": "Muhammad Wasim Jr" },
+    { "name": "Shaheen Afridi" },
+    { "name": "Sajid Khan" },
+    { "name": "Khurram Shahzad" },
+    { "name": "Haris Rauf" },
+    { "name": "Hasan Ali" },
+    { "name": "Araf Jawad" },
+    { "name": "Sufiyan Muqeem" },
+    { "name": "Muhammad Hasnain" }
+=======
+    {
+      "name": "Imam-ul-Haq",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c617489/imam-ul-haq.jpg"
+    },
+    {
+      "name": "Muhammad Hurraira",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/muhammad-hurraira.jpg"
+    },
+    {
+      "name": "Babar Azam",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616440/babar-azam.jpg"
+    },
+    {
+      "name": "Shan Masood",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244962/shan-masood.jpg"
+    },
+    {
+      "name": "Saim Ayub",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582345/saim-ayub.jpg"
+    },
+    {
+      "name": "Fakhar Zaman",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616447/fakhar-zaman.jpg"
+    },
+    {
+      "name": "Khushdil Shah",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616448/khushdil-shah.jpg"
+    },
+    {
+      "name": "Hasan Nawaz",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/hasan-nawaz.jpg"
+    },
+    {
+      "name": "Abdullah Shafique",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352418/abdullah-shafique.jpg"
+    },
+    {
+      "name": "Tayyab Tahir",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616438/tayyab-tahir.jpg"
+    },
+    {
+      "name": "Omair Yousuf",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/omair-yousuf.jpg"
+    },
+    {
+      "name": "Abdul Samad",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/abdul-samad.jpg"
+    }
+  ],
+  "All Rounders": [
+    {
+      "name": "Saud Shakeel",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616442/saud-shakeel.jpg"
+    },
+    {
+      "name": "Kamran Ghulam",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616444/kamran-ghulam.jpg"
+    },
+    {
+      "name": "Salman Agha",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616441/salman-agha.jpg"
+    },
+    {
+      "name": "Irfan Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582346/irfan-khan.jpg"
+    },
+    {
+      "name": "Hussain Talat",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/hussain-talat.jpg"
+    },
+    {
+      "name": "Noman Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/noman-ali.jpg"
+    },
+    {
+      "name": "Faheem Ashraf",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616443/faheem-ashraf.jpg"
+    },
+    {
+      "name": "Shadab Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352424/shadab-khan.jpg"
+    },
+    {
+      "name": "Jahandad Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jahandad-khan.jpg"
+    }
+  ],
+  "Wicket Keepers": [
+    {
+      "name": "Rohail Nazir",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c155978/rohail-nazir.jpg"
+    },
+    {
+      "name": "Mohammad Rizwan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616445/mohammad-rizwan.jpg"
+    },
+    {
+      "name": "Sahibzada Farhan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/sahibzada-farhan.jpg"
+    },
+    {
+      "name": "Mohammad Haris",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244950/mohammad-haris.jpg"
+    },
+    {
+      "name": "Usman Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616437/usman-khan.jpg"
+    }
+  ],
+  "Bowlers": [
+    {
+      "name": "Abrar Ahmed",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616450/abrar-ahmed.jpg"
+    },
+    {
+      "name": "Sajid Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/sajid-khan.jpg"
+    },
+    {
+      "name": "Mohammad Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/mohammad-ali.jpg"
+    },
+    {
+      "name": "Khurram Shahzad",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/khurram-shahzad.jpg"
+    },
+    {
+      "name": "Kashif Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/kashif-ali.jpg"
+    },
+    {
+      "name": "Haris Rauf",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616449/haris-rauf.jpg"
+    },
+    {
+      "name": "Naseem Shah",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616439/naseem-shah.jpg"
+    },
+    {
+      "name": "Hasan Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352428/hasan-ali.jpg"
+    },
+    {
+      "name": "Abbas Afridi",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582350/abbas-afridi.jpg"
+    },
+    {
+      "name": "Akif Javed",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/akif-javed.jpg"
+    },
+    {
+      "name": "Mohammad Wasim Jr",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352429/mohammad-wasim-jr.jpg"
+    },
+    {
+      "name": "Sufiyan Muqeem",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/sufiyan-muqeem.jpg"
+    },
+    {
+      "name": "Shaheen Afridi",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616446/shaheen-afridi.jpg"
+    },
+    {
+      "name": "Mohammad Hasnain",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616436/mohammad-hasnain.jpg"
+    }
+  ],
+  "All Players": [
+    {
+      "name": "Imam-ul-Haq",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c617489/imam-ul-haq.jpg"
+    },
+    {
+      "name": "Muhammad Hurraira",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/muhammad-hurraira.jpg"
+    },
+    {
+      "name": "Babar Azam",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616440/babar-azam.jpg"
+    },
+    {
+      "name": "Shan Masood",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244962/shan-masood.jpg"
+    },
+    {
+      "name": "Saim Ayub",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582345/saim-ayub.jpg"
+    },
+    {
+      "name": "Fakhar Zaman",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616447/fakhar-zaman.jpg"
+    },
+    {
+      "name": "Khushdil Shah",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616448/khushdil-shah.jpg"
+    },
+    {
+      "name": "Hasan Nawaz",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/hasan-nawaz.jpg"
+    },
+    {
+      "name": "Abdullah Shafique",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352418/abdullah-shafique.jpg"
+    },
+    {
+      "name": "Tayyab Tahir",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616438/tayyab-tahir.jpg"
+    },
+    {
+      "name": "Omair Yousuf",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/omair-yousuf.jpg"
+    },
+    {
+      "name": "Abdul Samad",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/abdul-samad.jpg"
+    },
+     {
+      "name": "Abrar Ahmed",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616450/abrar-ahmed.jpg"
+    },
+    {
+      "name": "Sajid Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/sajid-khan.jpg"
+    },
+    {
+      "name": "Mohammad Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/mohammad-ali.jpg"
+    },
+    {
+      "name": "Khurram Shahzad",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/khurram-shahzad.jpg"
+    },
+    {
+      "name": "Kashif Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/kashif-ali.jpg"
+    },
+    {
+      "name": "Haris Rauf",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616449/haris-rauf.jpg"
+    },
+    {
+      "name": "Naseem Shah",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616439/naseem-shah.jpg"
+    },
+    {
+      "name": "Hasan Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352428/hasan-ali.jpg"
+    },
+    {
+      "name": "Abbas Afridi",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582350/abbas-afridi.jpg"
+    },
+    {
+      "name": "Akif Javed",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/akif-javed.jpg"
+    },
+    {
+      "name": "Mohammad Wasim Jr",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352429/mohammad-wasim-jr.jpg"
+    },
+    {
+      "name": "Sufiyan Muqeem",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/sufiyan-muqeem.jpg"
+    },
+    {
+      "name": "Shaheen Afridi",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616446/shaheen-afridi.jpg"
+    },
+    {
+      "name": "Mohammad Hasnain",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616436/mohammad-hasnain.jpg"
+    },
+    {
+      "name": "Saud Shakeel",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616442/saud-shakeel.jpg"
+    },
+    {
+      "name": "Kamran Ghulam",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616444/kamran-ghulam.jpg"
+    },
+    {
+      "name": "Salman Agha",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616441/salman-agha.jpg"
+    },
+    {
+      "name": "Irfan Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582346/irfan-khan.jpg"
+    },
+    {
+      "name": "Hussain Talat",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/hussain-talat.jpg"
+    },
+    {
+      "name": "Noman Ali",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/noman-ali.jpg"
+    },
+    {
+      "name": "Faheem Ashraf",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616443/faheem-ashraf.jpg"
+    },
+    {
+      "name": "Shadab Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c352424/shadab-khan.jpg"
+    },
+    {
+      "name": "Jahandad Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jahandad-khan.jpg"
+    },
+    {
+      "name": "Rohail Nazir",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c155978/rohail-nazir.jpg"
+    },
+    {
+      "name": "Mohammad Rizwan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616445/mohammad-rizwan.jpg"
+    },
+    {
+      "name": "Sahibzada Farhan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/sahibzada-farhan.jpg"
+    },
+    {
+      "name": "Mohammad Haris",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244950/mohammad-haris.jpg"
+    },
+    {
+      "name": "Usman Khan",
+      "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616437/usman-khan.jpg"
+    }
+
+>>>>>>> 41c0f55 (Added all Team Players Images)
+  ]
+}
