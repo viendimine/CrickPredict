@@ -1,77 +1,5 @@
 {
   "Batsmen": [
-<<<<<<< HEAD
-    { "name": "Brandon King" },
-    { "name": "Kraigg Brathwaite" },
-    { "name": "Rovman Powell" },
-    { "name": "Evin Lewis" },
-    { "name": "Alick Athanaze" },
-    { "name": "Kavem Hodge" },
-    { "name": "Shimron Hetmyer" }
-  ],
-  "All Rounders": [
-    { "name": "Keacy Carty" },
-    { "name": "Sherfane Rutherford" },
-    { "name": "Gudakesh Motie" },
-    { "name": "Romario Shepherd" },
-    { "name": "Andre Russell" },
-    { "name": "Justin Greaves" },
-    { "name": "John Campbell" },
-    { "name": "Roston Chase" },
-    { "name": "Jason Holder" }
-  ],
-  "Wicket Keepers": [
-    { "name": "Shai Hope" },
-    { "name": "Johnson Charles" },
-    { "name": "Jewel Andrew" },
-    { "name": "Joshua Da Silva" },
-    { "name": "Andre Fletcher" },
-    { "name": "Amir Jangoo" }
-  ],
-  "Bowlers": [
-    { "name": "Alzarri Joseph" },
-    { "name": "Jayden Seales" },
-    { "name": "Terrance Hinds" },
-    { "name": "Shamar Springer" },
-    { "name": "Jediah Blades" },
-    { "name": "Shamar Joseph" },
-    { "name": "Akeal Hosein" },
-    { "name": "Obed McCoy" },
-    { "name": "Matthew Forde" }
-  ],
-  "All Players": [
-    { "name": "Brandon King" },
-    { "name": "Kraigg Brathwaite" },
-    { "name": "Rovman Powell" },
-    { "name": "Evin Lewis" },
-    { "name": "Alick Athanaze" },
-    { "name": "Kavem Hodge" },
-    { "name": "Shimron Hetmyer" },
-    { "name": "Keacy Carty" },
-    { "name": "Sherfane Rutherford" },
-    { "name": "Gudakesh Motie" },
-    { "name": "Romario Shepherd" },
-    { "name": "Andre Russell" },
-    { "name": "Justin Greaves" },
-    { "name": "John Campbell" },
-    { "name": "Roston Chase" },
-    { "name": "Jason Holder" },
-    { "name": "Shai Hope" },
-    { "name": "Johnson Charles" },
-    { "name": "Jewel Andrew" },
-    { "name": "Joshua Da Silva" },
-    { "name": "Andre Fletcher" },
-    { "name": "Amir Jangoo" },
-    { "name": "Alzarri Joseph" },
-    { "name": "Jayden Seales" },
-    { "name": "Terrance Hinds" },
-    { "name": "Shamar Springer" },
-    { "name": "Jediah Blades" },
-    { "name": "Shamar Joseph" },
-    { "name": "Akeal Hosein" },
-    { "name": "Obed McCoy" },
-    { "name": "Matthew Forde" }
-=======
     {
       "name": "Brandon King",
       "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c244662/brandon-king.jpg"
@@ -328,6 +256,5 @@
     "name": "Jediah Blades",
     "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/jediah-blades.jpg"
   }
->>>>>>> 41c0f55 (Added all Team Players Images)
   ]
 }

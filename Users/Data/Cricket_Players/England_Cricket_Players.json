@@ -1,77 +1,5 @@
 {
   "Batsmen": [
-<<<<<<< HEAD
-    { "name": "Ben Duckett" },
-    { "name": "Harry Brook" },
-    { "name": "Joe Root" },
-    { "name": "Zak Crawley" }
-  ],
-  "All Rounders": [
-    { "name": "Ben Stokes" },
-    { "name": "Will Jacks" },
-    { "name": "Chris Woakes" },
-    { "name": "Jacob Bethell" },
-    { "name": "Liam Livingstone" },
-    { "name": "Sam Curran" }
-  ],
-  "Wicket Keepers": [
-    { "name": "Ollie Pope" },
-    { "name": "Jos Buttler" },
-    { "name": "Philip Salt" },
-    { "name": "Jamie Smith" },
-    { "name": "Jonny Bairstow" }
-  ],
-  "Bowlers": [
-    { "name": "Sam James Cook" },
-    { "name": "Shoaib Bashir" },
-    { "name": "Jamie Overton" },
-    { "name": "Mark Wood" },
-    { "name": "Jofra Archer" },
-    { "name": "Matthew Potts" },
-    { "name": "Olly Stone" },
-    { "name": "Josh Hull" },
-    { "name": "Brydon Carse" },
-    { "name": "Josh Tongue" },
-    { "name": "Gus Atkinson" },
-    { "name": "Rehan Ahmed" },
-    { "name": "Jack Leach" },
-    { "name": "Adil Rashid" },
-    { "name": "Reece Topley" },
-    { "name": "John Turner" }
-  ],
-  "All Players": [
-    { "name": "Ben Duckett" },
-    { "name": "Harry Brook" },
-    { "name": "Joe Root" },
-    { "name": "Zak Crawley" },
-    { "name": "Ben Stokes" },
-    { "name": "Will Jacks" },
-    { "name": "Chris Woakes" },
-    { "name": "Jacob Bethell" },
-    { "name": "Liam Livingstone" },
-    { "name": "Sam Curran" },
-    { "name": "Ollie Pope" },
-    { "name": "Jos Buttler" },
-    { "name": "Philip Salt" },
-    { "name": "Jamie Smith" },
-    { "name": "Jonny Bairstow" },
-    { "name": "Sam James Cook" },
-    { "name": "Shoaib Bashir" },
-    { "name": "Jamie Overton" },
-    { "name": "Mark Wood" },
-    { "name": "Jofra Archer" },
-    { "name": "Matthew Potts" },
-    { "name": "Olly Stone" },
-    { "name": "Josh Hull" },
-    { "name": "Brydon Carse" },
-    { "name": "Josh Tongue" },
-    { "name": "Gus Atkinson" },
-    { "name": "Rehan Ahmed" },
-    { "name": "Jack Leach" },
-    { "name": "Adil Rashid" },
-    { "name": "Reece Topley" },
-    { "name": "John Turner" }
-=======
     { "name": "Ben Duckett", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c717790/ben-duckett.jpg" },
     { "name": "Joe Root", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c717792/joe-root.jpg" },
     { "name": "Harry Brook", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c717793/harry-brook.jpg" },
@@ -142,6 +70,5 @@
     { "name": "Reece Topley", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c627475/reece-topley.jpg" },
     { "name": "Josh Hull", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/josh-hull.jpg" },
     { "name": "John Turner", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c578419/john-turner.jpg" }
->>>>>>> 41c0f55 (Added all Team Players Images)
   ]
 }

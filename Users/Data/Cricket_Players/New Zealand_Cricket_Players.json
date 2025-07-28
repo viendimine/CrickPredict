@@ -1,65 +1,5 @@
 {
   "Batsmen": [
-<<<<<<< HEAD
-    { "name": "Kane Williamson" },
-    { "name": "Mark Chapman" },
-    { "name": "Will Young" },
-    { "name": "Finn Allen" },
-    { "name": "Henry Nicholls" }
-  ],
-  "All Rounders": [
-    { "name": "Muhammad Abbas" },
-    { "name": "Daryl Mitchell" },
-    { "name": "Rachin Ravindra" },
-    { "name": "Mitchell Santner" },
-    { "name": "Michael Bracewell" },
-    { "name": "Glenn Phillips" },
-    { "name": "Zakary Foulkes" },
-    { "name": "Nathan Smith" }
-  ],
-  "Wicket Keepers": [
-    { "name": "Devon Conway" },
-    { "name": "Tom Blundell" },
-    { "name": "Tom Latham" },
-    { "name": "Tim Seifert" },
-    { "name": "Mitchell Hey" }
-  ],
-  "Bowlers": [
-    { "name": "Lockie Ferguson" },
-    { "name": "Jacob Duffy" },
-    { "name": "Kyle Jamieson" },
-    { "name": "Ben Sears" },
-    { "name": "Adithya Ashok" },
-    { "name": "Matt Henry" },
-    { "name": "William O'Rourke" }
-  ],
-  "All Players": [
-    { "name": "Kane Williamson" },
-    { "name": "Mark Chapman" },
-    { "name": "Will Young" },
-    { "name": "Finn Allen" },
-    { "name": "Henry Nicholls" },
-    { "name": "Muhammad Abbas" },
-    { "name": "Daryl Mitchell" },
-    { "name": "Rachin Ravindra" },
-    { "name": "Mitchell Santner" },
-    { "name": "Michael Bracewell" },
-    { "name": "Glenn Phillips" },
-    { "name": "Zakary Foulkes" },
-    { "name": "Nathan Smith" },
-    { "name": "Devon Conway" },
-    { "name": "Tom Blundell" },
-    { "name": "Tom Latham" },
-    { "name": "Tim Seifert" },
-    { "name": "Mitchell Hey" },
-    { "name": "Lockie Ferguson" },
-    { "name": "Jacob Duffy" },
-    { "name": "Kyle Jamieson" },
-    { "name": "Ben Sears" },
-    { "name": "Adithya Ashok" },
-    { "name": "Matt Henry" },
-    { "name": "William O'Rourke" }
-=======
     {
       "name": "Kane Williamson",
       "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c616418/kane-williamson.jpg"
@@ -268,6 +208,5 @@
       "name": "Ben Sears",
       "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/ben-sears.jpg"
     }
->>>>>>> 41c0f55 (Added all Team Players Images)
   ]
 }

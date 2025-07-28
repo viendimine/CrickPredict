@@ -874,8 +874,6 @@ def team_details(request, team_name):
         if team["team"].lower() == team_name.lower():
             selected_team_data = team_info
 
-<<<<<<< HEAD
-=======
     # print(test_data)
 
     with open("Users/Data/Cricket_Players/India_Cricket_Players.json", "r") as f:
@@ -923,22 +921,16 @@ def team_details(request, team_name):
     print(All_players)
 
 
->>>>>>> 41c0f55 (Added all Team Players Images)
     return render(
         request,
         "Users/team_details.html",
         {
             'test_data': test_data,
-<<<<<<< HEAD
-            'team': selected_team_data,       
-            'team_name': team_name           
-=======
             'team': selected_team_data,
             'team_name': team_name,
             'All_players': All_players,
             'Batting': Batting,
             'Bowling': Bowling,
             'AllRounder': AllRounder
->>>>>>> 41c0f55 (Added all Team Players Images)
         }
     )

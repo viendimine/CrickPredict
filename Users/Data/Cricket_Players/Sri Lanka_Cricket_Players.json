@@ -1,81 +1,5 @@
 {
   "Batsmen": [
-<<<<<<< HEAD
-    { "name": "Pathum Nissanka" },
-    { "name": "Oshada Fernando" },
-    { "name": "Avishka Fernando" },
-    { "name": "Pavan Rathnayake" },
-    { "name": "Pasindu Sooriyabandara" },
-    { "name": "Nuwanidu Fernando" }
-  ],
-  "All Rounders": [
-    { "name": "Angelo Mathews" },
-    { "name": "Dhananjaya de Silva" },
-    { "name": "Janith Liyanage" },
-    { "name": "Tharindu Rathnayake" },
-    { "name": "Dunith Wellalage" },
-    { "name": "Kamindu Mendis" },
-    { "name": "Charith Asalanka" },
-    { "name": "Sonal Dinusha" },
-    { "name": "Milan Priyanath Rathnayake" },
-    { "name": "Wanindu Hasaranga" }
-  ],
-  "Wicket Keepers": [
-    { "name": "Dinesh Chandimal" },
-    { "name": "Lahiru Udara" },
-    { "name": "Sadeera Samarawickrama" },
-    { "name": "Kusal Mendis" },
-    { "name": "Nishan Madushka" }
-  ],
-  "Bowlers": [
-    { "name": "Asitha Fernando" },
-    { "name": "Kasun Rajitha" },
-    { "name": "Isitha Wijesundera" },
-    { "name": "Nishan Peiris" },
-    { "name": "Jeffrey Vandersay" },
-    { "name": "Eshan Malinga" },
-    { "name": "Prabath Jayasuriya" },
-    { "name": "Akila Dananjaya" },
-    { "name": "Lahiru Kumara" },
-    { "name": "Vishwa Fernando" },
-    { "name": "Mohamed Shiraz" },
-    { "name": "Maheesh Theekshana" }
-  ],
-  "All Players": [
-    { "name": "Pathum Nissanka" },
-    { "name": "Oshada Fernando" },
-    { "name": "Avishka Fernando" },
-    { "name": "Pavan Rathnayake" },
-    { "name": "Pasindu Sooriyabandara" },
-    { "name": "Nuwanidu Fernando" },
-    { "name": "Angelo Mathews" },
-    { "name": "Dhananjaya de Silva" },
-    { "name": "Janith Liyanage" },
-    { "name": "Tharindu Rathnayake" },
-    { "name": "Dunith Wellalage" },
-    { "name": "Kamindu Mendis" },
-    { "name": "Charith Asalanka" },
-    { "name": "Sonal Dinusha" },
-    { "name": "Milan Priyanath Rathnayake" },
-    { "name": "Wanindu Hasaranga" },
-    { "name": "Dinesh Chandimal" },
-    { "name": "Lahiru Udara" },
-    { "name": "Sadeera Samarawickrama" },
-    { "name": "Kusal Mendis" },
-    { "name": "Nishan Madushka" },
-    { "name": "Asitha Fernando" },
-    { "name": "Kasun Rajitha" },
-    { "name": "Isitha Wijesundera" },
-    { "name": "Nishan Peiris" },
-    { "name": "Jeffrey Vandersay" },
-    { "name": "Eshan Malinga" },
-    { "name": "Prabath Jayasuriya" },
-    { "name": "Akila Dananjaya" },
-    { "name": "Lahiru Kumara" },
-    { "name": "Vishwa Fernando" },
-    { "name": "Mohamed Shiraz" },
-    { "name": "Maheesh Theekshana" }
-=======
     { "name": "Pathum Nissanka", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c351889/pathum-nissanka.jpg" },
     { "name": "Pavan Rathnayake", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/pavan-rathnayake.jpg" },
     { "name": "Oshada Fernando", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c582354/oshada-fernando.jpg" },
@@ -150,6 +74,5 @@
   { "name": "Mohamed Shiraz", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/mohamed-shiraz.jpg" },
   { "name": "Eshan Malinga", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c174146/eshan-malinga.jpg" },
   { "name": "Maheesh Theekshana", "image": "https://static.cricbuzz.com/a/img/v1/75x75/i1/c594214/maheesh-theekshana.jpg" }
->>>>>>> 41c0f55 (Added all Team Players Images)
   ]
 }
