@@ -128,17 +128,39 @@
     }
 
     .team-banner {
-      display: flex;
-      gap: 440px;
-      height: 300px;
-      overflow: hidden;
-      background-color: #d2d7d6ff;
-      align-items: center;
-      padding: 30px 200px 0 200px;
-      position: absolute;
-      width: 1110px;
+  display: flex;
+  height: 300px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 0px;
+  background-color: #89a39fff;
+}
+
+.team-logo-box, .team-image-box {
+  width: 50%;
+  height: 100%;
+}
+
+.team-logo-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cad8d6ff; 
+}
+
+    .team-logo-box img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+      padding: 20px; /* optional: adds space around */
+      box-sizing: border-box;
     }
 
+    .team-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
     .team-banner img {
       height: 100%;
       object-fit: cover;
@@ -146,6 +168,7 @@
 
     .team-card {
       background-color: #f1ebebff;
+      object-align : center;
       color: black;
       border-radius: 15px;
       padding: 30px;
@@ -154,15 +177,21 @@
       width: 90%;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       text-align: left;
-      position: absolute;
-      bottom: -130px;
-      left: 50%;
+      position: relative;
+      bottom: 50px;
+      left: 650px;
       transform: translateX(-50%);
     }
 
     .tab-content {
       display: none;
       margin-top: 30px;
+    }
+
+    .player-card{
+      width:100px;
+      height:100px;
+      background-color: blue;
     }
   </style>
 </head>
@@ -191,9 +220,14 @@
 
   <div>
     {% if team.team == 'India' %}
-  <div class="team-banner">
-    <img src="{% static 'Team_Images/BCCI.jpg' %}" alt="Team India" style="width: 200px; object-fit: contain; margin-top: -30px;" />
-    <img src="{% static 'Team_Images/India.jpg' %}" alt="Team India" style="width: 65%; height:120%;" />
+       <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/BCCI.jpg' %}" alt="India Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/India.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>  
   </div>
 
   <center>
@@ -256,9 +290,14 @@
   </center>
 
 {% elif team.team == 'Australia' %}
-  <div class="team-banner">
-    <img src="{% static 'Team_Images/ACB.jpg' %}" style="width: 200px; object-fit: contain; margin-top: -30px;" />
-    <img src="{% static 'Team_Images/Australia.jpg' %}" alt="Team Australia" style="width: 65%; height:120%;" />
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ACB.jpg' %}" alt="Australia Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/Australia.jpg' %}" alt="Australia Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
   </div>
 
   <center>
@@ -321,9 +360,14 @@
   </center>
 
     {% elif team.team == 'England' %}
-      <div class="team-banner">
-    <img src="{% static 'Team_Images/ECB.jpg' %}" alt="Team England" style="width: 200px; object-fit: contain; margin-top: -30px;" />
-    <img src="{% static 'Team_Images/England.jpg' %}" alt="Team England" style="width: 65%; height:120%;" />
+     <div class="team-banner">
+    <div class="team-logo-box">
+      <img src="{% static 'Team_Images/ECB.jpg' %}" alt="England Logo" style="width: 200px; object-fit: contain; margin-top: -30px;" />
+    </div>
+    <div class="team-image-box">
+      <img src="{% static 'Team_Images/England.jpg' %}" alt="England Banner" style="width: 100%; height:100%;"/>
+    </div>
+  </div>
   </div>
 
   <center>
@@ -340,8 +384,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -351,8 +395,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -361,8 +405,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -371,8 +415,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -410,8 +454,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -421,8 +465,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -431,8 +475,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -441,8 +485,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -480,8 +524,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -491,8 +535,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -501,8 +545,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -511,8 +555,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -550,8 +594,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -561,8 +605,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -571,8 +615,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -581,8 +625,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -621,8 +665,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -632,8 +676,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -642,8 +686,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -652,8 +696,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -692,8 +736,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -703,8 +747,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -713,8 +757,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -723,8 +767,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -763,8 +807,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -774,8 +818,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -784,8 +828,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -794,8 +838,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -834,8 +878,8 @@
       <div id="AllPlayers" class="tab-content">
         <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in All_players%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -845,8 +889,8 @@
       </div>
       <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Batting%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -855,8 +899,8 @@
         </div></div>
       <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in Bowling%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -865,8 +909,8 @@
         </div> </div>
       <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
           {%for player in AllRounder%}
-           <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
+            <div style="width: 150px; height: 180px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
+                <img src="{% static player.image %}" alt="news image" style="width: 150px; height: 130px; border-radius: 100px;">
   <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
     {{ player.name }}
   </div>
@@ -942,10 +986,144 @@
       });
     }
 
+    function NewZealand(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function WestIndies(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function SouthAfrica(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function Pakistan(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+    function SriLanka(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+     function Bangladesh(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
+
+     function Afghanistan(tabId) {
+      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+
+      const activeSection = document.getElementById(tabId);
+      if (activeSection) activeSection.style.display = 'block';
+
+      document.querySelectorAll('.team-tab').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(tabId)) {
+          btn.classList.add('active');
+        }
+      });
+    }
+
     window.onload = function () {
       Australia('AllPlayers');
       India('AllPlayers');
       England('AllPlayers');
+      NewZealand('AllPlayers');
+      WestIndies('AllPlayers');
+      SouthAfrica('AllPlayers');
+      Pakistan('AllPlayers');
+      SriLanka('AllPlayers');
+      Bangladesh('AllPlayers');
+      Afghanistan('AllPlayers');
     };
   </script>
 </body>
