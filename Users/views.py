@@ -331,12 +331,82 @@ def IPL(request):
 
     print(matches)
 
+    with open("Users/Data/IPL/News.json", "r") as f:
+        data = json.load(f)
+
+    IPL_News = []
+    for news in data:
+        IPL_News.append(
+            {
+                "title" : news['title'],
+                "description" : news['description'],
+                "date" : news['date'],
+                "image" : news['image']
+            }
+        )
+
+    # print(IPL_News)
+
+    with open("Users/Data/IPL/Most_Runs.json", "r") as f:
+        data = json.load(f)
+
+    Most_Runs = []
+    for Runs in data[:10]:
+        Most_Runs.append(
+            {
+               "rank" : Runs["rank"],
+               "player" : Runs["player"],
+               "matches" : Runs["matches"],
+               "innings" : Runs["innings"],
+               "runs": Runs["runs"],
+               "average" : Runs["average"],
+               "SR" : Runs["strike_rate"],
+               "fours" : Runs["fours"],
+               "sixes": Runs["sixes"] 
+            }
+        )
+
+    with open("Users/Data/IPL/Most_Wickets.json", "r") as f:
+        data = json.load(f)
+
+    Most_Wickets = []
+    for wickets in data[:10]:
+        Most_Wickets.append(
+            {
+                "rank": wickets['rank'],
+                "player": wickets['player'],
+                "matches": wickets['matches'],
+                "overs": wickets['overs'],
+                "balls": wickets['balls'],
+                "wickets": wickets['wickets'],
+                "average": wickets['average'],
+                "runs": wickets['runs'],
+                "4fers": wickets['4fers'],
+                "5fers": wickets['5fers']
+            }
+        )
+
+    with open("Users/Data/IPL/Teams.json", "r") as f:
+        data = json.load(f)
+
+    Teams = []
+    for team in data['teams']:
+        Teams.append({
+        "short_name" : team.get('short_name'),
+        "full_name" : team.get('full_name'),
+        "image" : f"IPL/{team['short_name']}.jpg"
+        }
+     )
 
 
 
     return render(request , "Users/IPL.html",{
         "all_stats":all_stats ,
-        "matches" : matches
+        "matches" : matches,
+        "IPL_News" : IPL_News,
+        "Most_Runs" : Most_Runs,
+        "Most_Wickets" : Most_Wickets,
+        "Teams" : Teams
         }
     )
 

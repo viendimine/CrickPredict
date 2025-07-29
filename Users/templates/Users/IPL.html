@@ -296,9 +296,9 @@
 
     .slider-arrow {
   position: absolute;
-  top: 50%;
+  top: 30%;              /* ✅ Vertically center */
   transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #f1ebebff;
   border: none;
   font-size: 24px;
   padding: 10px;
@@ -314,6 +314,15 @@
 
 .right-arrow {
   right: 5px; 
+}
+.tablinks{
+    width: 200px;
+    height : 40px;
+    background-color: white;
+}
+.tab{
+  margin-top : 100px;
+  
 }
 
 </style>
@@ -352,19 +361,32 @@
     </div>
   </div>  
 
-   <center>
+  <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
         <button class="tab-button team-tab" onclick="IPL('Home')">Home</button>
         <button class="tab-button team-tab" onclick="IPL('Stats')">Stats</button>
-        <button class="tab-button team-tab" onclick="IPL('News')">News</button>
+        <button class="tab-button team-tab" onclick="IPL('Teams')">Teams</button>
         <button class="tab-button team-tab" onclick="IPL('Matches')">Matches</button>
         <button class="tab-button team-tab" onclick="IPL('Winners')">Winners</button>
       </div>
 
-  <div id="Stats" class="tab-content">
-    <h3>IPL</h3>
-    <table class="styled-table">
+      <div id="Home" class="tab-content"> <h2 style="padding: 15px;">IPL 2025 Top Stories</h2>
+  <div style="display:flex;flex-direction: row ;gap: 1px ;">
+    <div style="display: flex; flex-direction: column; gap: 15px; padding: 0 15px; margin-top: -10px ;width:700px">
+    {% for news in IPL_News %}
+  <div style="display: flex; background: #f3ededff; border-radius: 10px; overflow: hidden; max-width:650px; box-shadow: 0 4px 8px rgba(0,0,0,0.2)">
+    <img src={{ news.image }} alt="news image" style="width: 250px; height: 150px; object-fit: cover; border-right: 1px solid #eee;">
+    <div style="padding: 12px; display: flex; flex-direction: column; justify-content: center;width:350px;">
+      <h3 style="font-size: 17px; margin: 0 0 8px; font-weight: bold;">{{ news.title }}</h3>
+      <p style="font-size: 15px; color: #666; margin: 0 0 6px; width: 400px;">{{ news.description }}</p>
+      <p style="font-size: 12px; color: #777;">{{ news.date }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+  <table class="styled-table" style="height: 5px; width: 100px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-top: -10px;">
       <thead>
         <tr>
           <th>Rank</th>
@@ -399,11 +421,89 @@
         {% endfor %}
       </tbody>
     </table>
-  </div>
+  </div></div>
+      <div id="Stats" class="tab-content"><br>
+    <div style="display: flex; flex-direction: row;">
+    <table class="styled-table" style=" font-size: 13px; margin-left : -10px;" >
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Matches</th>
+          <th>Inns</th>
+          <th>Runs</th>
+          <th>Avg</th>
+          <th>Sr</th>
+          <th>4s</th>
+          <th>6s</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for player in Most_Runs %}
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center; width: 130px;">
+              {{player.rank}}&nbsp;&nbsp;{{ player.player }}
+            </div>
+          </td>
+          <td>{{ player.matches }}</td>
+          <td>{{ player.innings }}</td>
+          <td>{{ player.runs }}</td>
+          <td>{{ player.average }}</td>
+          <td>{{ player.SR }}</td>
+          <td>{{ player.fours }}</td>
+          <td>{{ player.sixes }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 
-
-    <div id="Matches" class="match-slider-wrapper tab-content" style=" width: 1000px;" >
-      <button class="slider-arrow left-arrow" onclick="scrollSlider('completed', -1)">&#10094;</button>
+    <br>
+    <br>
+    <table class="styled-table" style=" font-size: 13px; margin-left : -10px;" >
+      <thead>
+        <tr>
+          <th>Player</th>
+          <th>Matches</th>
+          <th>Overs</th>
+          <th>Balls</th>
+          <th>Wkts</th>
+          <th>Avg</th>
+          <th>4fers</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for player in Most_Wickets %}
+        <tr>
+          <td>
+            <div style="display: flex; align-items: center; width: 130px;">
+             {{player.rank}}&nbsp;&nbsp; {{ player.player }}
+            </div>
+          </td>
+          <td>{{ player.matches }}</td>
+          <td>{{ player.overs }}</td>
+          <td>{{ player.balls }}</td>
+          <td>{{ player.wickets }}</td>
+          <td>{{ player.average }}</td>
+          <td>{{ player.4fers }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div></div>
+      <div id="Teams" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap:10px; padding: 0 50px; margin-top: 40px;margin-left: -10px;">
+  {% for team in Teams %}
+    <div style="width: 270px;height:80px; background: rgba(249, 242, 242, 0.96); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: row;">
+      <img src={% static team.image %} alt="news image" style="width: 50px; height: 70px; margin-left:10px;margin-top: 0px;">
+      <div style="padding: 10px; margin-top: 0px;">
+        <h3>{{ team.full_name }}</h3>
+      </div>
+    </div>
+  {% endfor %}
+</div></div>
+      <div id="Matches" class="tab-content">
+        <button class="slider-arrow left-arrow" onclick="scrollSlider('completed', -1)">&#10094;</button>
+        <br>
+        <br>
       <div class="match-card-container" id="completedSlider">
     {% for match in matches %}
     <div class="match-card">
@@ -440,11 +540,10 @@
     </div>
     {% endfor %}
   </div>
-  <button class="slider-arrow right-arrow" onclick="scrollSlider('completed', 1)">&#10095;</button>
-</div>
-</div>
-</div>
-</center>
+  <button class="slider-arrow right-arrow" onclick="scrollSlider('completed', 1)">&#10095;</button></div>
+      <div id="Winners" class="tab-content">{% comment %} Winners Tab Content {% endcomment %}</div>
+    </div>
+  </center>
 
   <script>
     function scrollSlider(type, direction) {
@@ -457,7 +556,7 @@
   }
 
     function IPL(tabId) {
-      const sections = ['Home', 'Stats', 'News', 'Matches', 'Winners'];
+      const sections = ['Home', 'Stats', 'Teams', 'Matches', 'Winners'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
