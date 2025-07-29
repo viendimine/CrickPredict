@@ -357,7 +357,7 @@
 
     </div>
     <div class="team-image-box">
-      <img src="{% static 'Team_Images/RCB.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
+      <img src="{% static 'IPL/IPL.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
     </div>
   </div>  
 
@@ -407,7 +407,7 @@
           <td>
             <div style="display: flex; align-items: center;">
               <img src="{% static team.image %}" style="height:30px ; width:30px; margin-right: 5px;">
-              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
+              <a href="{% url 'IPLteam_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
           <td>{{ team.gp }}</td>
@@ -495,7 +495,7 @@
     <div style="width: 270px;height:80px; background: rgba(249, 242, 242, 0.96); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: row;">
       <img src={% static team.image %} alt="news image" style="width: 50px; height: 70px; margin-left:10px;margin-top: 0px;">
       <div style="padding: 10px; margin-top: 0px;">
-        <h3>{{ team.full_name }}</h3>
+        <a href="{% url 'IPLteam_details' team.short_name %}" style=" text-decoration: none; color: black;"><h3>{{ team.full_name }}</h3></a>
       </div>
     </div>
   {% endfor %}

@@ -329,7 +329,7 @@ def IPL(request):
         )
     matches.reverse()
 
-    print(matches)
+    # print(matches)
 
     with open("Users/Data/IPL/News.json", "r") as f:
         data = json.load(f)
@@ -1144,3 +1144,22 @@ from django.http import HttpResponse
 
 def player_details(request, player_name):
     return render(request , "Users/player_details.html")
+
+def IPLteam_details(request , team_name):
+    with open("Users/Data/IPL/Teams.json", "r") as f:
+        data = json.load(f)
+
+    selected_team = []
+    for team in data['teams']:
+        if team.get('short_name', '') == team_name:
+            selected_team = {
+                "short_name": team.get('short_name'),
+                "full_name": team.get('full_name'),
+                "image": f"IPL/{team['short_name']}.jpg"
+            }
+            break  # Stop after finding the matching team
+
+    
+    print(selected_team)
+
+    return render(request , "Users/IPLteam_details.html", {"selected__team" : selected_team} )
