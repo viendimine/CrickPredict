@@ -136,9 +136,14 @@
   background-color: #89a39fff;
 }
 
-.team-logo-box, .team-image-box {
-  width: 50%;
-  height: 100%;
+.team-logo-box {
+  width: 70%;
+  height : 100%;
+}
+
+.team-image-box{
+  width: 30%;
+  height : 150%;
 }
 
 .team-logo-box {
@@ -158,11 +163,11 @@
 
     .team-image-box img {
       width: 100%;
-      height: 100%;
+      height: 120%;
       object-fit: contain;
     }
     .team-banner img {
-      height: 100%;
+      height: 150%;
       object-fit: cover;
     }
 
@@ -261,46 +266,51 @@
     </ul>
   </div>
 
-    <div class="tab-content">
-    <h3>IPL</h3>
-    <table class="styled-table">
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Team</th>
-          <th>Matches</th>
-          <th>Win</th>
-          <th>Loss</th>
-          <th>Draw</th>
-          <th>Points</th>
-          <th>Net Run Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for team in all_stats %}
-        <tr>
-            {% if team.year == '2025' %}
-                <td>{{ team.rank }}</td>
-          <td>
-            <div style="display: flex; align-items: center;">
-              <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
-            </div>
-          </td>
-          <td>{{ team.gp }}</td>
-          <td>{{ team.w }}</td>
-          <td>{{ team.l }}</td>
-          <td>{{ team.nr }}</td>
-          <td>{{ team.pts }}</td>
-          <td>{{ team.nrr }}</td>
-        </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+  <div> 
+    <div class="team-banner">
+    <div class="team-logo-box" >
+
+    <div style="font-size: 16px; line-height: 1.6;">
+    <p><strong>Name:</strong> {{ player_name }}</p>
+    <p><strong>Country:</strong> {{ country }}</p>
+    <p><strong>Age:</strong> {{ age }}</p>
+    <p><strong>Batting Style:</strong> {{ batting_style }}</p>
+    <p><strong>Bowling Style:</strong> {{ bowling_style }}</p>
+  </div>
+
+  </div>
+
+
+    <div class="team-image-box" style="background-color: #f1ebebff;">
+      <img src="{% static image %}" alt="India Banner" style="width: 70%; height:80%; "/>
+    </div>
+  </div>  
   </div>
 </div>
-</div>
+
+<center>
+    <div class="team-card">
+      <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="India('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="India('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="India('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="India('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="India('News')">News</button>
+        <button class="tab-button team-tab" onclick="India('Matches')">Matches</button>
+      </div>
+
+      <div id="AllPlayers" class="tab-content"></div>
+      <div id="Batting" class="tab-content"></div>
+      <div id="Bowling" class="tab-content"></div>
+      <div id="AllRounder" class="tab-content"></div>
+      <div id="News" class="tab-content">News </div>
+      <div id="Matches" class="tab-content">Matches </div>
+    </div>
+  </center>
 
 
+
+  
   
   </body>
 </html>

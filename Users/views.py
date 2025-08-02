@@ -134,6 +134,7 @@ def Dashboard(request):
     live_response = requests.get(live_url, headers=headers)
     
     data = live_response.json()
+    print(data)
     live_matches = []
 
     for type_block in data.get("typeMatches", []):
@@ -246,7 +247,8 @@ def Dashboard(request):
             "news_id" :story.get("id")
             })
         
-    print(stories)
+    # print(stories)
+    # print(live_matches)
 
 
 # Then define context
@@ -303,7 +305,7 @@ def IPL(request):
                     "nr": team["nr"],
                     "pts": team["pts"],
                     "nrr": team["nrr"],
-                    "image": f"IPL/{team['team']}.jpg",
+                    "image": f"IPL/logo/{team['team']}.jpg",
                 })
     # print(all_stats)
 
@@ -323,8 +325,8 @@ def IPL(request):
                 "score1" : match['score_team1'],
                 "score2" : match['score_team2'],
                 "result" : match['result'],
-                "image1": f"IPL/{match['team1']}.jpg",
-                "image2": f"IPL/{match['team2']}.jpg"
+                "image1": f"IPL/logo/{match['team1']}.jpg",
+                "image2": f"IPL/logo/{match['team2']}.jpg"
             }
         )
     matches.reverse()
@@ -394,7 +396,7 @@ def IPL(request):
         Teams.append({
         "short_name" : team.get('short_name'),
         "full_name" : team.get('full_name'),
-        "image" : f"IPL/{team['short_name']}.jpg"
+        "image" : f"IPL/logo/{team['short_name']}.jpg"
         }
      )
 
@@ -1143,7 +1145,31 @@ def team_details(request, team_name):
 from django.http import HttpResponse
 
 def player_details(request, player_name):
-    return render(request , "Users/player_details.html")
+
+    with open("Users/Data/player.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    all_players = data.get("T20I_top15", []) + data.get("ODI_top10", []) + data.get("Test_top10", [])
+    player_data = None
+
+    for player in all_players:
+        if player["name"].lower() == player_name.lower():
+            player_data = player
+            break
+
+    if not player_data:
+        return render(request, "Users/player_not_found.html", {"player_name": player_name})
+
+    context = {
+        "player_name": player_data.get("name"),
+        "country": player_data.get("team"),
+        "age": player_data.get("age"),
+        "batting_style": player_data.get("batting_style"),
+        "bowling_style": player_data.get("bowling_style"),
+        "image": f"Players/{player_data.get('name')}.jpg"
+    }
+
+    return render(request, "Users/player_details.html", context)
 
 def IPLteam_details(request , team_name):
     with open("Users/Data/IPL/Teams.json", "r") as f:
@@ -1155,7 +1181,8 @@ def IPLteam_details(request , team_name):
             selected_team = {
                 "short_name": team.get('short_name'),
                 "full_name": team.get('full_name'),
-                "image": f"IPL/{team['short_name']}.jpg"
+                "image_logo": f"IPL/logo/{team['short_name']}.jpg",
+                "image_team" : f"IPL/Images/{team['short_name']}.jpg"
             }
             break  # Stop after finding the matching team
 

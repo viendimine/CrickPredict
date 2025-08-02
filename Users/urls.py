@@ -15,7 +15,7 @@ urlpatterns = [
     path('news/<int:news_id>/', views.news_detail, name='news_detail'),
     path('dashboard/<int:match_id>/' ,views.scorecard , name='scorecard'),
     path('<str:team_name>/', views.team_details, name='team_details'),
-    path('player/<slug:player_name>/', views.player_details, name='player_details'),
+    path(r'^player/(?P<player_name>[\w\s\'\-]+)/$', views.player_details, name='player_details'),
     path('IPL/<str:team_name>',views.IPLteam_details , name = 'IPLteam_details'),
     
 

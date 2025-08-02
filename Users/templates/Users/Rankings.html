@@ -426,7 +426,8 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">
+       <a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -454,7 +455,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-     <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
+     <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px"><a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
       </div></td>
       <td>{{ player.country }}</td>
       
@@ -482,7 +483,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
+      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px"><a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
       </div></td>
       <td>{{ player.country }}</td>
       
