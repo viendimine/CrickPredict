@@ -536,7 +536,7 @@
         <div>{{match.score2}}</div>
       </div>
       <div style="color: red; font-size: 12px; text-align: center">{{ match.result }}</div>
-      <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;">Scorecard</a>
+      <a href="{% url 'IPLScorecard' match.match_no %}" style="font-size: 12px; color: #007BFF; text-decoration: none;">Scorecard</a>
     </div>
     {% endfor %}
   </div>

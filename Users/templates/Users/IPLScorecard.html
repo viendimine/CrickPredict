@@ -191,45 +191,42 @@
   .tab-button:hover {
     background-color: #f0f0f0;
   }
-
-   .team-banner {
+.team-banner {
   display: flex;
   height: 300px;
   overflow: hidden;
   width: 100%;
   margin-top: 0px;
-  background-color: #89a39fff;
+  background-color: #b9cdcaff;
+}
+.team-logo-box {
+  width: 50%;
+  height : 100%;
 }
 
-.team-logo-box, .team-image-box {
+.team-image-box{
   width: 50%;
   height: 100%;
+  background-color: #b9cdcaff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .team-logo-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #cad8d6ff; 
+  background-color: #b9cdcaff; 
 }
 
-    .team-logo-box img {
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: contain;
-      padding: 20px; /* optional: adds space around */
-      box-sizing: border-box;
-    }
-
-    .team-image-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-    .team-banner img {
-      height: 100%;
-      object-fit: cover;
-    }
+    .team-logo-box img,
+.team-image-box img {
+  height: 60%;
+  width: auto;
+  max-width: 60%;
+  object-fit: contain;
+}
 
     .team-card {
       background-color: #f1ebebff;
@@ -252,6 +249,36 @@
       display: none;
       margin-top: 30px;
     }
+
+    .team-vs-box {
+        width: 800px;
+        top: 00px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: none;
+        color: #000;
+        align-self: center;
+        font-family: 'Segoe UI', sans-serif;
+}
+.vs-center-box-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 10px 0;
+}
+
+.team-logo-inline {
+  height: 150px;
+  width: 280px;
+  max-width: 120px;
+}
+
+.vs-text-inline {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
 
 
   </style>
@@ -276,115 +303,48 @@
       <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
       <li><a href="{% url 'IPL' %}" class="nav-link">IPL 2025</a></li>
       <li><a href="#" class="nav-link">Profile</a></li>
-      <li><a href="#" class="nav-link">Contests</a></li>
+      <li><a href="{% url 'contest_detail' %}" class="nav-link">Contests</a></li>
     </ul>
   </div>
-
+   
 <div>
- <div class="team-banner">
-    <div class="team-logo-box">
-      <img src="{% static selected__team.image_logo %}" alt="Team Logo" style="width: 200px; object-fit: contain; margin-top: -30px;"/>
-      <div style="font-weight: bold; font-size: 20px; color: purple;">{{selected__team.full_name}}</div>
-
-    </div>
-    <div class="team-image-box">
-      <img src="{% static selected__team.image_team %}" alt="Team Banner" style="width: 100%; height:100%;"/>
-    </div>
-  </div>  
+    <div class="team-banner">
+  <div class="team-logo-box">
+    <img src="{{ scorecard.captain1 }}" alt="{{ scorecard.captain1 }}"style="height:300px; width: 350px; margin-left:-100px">
   </div>
 
-<center>
+  <div class="vs-center-box-horizontal">
+    <img src="{{ scorecard.image1 }}" alt="{{ scorecard.team1 }}" class="team-logo-inline">
+  <div class="vs-text-inline">vs</div>
+    <img src="{{ scorecard.image2 }}" alt="{{ scorecard.team2 }}" class="team-logo-inline">
+  </div>
+  <div class="team-image-box">
+    <img src="{{ scorecard.captain2 }}" alt="{{ scorecard.captain2 }}"style="height:300px; width: 350px; margin-right:-100px">
+  </div>
+</div>
+  </div>
+
+  <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
-        <button class="tab-button team-tab" onclick="showTab('AllPlayers')">Allplayers</button>
-        <button class="tab-button team-tab" onclick="showTab('Batting')">Batting</button>
-        <button class="tab-button team-tab" onclick="showTab('Bowling')">Bowling</button>
-        <button class="tab-button team-tab" onclick="showTab('AllRounder')">All Rounder</button>
-        <button class="tab-button team-tab" onclick="showTab('News')">News</button>
-        <button class="tab-button team-tab" onclick="showTab('Matches')">Matches</button>
+        <button class="tab-button team-tab" onclick="India('AllPlayers')">Allplayers</button>
+        <button class="tab-button team-tab" onclick="India('Batting')">Batting</button>
+        <button class="tab-button team-tab" onclick="India('Bowling')">Bowling</button>
+        <button class="tab-button team-tab" onclick="India('AllRounder')">All Rounder</button>
+        <button class="tab-button team-tab" onclick="India('News')">News</button>
+        <button class="tab-button team-tab" onclick="India('Matches')">Matches</button>
       </div>
 
-      <div id="AllPlayers" class="tab-content">
-        <div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
-          {%for player in AllPlayers%}
-            <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-                  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-                     <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
-  {{ player.name }}
-</a>
-  </div>
-    </div>
-          {%endfor%}
-        </div>
-      </div>
-      <div id="Batting" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
-          {%for player in Batsmen%}
-            <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
-  {{ player.name }}
-</a>
-  </div>
-    </div>
-          {%endfor%}
-        </div></div>
-      <div id="Bowling" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
-          {%for player in Bowlers%}
-            <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-  <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-    <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
-  {{ player.name }}
-</a>
-  </div>
-    </div>
-          {%endfor%}
-        </div> </div>
-      <div id="AllRounder" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap: 20px; padding: 25px 5px;">
-          {%for player in AllRounders%}
-            <div style="width: 100px; height: 150px; background: #f1ebebff; overflow: hidden; box-shadow: none;">
-                <img src={{player.image}} alt="news image" style="width: 100px; height: 100px; border-radius: 100px;">
-                    <div style="padding: 0px 0; background: #f1ebebff; color: black; width: 100%; text-align: center; height:30px;">
-                      <a href="{% url 'player_details' player.name|slugify %}" style="text-decoration: none; color: black;">
-  {{ player.name }}
-</a>
-  </div>
-    </div>
-          {%endfor%}
-        </div>
-       </div>
+      <div id="AllPlayers" class="tab-content"></div>
+      <div id="Batting" class="tab-content"></div>
+      <div id="Bowling" class="tab-content"></div>
+      <div id="AllRounder" class="tab-content"></div>
       <div id="News" class="tab-content">News </div>
       <div id="Matches" class="tab-content">Matches </div>
     </div>
   </center>
-</div>
 
-<script>
-
-  function showTab(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
-      sections.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = 'none';
-      });
-
-      const activeSection = document.getElementById(tabId);
-      if (activeSection) activeSection.style.display = 'block';
-
-      document.querySelectorAll('.team-tab').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('onclick').includes(tabId)) {
-          btn.classList.add('active');
-        }
-      });
-    }
-
-    window.onload = function () {
-      showTab('AllPlayers');
-    };
-</script>
+   
 
 
   </body>

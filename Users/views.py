@@ -1175,6 +1175,7 @@ def IPLteam_details(request , team_name):
     with open("Users/Data/IPL/Teams.json", "r") as f:
         data = json.load(f)
 
+    # print(data)
     selected_team = []
     for team in data['teams']:
         if team.get('short_name', '') == team_name:
@@ -1187,6 +1188,52 @@ def IPLteam_details(request , team_name):
             break  # Stop after finding the matching team
 
     
-    print(selected_team)
+    with open("Users/Data/IPL/players.json", "r") as f:
+        players_data = json.load(f)
 
-    return render(request , "Users/IPLteam_details.html", {"selected__team" : selected_team} )
+    # Get the player info for the team
+    team_data = players_data.get(selected_team.get("full_name"))
+    print(team_data)
+
+    if not team_data:
+        return render(request, "Users/team_not_found.html", {"team_name": team_name})
+    
+    print("🎯 Bowlers:", team_data.get("Bowlers", []))
+
+    return render(request, "Users/IPLteam_details.html", {
+        "team_name": selected_team.get("full_name"),
+        "selected__team": selected_team,
+        "Batsmen": team_data.get("Batsmen", []),
+        "AllRounders": team_data.get("All Rounders", []),
+        "Wicket Keepers": team_data.get("Wicket Keepers", []),
+        "Bowlers": team_data.get("Bowlers", []),
+        "AllPlayers": team_data.get("All Players", [])
+    })
+    # print(Bowlers)
+
+def IPL_Scorecard(request , match_no):
+
+    from django.templatetags.static import static
+
+    with open("Users/Data/IPL/2024.json", "r") as f:
+        data = json.load(f)
+
+    # print(data)
+
+    scorecard = []
+    for match in data['matches']:
+        if match.get('match_no','') == int(match_no):
+            scorecard = {
+                "team1" : match.get('team1'),
+                "team2" : match.get('team2'),
+                "image1": static(f"IPL/logo/{match['team1']}.jpg"),
+                "image2": static(f"IPL/logo/{match['team2']}.jpg"),
+                "captain1": static(f"IPL/Captains/{match['captain1']}.jpg"),
+                "captain2": static(f"IPL/Captains/{match['captain2']}.jpg"),
+            }
+            break
+
+
+    print(scorecard)
+    return render(request , "Users/IPLScorecard.html", {"scorecard" : scorecard} )
+

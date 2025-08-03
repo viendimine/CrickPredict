@@ -17,11 +17,12 @@ urlpatterns = [
     path('<str:team_name>/', views.team_details, name='team_details'),
     path(r'^player/(?P<player_name>[\w\s\'\-]+)/$', views.player_details, name='player_details'),
     path('IPL/<str:team_name>',views.IPLteam_details , name = 'IPLteam_details'),
+    path(r'^IPL/(?P<match_no>[\w\s\'\-]+)/$', views.IPL_Scorecard , name='IPLScorecard'),
     
 
     # Dashboard routes
     path('admin-dashboard/', views.admin_dashboard, name='admin_dashboard'),
     path('user-dashboard/', views.user_dashboard, name='user_dashboard'),
-    path('contest/<int:contest_id>/', views.contest_detail, name='contest_detail'),
+    path('contest/', views.contest_detail, name='contest_detail'),
     path('profile/',views.profile_view , name='profile'),
 ]

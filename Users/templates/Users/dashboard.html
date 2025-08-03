@@ -213,7 +213,7 @@
       <li><a href="{% url 'Rankings' %}" class="nav-link">Rankings</a></li>
       <li><a href="{% url 'IPL' %}" class="nav-link">IPL 2025</a></li>
       <li><a href="#" class="nav-link">Profile</a></li>
-      <li><a href="#" class="nav-link">Contests</a></li>
+      <li><a href="{% url 'contest_detail' %}" class="nav-link">Contests</a></li>
     </ul>
   </div>
 
@@ -243,7 +243,7 @@
       </div>
       <div class="team-score">
         <div><img src="https://static.cricbuzz.com/a/img/v1/i1/c{{match.team2_img}}/i.jpg?p=thumb">{{ match.team2 }}</div>
-        <div>{% if match.score2 and match.score2.inngs1.runs|length > 0 %}{{ match.score2.inngs1.runs }}/{{ match.score2.inngs1.wickets }} ({{ match.score2.inngs1.overs }}){% else %}Yet to Bat{% endif %}</div>
+        <div>{% if match.score2 and match.score2|length > 0 %}{{ match.score2.inngs1.runs }}/{{ match.score2.inngs1.wickets }} ({{ match.score2.inngs1.overs }}){% else %}Yet to Bat{% endif %}</div>
       </div>
       <div style="color: red; font-size: 12px; text-align: center">{{ match.status }}</div>
       <a href="#" style="font-size: 12px; color: #007BFF; text-decoration: none;">Schedule</a>
