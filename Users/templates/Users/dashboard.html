@@ -219,9 +219,9 @@
 
   <!-- Tabs for Match Categories -->
 <div style="margin: 0px 30px;">
-  <button class="tab-button" onclick="showTab('completed')">Completed</button>
-  <button class="tab-button" onclick="showTab('upcoming')">Upcoming</button>
-  <button class="tab-button" onclick="showTab('live')">Live</button>
+  <button class="tab-button team-tab" onclick="showTab('completed')">Completed</button>
+  <button class="tab-button team-tab" onclick="showTab('upcoming')">Upcoming</button>
+  <button class="tab-button team-tab" onclick="showTab('live')">Live</button>
 </div>
 
 <!-- Completed Matches Section -->
@@ -376,6 +376,13 @@
       tab.style.display = 'none';
     });
     document.getElementById(tabId).style.display = 'block';
+    document.querySelectorAll('.team-tab').forEach(btn => {
+    btn.classList.remove('active');
+    if (btn.getAttribute('onclick').includes(tabId)) {
+      btn.classList.add('active');
+    }
+  });
+    
   }
 
   // 🚀 Add this to trigger the default tab on load

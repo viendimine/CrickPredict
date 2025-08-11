@@ -64,7 +64,7 @@ def Dashboard(request):
                 upcoming_matches.append(match)
 
         
-    all_leagues_url = f"https://apiv2.api-cricket.com/cricket/?method=get_leagues&APIkey=1496ef731183450b869852b88ae5f64cf062e50caec83fd551ade6774dc43df3"
+    all_leagues_url = f"https://apiv2.api-cricket.com/cricket/?method=get_leagues&APIkey=7a23ad6768d7963807b91bc421c8fce45d15fcf95b279bc67aeba5bbe2b40978 "
     all_leagues_response = requests.get(all_leagues_url)
     all_leagues_data = all_leagues_response.json()
 
@@ -87,17 +87,13 @@ def Dashboard(request):
 #     }
 
     url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
-    payload = {}
 
     headers = {
-	"x-rapidapi-key": "356fbb3facmsha25df2559e89a0dp14d3bbjsn03b52f07dc6b",
+	"x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
-    }
+}
 
     response = requests.get(url, headers=headers)
-
-
-    response = requests.request("GET", url, headers=headers, data=payload)
     previous_matches_data = response.json()
 
     previous_matches = []
@@ -218,34 +214,36 @@ def Dashboard(request):
     # 'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
     # }
 
-    url = "https://Cricbuzz-Official-Cricket-API.proxy-production.allthingsdev.co/news"
+    url = "https://cricbuzz-cricket.p.rapidapi.com/news/v1/index"
 
-    payload = {}
     headers = {
-        'x-apihub-key': 'oeP1UQOfy7TfWS-r4Hbe5BaIG9CeMlIulJ4c9vtrMkN0SmfU3L',
-        'x-apihub-host': 'Cricbuzz-Official-Cricket-API.allthingsdev.co',
-        'x-apihub-endpoint': 'b02fb028-fcca-4590-bf04-d0cd0c331af4'
+	"x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
-    response = requests.request("GET", url, headers=headers, data=payload)
-
+    response = requests.get(url, headers=headers)
 
     # print(response.text)
     data = response.json()
+    # print(data)
     stories = []
     for item in data.get("storyList", []):
-        story = item.get("story", {})
-        stories.append({
+        if "story" in item:  # Skip ads or other non-story entries
+            story = item["story"]
+            pub_time = story.get("pubTime", 0)
+            stories.append({
             "headline": story.get("hline"),
             "intro": story.get("intro"),
             "context": story.get("context"),
-            "published": story.get("pubTime"),
+            "published": datetime.fromtimestamp(int(pub_time) / 1000).strftime("%Y-%m-%d %H:%M:%S"),
             "image_id": story.get("imageId"),
             "caption": story.get("coverImage", {}).get("caption"),
             "seoHeadline": story.get("seoHeadline"),
             "source": story.get("source"),
-            "news_id" :story.get("id")
-            })
+            "news_id": story.get("id")
+        })
+
+    # print(stories)
         
     # print(stories)
     # print(live_matches)
@@ -954,7 +952,7 @@ def news_detail(request, news_id):
 
     response = requests.get(url, headers=headers)
     data = response.json()
-    print(data)
+    # print(data)
 
     selected_news = None
 
@@ -1193,7 +1191,7 @@ def IPLteam_details(request , team_name):
 
     # Get the player info for the team
     team_data = players_data.get(selected_team.get("full_name"))
-    print(team_data)
+    # print(team_data)
 
     if not team_data:
         return render(request, "Users/team_not_found.html", {"team_name": team_name})
