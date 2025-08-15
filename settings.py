@@ -7,14 +7,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8'
 
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+]
+
+render_host = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if render_host:
+    ALLOWED_HOSTS.append(render_host)
+
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = [
-    'crick-predict.onrender.com',
-    'localhost',
-    '127.0.0.1'
-]
 
 # Application definition
 INSTALLED_APPS = [
