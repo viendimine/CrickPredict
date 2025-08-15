@@ -1,0 +1,17 @@
+[
+  { "name": "India", "CB": "BCCI" },
+  { "name": "Australia", "CB": "ACB" },
+  { "name": "England", "CB": "ECB" },
+  { "name": "Pakistan", "CB": "PCB" },
+  { "name": "South Africa", "CB": "CSA" },
+  { "name": "New Zealand", "CB": "NZC" },
+  { "name": "Sri Lanka", "CB": "SLC" },
+  { "name": "Bangladesh", "CB": "BCB" },
+  { "name": "West Indies", "CB": "CWI" },
+  { "name": "Afghanistan", "CB": "AFCB" },
+  { "name": "Ireland", "CB": "CI" },
+  { "name": "Zimbabwe", "CB": "ZC" },
+  { "name": "Netherlands", "CB": "KNCB" },
+  { "name": "Scotland", "CB": "CSA" },
+  { "name": "Nepal", "CB": "CAN" }
+]

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ news.headline }}</title>
+</head>
+<body>
+  {% if news %}
+    <h1>{{ news.headline }}</h1>
+    <p><em>{{ news.context }}</em></p>
+    <img src="https://static.cricbuzz.com/a/img/v1/i1/c{{news.image_id}}/i.jpg?p=thumb" alt="News Image">
+    <p>{{ news.intro }}</p>
+    <p>{{ news.seoHeadline }}</p>
+    <p><strong>Published:</strong> {{ news.published }}</p>
+    <p><strong>Source:</strong> {{ news.source }}</p>
+  {% else %}
+    <h2>{{ error }}</h2>
+  {% endif %}
+</body>
+</html>
