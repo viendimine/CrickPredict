@@ -1236,7 +1236,7 @@ def IPLteam_details(request , team_name):
             break  # Stop after finding the matching team
 
     
-    with open("Users/Data/IPL/players.json", "r") as f:
+    with open("Users/Data/IPL/Players.json", "r") as f:
         players_data = json.load(f)
 
     # Get the player info for the team
