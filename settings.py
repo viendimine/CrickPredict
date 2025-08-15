@@ -7,17 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
-# Add Render's domain automatically if available
-render_host = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
-if render_host:
-    ALLOWED_HOSTS.append(render_host)
-
-# Also allow from environment override
-extra_hosts = os.environ.get('DJANGO_ALLOWED_HOSTS')
-if extra_hosts:
-    ALLOWED_HOSTS.extend(extra_hosts.split(','))
+ALLOWED_HOSTS = ['*']
 
 
 
