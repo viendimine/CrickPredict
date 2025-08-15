@@ -1,6 +1,7 @@
-from django.urls import path
+from django.urls import path , re_path
 from . import views
 from .views import register_view, login_view, logout_view, profile_view
+
 
 urlpatterns = [
     path('', views.Homepage, name='Homepage'),
@@ -15,9 +16,9 @@ urlpatterns = [
     path('news/<int:news_id>/', views.news_detail, name='news_detail'),
     path('dashboard/<int:match_id>/' ,views.scorecard , name='scorecard'),
     path('<str:team_name>/', views.team_details, name='team_details'),
-    path(r'^player/(?P<player_name>[\w\s\'\-]+)/$', views.player_details, name='player_details'),
+    re_path(r'^player/(?P<player_name>[\w\s\'\-]+)/$', views.player_details, name='player_details'),
+    re_path(r'^IPL/(?P<match_no>[\w\s\'\-]+)/$', views.IPL_Scorecard, name='IPLScorecard'),
     path('IPL/<str:team_name>',views.IPLteam_details , name = 'IPLteam_details'),
-    path(r'^IPL/(?P<match_no>[\w\s\'\-]+)/$', views.IPL_Scorecard , name='IPLScorecard'),
     
 
     # Dashboard routes
