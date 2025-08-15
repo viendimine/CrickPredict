@@ -71,6 +71,6 @@ python manage.py runserver
 
 ---
 
-## 📸 Screenshots
-- **Live Matches View**  
-- **Scorecard View**
+## 📸 Features
+- **Live Matches View**
+<img width="1919" height="929" alt="CrickPredict" src="https://github.com/user-attachments/assets/b965086a-53f0-49f5-85cb-030eb7987e57" />
