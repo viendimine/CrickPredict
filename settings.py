@@ -34,7 +34,6 @@ SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -173,7 +172,7 @@ REST_FRAMEWORK = {
 }
 
 ALLOWED_HOSTS = [
-    'crick-predict.onrender.com',  # your Render domain
+    'crick-predict.onrender.com',  # exactly as your Render URL
     'localhost',
     '127.0.0.1'
 ]
