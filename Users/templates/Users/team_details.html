@@ -235,6 +235,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="India('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="India('Results')">Results</button>
         <button class="tab-button team-tab" onclick="India('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="India('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="India('Bowling')">Bowling</button>
@@ -314,6 +316,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Australia('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="Australia('Results')">Results</button>
         <button class="tab-button team-tab" onclick="Australia('AllPlayers')">All players</button>
         <button class="tab-button team-tab" onclick="Australia('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="Australia('Bowling')">Bowling</button>
@@ -392,6 +396,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="England('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="England('Results')">Results</button>
         <button class="tab-button team-tab" onclick="England('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="England('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="England('Bowling')">Bowling</button>
@@ -470,6 +476,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="NewZealand('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="NewZealand('Results')">Results</button>
         <button class="tab-button team-tab" onclick="NewZealand('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="NewZealand('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="NewZealand('Bowling')">Bowling</button>
@@ -548,6 +556,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="WestIndies('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="WestIndies('Results')">Results</button>
         <button class="tab-button team-tab" onclick="WestIndies('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="WestIndies('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="WestIndies('Bowling')">Bowling</button>
@@ -627,6 +637,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="SouthAfrica('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="SouthAfrica('Results')">Results</button>
         <button class="tab-button team-tab" onclick="SouthAfrica('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="SouthAfrica('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="SouthAfrica('Bowling')">Bowling</button>
@@ -707,6 +719,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Pakistan('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="Pakistan('Results')">Results</button>
         <button class="tab-button team-tab" onclick="Pakistan('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="Pakistan('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="Pakistan('Bowling')">Bowling</button>
@@ -787,6 +801,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="SriLanka('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="SriLanka('Results')">Results</button>
         <button class="tab-button team-tab" onclick="SriLanka('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="SriLanka('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="SriLanka('Bowling')">Bowling</button>
@@ -867,6 +883,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Bangladesh('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="Bangladesh('Results')">Results</button>
         <button class="tab-button team-tab" onclick="Bangladesh('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="Bangladesh('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="Bangladesh('Bowling')">Bowling</button>
@@ -946,6 +964,8 @@
   <center>
     <div class="team-card">
       <div style="margin: -20px 10px; margin-left: 10px;">
+        <button class="tab-button team-tab" onclick="Afghanistan('Home')">Home</button>
+        <button class="tab-button team-tab" onclick="Afghanistan('Results')">Results</button>
         <button class="tab-button team-tab" onclick="Afghanistan('AllPlayers')">Allplayers</button>
         <button class="tab-button team-tab" onclick="Afghanistan('Batting')">Batting</button>
         <button class="tab-button team-tab" onclick="Afghanistan('Bowling')">Bowling</button>
@@ -1017,7 +1037,7 @@
 
   <script>
     function Australia(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1034,7 +1054,7 @@
       });
     }
     function India(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1052,7 +1072,7 @@
     }
 
     function England(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1070,7 +1090,7 @@
     }
 
     function NewZealand(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1088,7 +1108,7 @@
     }
 
     function WestIndies(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1106,7 +1126,7 @@
     }
 
     function SouthAfrica(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1124,7 +1144,7 @@
     }
 
     function Pakistan(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1142,7 +1162,7 @@
     }
 
     function SriLanka(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1160,7 +1180,7 @@
     }
 
      function Bangladesh(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1179,7 +1199,7 @@
 
 
      function Afghanistan(tabId) {
-      const sections = ['AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
+      const sections = ['Home','Results','AllPlayers', 'Batting', 'Bowling', 'AllRounder', 'News', 'Matches'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';
@@ -1197,16 +1217,16 @@
     }
 
     window.onload = function () {
-      Australia('AllPlayers');
-      India('AllPlayers');
-      England('AllPlayers');
-      NewZealand('AllPlayers');
-      WestIndies('AllPlayers');
-      SouthAfrica('AllPlayers');
-      Pakistan('AllPlayers');
-      SriLanka('AllPlayers');
-      Bangladesh('AllPlayers');
-      Afghanistan('AllPlayers');
+      Australia('Home');
+      India('Home');
+      England('Home');
+      NewZealand('Home');
+      WestIndies('Home');
+      SouthAfrica('Home');
+      Pakistan('Home');
+      SriLanka('Home');
+      Bangladesh('Home');
+      Afghanistan('Home');
     };
   </script>
 </body>

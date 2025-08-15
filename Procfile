@@ -1,1 +1,0 @@
-web: gunicorn Cricket_prediction.wsgi:application --chdir=.

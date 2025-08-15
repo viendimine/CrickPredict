@@ -203,8 +203,8 @@
         <a href="#" class="nav-link">Series ▾</a>
         <div class="dropdown">
           <ul>
-            {% for league in all_leagues %}
-                <li><a href="#">{{ league.league_name }} , 2025</a></li>
+            {% for league in unique_leagues %}
+                <li><a href="#">{{ league.seriesName}}</a></li>
             {% endfor %}
           </ul>
         </div>
