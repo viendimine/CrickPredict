@@ -661,6 +661,73 @@ def Rankings(request):
     # data = response.json()
 
     # response = requests.get(url, headers=headers)
+    all_leagues_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
+
+    headers = {
+	    "x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
+	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
+    }
+
+    all_leagues_response = requests.get(all_leagues_url, headers=headers)
+    all_leagues_data = all_leagues_response.json()
+
+
+    all_leagues = []
+    for leagues in all_leagues_data.get('typeMatches', []):
+        match_type = leagues.get("matchType", "")
+
+        for series in leagues.get("seriesMatches", []):
+            if "seriesAdWrapper" not in series:
+                continue
+
+            series_data = series["seriesAdWrapper"]
+            series_name = series_data.get("seriesName", "")
+            series_id = series_data.get("seriesId", "")
+
+            for match in series_data.get("matches", []):
+                match_info = match.get("matchInfo", {})
+                match_score = match.get("matchScore", {})
+
+                team1 = match_info.get("team1", {})
+                team2 = match_info.get("team2", {})
+                venue = match_info.get("venueInfo", {})
+
+                all_leagues.append({
+                    "matchType": match_type,
+                    "seriesName": series_name,
+                    "seriesId": series_id,
+                    "matchDesc": match_info.get("matchDesc"),
+                    "matchFormat": match_info.get("matchFormat"),
+                    "status": match_info.get("status"),
+                    "stateTitle": match_info.get("stateTitle"),
+                    "team1": {
+                        "name": team1.get("teamName"),
+                        "short": team1.get("teamSName"),
+                        "image": f"https://www.cricbuzz.com/a/img/v1/i1/c{team1.get('imageId')}/i.jpg"
+                    },
+                    "team2": {
+                        "name": team2.get("teamName"),
+                        "short": team2.get("teamSName"),
+                        "image": f"https://www.cricbuzz.com/a/img/v1/i1/c{team2.get('imageId')}/i.jpg"
+                    },
+                    "venue": f"{venue.get('ground')}, {venue.get('city')}",
+                    "score_team1": match_score.get("team1Score", {}),
+                    "score_team2": match_score.get("team2Score", {})
+                })
+
+
+    unique_leagues = []
+    seen_series = set()
+
+    for match in all_leagues:
+        if match["seriesName"] not in seen_series:
+            seen_series.add(match["seriesName"])
+            unique_leagues.append(match)
+
+
+
+
+
 
     ### Test Rankings
     with open("Users/Data/test.json", "r") as f:
@@ -956,7 +1023,9 @@ def Rankings(request):
         "T20Is_bowlers" : T20Is_bowlers,
         "Test_bowlers" : Test_bowlers,
         "ODI_Women_bowlers" : ODI_Women_bowlers,
-        "T20Is_Women_bowlers" : T20Is_Women_bowlers
+        "T20Is_Women_bowlers" : T20Is_Women_bowlers,
+        "all_leagues" : all_leagues,
+        "unique_leagues" : unique_leagues,
         })
 
 
