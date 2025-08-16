@@ -66,7 +66,7 @@ def Dashboard(request):
     all_leagues_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
 
     headers = {
-	    "x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	    "x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
 	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
     }
 
@@ -138,7 +138,7 @@ def Dashboard(request):
     url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
 
     headers = {
-	"x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	"x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
@@ -172,7 +172,7 @@ def Dashboard(request):
     live_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live"
 
     headers = {
-	    "x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	    "x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
 	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
     }
 
@@ -266,7 +266,7 @@ def Dashboard(request):
     url = "https://cricbuzz-cricket.p.rapidapi.com/news/v1/index"
 
     headers = {
-	"x-rapidapi-key": "af63ff1472mshb469cc6f907f78dp19cb37jsnf28e7ad315ed",
+	"x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
