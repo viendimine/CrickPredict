@@ -175,7 +175,7 @@
     }
 
     .tab-content {
-      display: block; /* desktop default */
+      display: block; 
       flex: 1;
       min-width: 300px;
       max-width: 450px;
@@ -220,7 +220,7 @@
 
     @media only screen and (max-width: 600px){
       .logo{
-        display: none;
+        display: block;
       }
       .menu-bar {
         display: none;
@@ -234,6 +234,7 @@
         display: block; 
         font-size: 28px;
         cursor: pointer;
+        width: 50px;
         margin-left: 10px;
       }
 
@@ -359,7 +360,7 @@
 <body>
 
 <div class="header">
-  <div class="menu-icon" onclick="toggleSidebar()">☰ CrickPredict</div>
+  <div class="menu-icon" onclick="toggleSidebar()">☰ </div>
   <div class="logo">CrickPredict</div>
   <ul class="menu-bar">
     <li><a href="{% url 'Dashboard' %}" class="nav-link">Home</a></li>
@@ -395,23 +396,24 @@
 
 
 <div style="margin: 0px 30px;">
-  <button class="tab-button team-tab" onclick="showTab_Teams('MensTeam')">Men's Team Ranking </button>
-  <button class="tab-button team-tab" onclick="showTab_Teams('WomensTeam')">Women's Team Ranking </button>
+  <button class="tab-button team-tab" onclick="showTab_Teams('MensTeam')">Men's Team  </button>
+  <button class="tab-button team-tab" onclick="showTab_Teams('WomensTeam')">Women's Team </button>
 </div>
+
 
 
 <div class="rankings-wrapper" id="MensTeam">
   <div style="margin: 0px -10px;" class="formats">
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
-          onclick="showTab_formats_men('ICCMensT20Is', this)">ICC Men's T20Is</button>
+          onclick="showTab_formats_men('ICCMensT20Is', this)">T20</button>
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
-          onclick="showTab_formats_men('ICCMensTests', this)">ICC Men's Tests</button>
+          onclick="showTab_formats_men('ICCMensTests', this)">TEST</button>
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
-          onclick="showTab_formats_men('ICCMensODIs', this)">ICC Men's ODIs</button>
+          onclick="showTab_formats_men('ICCMensODIs', this)">ODI</button>
 </div>
   <div class="rankings-row">
   <div class="tab-content format-pane" id="ICCMensT20Is">
-    <div>ICC Men's T20Is</div>
+    <div><center>ICC Men's T20Is</center></div>
     <table class="styled-table">
       <thead>
         <tr>
@@ -440,7 +442,7 @@
   </div>
 
   <div class="tab-content format-pane" id="ICCMensTests">
-    <div>ICC Men's Tests</div>
+    <div><center>ICC Men's Tests</center></div>
     <table class="styled-table">
       <thead>
         <tr>
@@ -469,7 +471,7 @@
   </div>
 
   <div class="tab-content format-pane" id="ICCMensODIs">
-    <div>ICC Men's ODIs</div>
+    <div><center>ICC Men's ODIs</center></div>
     <table class="styled-table">
       <thead>
         <tr>
@@ -502,15 +504,15 @@
 
 <div class="rankings-wrapper" id="WomensTeam">
   <div style="margin: 0px 0px;" class="formats">
-  <button class="tab-button team-tab" style=" border-radius:100px; font-size: 12px;"
-          onclick="showTab_formats_women('ICCWomenT20Is', this)">ICC Women's T20Is</button>
-  <button class="tab-button team-tab" style=" border-radius:100px; font-size: 12px;"
-          onclick="showTab_formats_women('ICCWomenODIs', this)">ICC Women's ODIs</button>
+  <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
+          onclick="showTab_formats_women('ICCWomenT20Is', this)">T20</button>
+  <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
+          onclick="showTab_formats_women('ICCWomenODIs', this)">ODI</button>
 </div>
   <div class="rankings-row align-left">
 
     <div class="tab-content format-pane" id="ICCWomenT20Is">
-      <h3>ICC Women's T20Is</h3>
+      <h3><center>ICC Women's T20Is</center></h3>
       <table class="styled-table women-table">
         <thead>
           <tr>
@@ -539,7 +541,7 @@
     </div>
 
     <div class="tab-content format-pane" id="ICCWomenODIs">
-      <h3>ICC Women's ODIs</h3>
+      <h3><center>ICC Women's ODIs</center></h3>
       <table class="styled-table women-table">
         <thead>
           <tr>
@@ -570,16 +572,24 @@
   </div>
 </div>
 
-<div style="margin: 0px 30px;">
+<div style="margin: -30px 30px;">
   <button class="tab-button batter-tab " onclick="showTab_Batters('MensBatsmen')">Men's Batting </button>
   <button class="tab-button batter-tab" onclick="showTab_Batters('WomensBatsmen')">Women's Batting </button>
 </div>
 
 
 <div class="rankings-wrapper" id= "MensBatsmen">
+  <div style="margin: 0px 0px;" class="formats">
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_men_batting('ICCMensBatT20Is', this)">T20</button>
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_men_batting('ICCMensBatODIs', this)">ODI</button>
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_men_batting('ICCMensBatTests', this)">TEST</button>
+  </div>
   <div class="rankings-row">
-  <div class="tab-content" >
-    <h3>ICC Men's T20Is</h3>
+   <div class="tab-content format-pane" id="ICCMensBatT20Is">
+      <h3><center>ICC Men's T20Is</center></h3>
   <table border="1" class="styled-table">
   <thead>
     <tr>
@@ -605,8 +615,8 @@
 </table>
 </div>
 
-<div class="tab-content" >
-  <h3>ICC Men's ODIs</h3>
+<div class="tab-content format-pane" id="ICCMensBatODIs">
+      <h3><center>ICC Men's ODIs</center></h3>
   <table border="1" class="styled-table">
   <thead>
     <tr>
@@ -631,8 +641,8 @@
 </table>
 </div>
 
-<div class="tab-content" >
-  <h3>ICC Men's Tests</h3>
+<div class="tab-content format-pane" id="ICCMensBatTests">
+      <h3><center>ICC Men's Tests</center></h3>
   <table border="1" class="styled-table">
   <thead>
     <tr>
@@ -660,62 +670,78 @@
 </div>
 </div>
 
-<div class="rankings-wrapper" id= "WomensBatsmen">
+<div class="rankings-wrapper" id="WomensBatsmen">
+  <div style="margin: 0px -10px;" class="formats">
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_women_batting('ICCWomenBatT20Is', this)">T20</button>
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_women_batting('ICCWomenBatODIs', this)">ODI</button>
+  </div>
+
   <div class="rankings-row align-left">
-  <div class="tab-content" >
-    <strong>WOMEN'S BATTING RANKINGS</strong>
-  <table border="1" class="styled-table women-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in T20Is_Women_players %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
 
-<div class="tab-content" >
-  <br>
-  <table border="1" class="styled-table women-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in ODI_Women_players %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
-</div>
-</div>
+    <div class="tab-content format-pane" id="ICCWomenBatT20Is">
+      <h3><center>ICC Women's T20Is</center></h3>
+      <table class="styled-table women-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in T20Is_Women_players %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
 
+    <div class="tab-content format-pane" id="ICCWomenBatODIs">
+      <h3><center>ICC Women's ODIs</center></h3>
+      <table class="styled-table women-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in ODI_Women_players %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
 
 <div style="margin: 0px 30px;">
   <button class="tab-button bwoler-tab " onclick="showTab_Bowlers('MensBowler')">Men's Bowling </button>
@@ -723,143 +749,182 @@
 </div>
 
 
-<div class="rankings-wrapper" id= "MensBowler">
-  <div class="rankings-row">
-  <div class="tab-content" >
-    <h3>ICC Men's T20Is</h3>
-  <table border="1" class="styled-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in T20Is_bowlers %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
+<div class="rankings-wrapper" id="MensBowler">
+  <div style="margin: 0px -10px;" class="formats">
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_men_bowling('ICCMensBowlT20Is', this)">T20</button>
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_men_bowling('ICCMensBowlODIs', this)">ODI</button>
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_men_bowling('ICCMensBowlTests', this)">TEST</button>
+  </div>
 
-<div class="tab-content" >
-  <h3>ICC Men's ODIs</h3>
-  <table border="1" class="styled-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in ODI_bowlers %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
-
-<div class="tab-content" >
-  <h3>ICC Men's Tests</h3>
-  <table border="1" class="styled-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in Test_bowlers %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
-
-</div>
-</div>
-
-<div class="rankings-wrapper" id= "WomensBowler">
   <div class="rankings-row align-left">
-  <div class="tab-content" >
-    <strong>WOMEN'S Bowling RANKINGS</strong>
-  <table border="1" class="styled-table women-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in T20Is_Women_bowlers %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
+
+    <div class="tab-content format-pane" id="ICCMensBowlT20Is">
+      <h3><center>ICC Men's T20Is</center></h3>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in T20Is_bowlers %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-content format-pane" id="ICCMensBowlODIs">
+      <h3><center>ICC Men's ODIs</center></h3>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in ODI_bowlers %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-content format-pane" id="ICCMensBowlTests">
+      <h3><center>ICC Men's Tests</center></h3>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in Test_bowlers %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </div>
 
-<div class="tab-content" >
-  <br>
-  <table border="1" class="styled-table women-table">
-  <thead>
-    <tr>
-      <th>Rank</th>
-      <th>Name</th>
-      <th>Country</th>
-      <th>Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for player in ODI_Women_bowlers %}
-    <tr>
-      <td >{{ player.rank }}</td>
-      <td><div style="display: flex; align-items: center;">
-      <img src={{player.image}} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">{{player.name}}
-      </div></td>
-      <td>{{ player.country }}</td>
-      <td>{{ player.rating }}</td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-</div>
-</div>
+<div class="rankings-wrapper" id="WomensBowler">
+  <div style="margin: 0px -10px;" class="formats">
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_women_bowling('ICCWomenBowlT20Is', this)">T20</button>
+    <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
+      onclick="showTab_formats_women_bowling('ICCWomenBowlODIs', this)">ODI</button>
+  </div>
+
+  <div class="rankings-row align-left">
+
+    <div class="tab-content format-pane" id="ICCWomenBowlT20Is">
+      <h3><center>ICC Women's T20Is</center></h3>
+      <table class="styled-table women-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in T20Is_Women_bowlers %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tab-content format-pane" id="ICCWomenBowlODIs">
+      <h3><center>ICC Women's ODIs</center></h3>
+      <table class="styled-table women-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for player in ODI_Women_bowlers %}
+          <tr>
+            <td>{{ player.rank }}</td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                  style="margin-right: 20px; border-radius:100px">
+                {{ player.name }}
+              </div>
+            </td>
+            <td>{{ player.country }}</td>
+            <td>{{ player.rating }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </div>
 
 <script>
@@ -921,9 +986,70 @@
   if (el) el.classList.add('active');
 }
 
+  function showTab_formats_men_batting(tabId, el) {
+  document.querySelectorAll('#MensBatsmen .format-pane').forEach(p => p.classList.remove('active'));
+  var pane = document.getElementById(tabId);
+  if (pane) pane.classList.add('active');
+
+  document.querySelectorAll('#MensBatsmen .formats .team-tab').forEach(btn => btn.classList.remove('active'));
+  if (el) {
+    el.classList.add('active');
+  } else {
+    var firstBtn = document.querySelector('#MensBatsmen .formats .team-tab');
+    if (firstBtn) firstBtn.classList.add('active');
+  }
+}
+
+function showTab_formats_women_batting(tabId, el) {
+  document.querySelectorAll('#WomensBatsmen .format-pane').forEach(p => p.classList.remove('active'));
+  var pane = document.getElementById(tabId);
+  if (pane) pane.classList.add('active');
+
+  document.querySelectorAll('#WomensBatsmen .formats .team-tab').forEach(btn => btn.classList.remove('active'));
+  if (el) {
+    el.classList.add('active');
+  } else {
+    var firstBtn = document.querySelector('#WomensBatsmen .formats .team-tab');
+    if (firstBtn) firstBtn.classList.add('active');
+  }
+}
+
+function showTab_formats_men_bowling(tabId, el) {
+  document.querySelectorAll('#MensBowler .format-pane').forEach(p => p.classList.remove('active'));
+  var pane = document.getElementById(tabId);
+  if (pane) pane.classList.add('active');
+
+  document.querySelectorAll('#MensBowler .formats .team-tab').forEach(btn => btn.classList.remove('active'));
+  if (el) {
+    el.classList.add('active');
+  } else {
+    var firstBtn = document.querySelector('#MensBowler .formats .team-tab');
+    if (firstBtn) firstBtn.classList.add('active');
+  }
+}
+
+
+function showTab_formats_women_bowling(tabId, el) {
+  document.querySelectorAll('#WomensBowler .format-pane').forEach(p => p.classList.remove('active'));
+  var pane = document.getElementById(tabId);
+  if (pane) pane.classList.add('active');
+
+  document.querySelectorAll('#WomensBowler .formats .team-tab').forEach(btn => btn.classList.remove('active'));
+  if (el) {
+    el.classList.add('active');
+  } else {
+    var firstBtn = document.querySelector('#WomensBowler .formats .team-tab');
+    if (firstBtn) firstBtn.classList.add('active');
+  }
+}
+
   window.onload = function () {
     showTab_formats_men('ICCMensT20Is'); 
     showTab_formats_women('ICCWomenT20Is');
+    showTab_formats_men_batting('ICCMensBatT20Is');
+    showTab_formats_men_bowling('ICCMensBowlT20Is');
+    showTab_formats_women_batting('ICCWomenBatT20Is');
+    showTab_formats_women_bowling('ICCWomenBowlT20Is');
     showTab_Teams('MensTeam');
     showTab_Batters('MensBatsmen');
     showTab_Bowlers('MensBowler');
