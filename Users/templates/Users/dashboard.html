@@ -191,14 +191,88 @@
     background-color: #f0f0f0;
   }
 
+  .sidebar{
+    display : none;
+  }
+
+
+    .overlay, 
+    .hamburger {
+      display: none;
+  }
+    .menu-icon{
+      display : none;
+    }
+
+
+  @media only screen and (max-width: 600px){
+  
+    .logo{
+      display: none;
+    }
+  .menu-bar {
+    display: none; /* hide top nav */
+  }
+
+  .navbar-links {
+    display: none;   
+  }
+
+  .menu-icon {
+    display: block; /* show hamburger */
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: black;
+    opacity: 0.95;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+    transform: translateX(-100%); /* hidden by default */
+    transition: transform 0.4s ease;
+    z-index: 1000;
+  }
+
+  .sidebar.show {
+    transform: translateX(0); /* slide in */
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 12px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-bottom: 1px solid #444;
+  }
+
+  .close-btn {
+    font-size: 22px;
+    float: right;
+    cursor: pointer;
+    color: red;
+  }
+        
+}
+
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <div>CrickPredict</div>
-    <ul class="menu-bar">
-      <li><a href="{% url 'Dashboard' %}" class="nav-link">Home</a></li>
+
+<div class="header">
+  <div class="menu-icon" onclick="toggleSidebar()">☰ CrickPredict</div>
+  <div class="logo">CrickPredict</div>
+  <ul class="menu-bar">
+    <li><a href="{% url 'Dashboard' %}" class="nav-link">Home</a></li>
       <li>
         <a href="#" class="nav-link">Series ▾</a>
         <div class="dropdown">
@@ -214,10 +288,23 @@
       <li><a href="{% url 'IPL' %}" class="nav-link">IPL 2025</a></li>
       <li><a href="#" class="nav-link">Profile</a></li>
       <li><a href="{% url 'contest_detail' %}" class="nav-link">Contests</a></li>
-    </ul>
-  </div>
+  </ul>
+</div>
 
-  <!-- Tabs for Match Categories -->
+
+<div id="sidebar" class="sidebar">
+  <div class="close-btn" onclick="toggleSidebar()">✖</div>
+    <a href="{% url 'Dashboard' %}" class="menu-option">Home</a>
+    <a href="#" class="nav-link">Series ▾</a>
+    <a href="{% url 'News' %}" class="nav-link">News</a>
+    <a href="{% url 'Rankings' %}" class="nav-link">Rankings</a>
+    <a href="{% url 'IPL' %}" class="menu-option">IPL 2025</a>
+    <a href="#" class="nav-link">Profile</a>
+    <a href="{% url 'contest_detail' %}" class="menu-option">Contests</a>
+</div>
+
+
+
 <div style="margin: 0px 30px;">
   <button class="tab-button team-tab" onclick="showTab('completed')">Completed</button>
   <button class="tab-button team-tab" onclick="showTab('upcoming')">Upcoming</button>
@@ -370,6 +457,10 @@
       behavior: "smooth"
     });
   }
+
+  function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("show");
+      }
 
   function showTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => {
