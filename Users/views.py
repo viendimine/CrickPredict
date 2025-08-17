@@ -342,7 +342,7 @@ def IPL(request):
     with open("Users/Data/IPL/points_table.json", "r") as f:
         data = json.load(f)
 
-    all_stats = []  # ✅ List to collect all team stats
+    all_stats = []  
 
     for year, info in data.items():
         if isinstance(info, dict) and info.get("stats"):
@@ -367,42 +367,41 @@ def IPL(request):
 
     processed_data = {}
 
-    # Iterate over teams
     for team_name, team_data in players_data.items():
         processed_data[team_name] = []
 
-        # Handle Batsmen
         for player in team_data.get("Batsmen", []):
             processed_data[team_name].append({
                 "name": player["name"],
                 "name_id": player["name_id"],
+                "image_id": player["image_id"],
                 "role": "BAT",
                 "image": f"IPL/Captains/Profile.jpg"
             })
 
-        # Handle Bowlers
         for player in team_data.get("Bowlers", []):
             processed_data[team_name].append({
                 "name": player["name"],
                 "name_id": player["name_id"],
+                "image_id": player["image_id"],
                 "role": "BOWL",
                 "image": f"IPL/Captains/Profile.jpg"
             })
 
-        # Handle All Rounders
         for player in team_data.get("All Rounders", []):
             processed_data[team_name].append({
                 "name": player["name"],
                 "name_id": player["name_id"],
+                "image_id": player["image_id"],
                 "role": "ALL-R",
                 "image": f"IPL/Captains/Profile.jpg"
             })
 
-        # Handle Wicket Keepers
         for player in team_data.get("Wicket Keepers", []):
             processed_data[team_name].append({
                 "name": player["name"],
                 "name_id": player["name_id"],
+                "image_id": player["image_id"],
                 "role": "WK",
                 "image": f"IPL/Captains/Profile.jpg"
             })

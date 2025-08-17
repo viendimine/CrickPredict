@@ -96,441 +96,441 @@
   },
    "Chennai Super Kings": {
     "Batsmen": [
-      {"name":"Ruturaj Gaikwad","name_id":"ruturaj-gaikwad"},
-      {"name":"Devon Conway","name_id":"devon-conway"},
-      {"name":"Rahul Tripathi","name_id":"rahul-tripathi"},
-      {"name":"Shaik Rasheed","name_id":"shaik-rasheed"},
-      {"name":"Andre Siddarth","name_id":"andre-siddarth"}
+      {"name":"Ruturaj Gaikwad","name_id":"ruturaj-gaikwad","image_id" :""},
+      {"name":"Devon Conway","name_id":"devon-conway","image_id" :""},
+      {"name":"Rahul Tripathi","name_id":"rahul-tripathi","image_id" :""},
+      {"name":"Shaik Rasheed","name_id":"shaik-rasheed","image_id" :""},
+      {"name":"Andre Siddarth","name_id":"andre-siddarth","image_id" :""}
     ],
     "All Rounders": [
-      {"name":"Ravindra Jadeja","name_id":"ravindra-jadeja"},
-      {"name":"Shivam Dube","name_id":"shivam-dube"},
-      {"name":"Rachin Ravindra","name_id":"rachin-ravindra"},
-      {"name":"Ravichandran Ashwin","name_id":"ravichandran-ashwin"},
-      {"name":"Sam Curran","name_id":"sam-curran"},
-      {"name":"Deepak Hooda","name_id":"deepak-hooda"},
-      {"name":"Vijay Shankar","name_id":"vijay-shankar"},
-      {"name":"Anshul Kamboj","name_id":"anshul-kamboj"},
-      {"name":"Jamie Overton","name_id":"jamie-overton"},
-      {"name":"Ramakrishna Ghosh","name_id":"ramakrishna-ghosh"}
+      {"name":"Ravindra Jadeja","name_id":"ravindra-jadeja","image_id" :""},
+      {"name":"Shivam Dube","name_id":"shivam-dube","image_id" :""},
+      {"name":"Rachin Ravindra","name_id":"rachin-ravindra","image_id" :""},
+      {"name":"Ravichandran Ashwin","name_id":"ravichandran-ashwin","image_id" :""},
+      {"name":"Sam Curran","name_id":"sam-curran","image_id" :""},
+      {"name":"Deepak Hooda","name_id":"deepak-hooda","image_id" :""},
+      {"name":"Vijay Shankar","name_id":"vijay-shankar","image_id" :""},
+      {"name":"Anshul Kamboj","name_id":"anshul-kamboj","image_id" :""},
+      {"name":"Jamie Overton","name_id":"jamie-overton","image_id" :""},
+      {"name":"Ramakrishna Ghosh","name_id":"ramakrishna-ghosh","image_id" :""}
     ],
     "Wicket Keepers": [
-      {"name":"MS Dhoni","name_id":"ms-dhoni"},
-      {"name":"Vansh Bedi","name_id":"vansh-bedi"}
+      {"name":"MS Dhoni","name_id":"ms-dhoni","image_id" :""},
+      {"name":"Vansh Bedi","name_id":"vansh-bedi","image_id" :""}
     ],
     "Bowlers": [
-      {"name":"Matheesha Pathirana","name_id":"matheesha-pathirana"},
-      {"name":"Khaleel Ahmed","name_id":"khaleel-ahmed"},
-      {"name":"Noor Ahmad","name_id":"noor-ahmad"},
-      {"name":"Mukesh Choudhary","name_id":"mukesh-choudhary"},
-      {"name":"Gurjapneet Singh","name_id":"gurjapneet-singh"},
-      {"name":"Nathan Ellis","name_id":"nathan-ellis"},
-      {"name":"Shreyas Gopal","name_id":"shreyas-gopal"}
+      {"name":"Matheesha Pathirana","name_id":"matheesha-pathirana","image_id" :""},
+      {"name":"Khaleel Ahmed","name_id":"khaleel-ahmed","image_id" :""},
+      {"name":"Noor Ahmad","name_id":"noor-ahmad","image_id" :""},
+      {"name":"Mukesh Choudhary","name_id":"mukesh-choudhary","image_id" :""},
+      {"name":"Gurjapneet Singh","name_id":"gurjapneet-singh","image_id" :""},
+      {"name":"Nathan Ellis","name_id":"nathan-ellis","image_id" :""},
+      {"name":"Shreyas Gopal","name_id":"shreyas-gopal","image_id" :""}
     ],
     "All Players": [
-      {"name":"Ruturaj Gaikwad","name_id":"ruturaj-gaikwad"},
-      {"name":"Devon Conway","name_id":"devon-conway"},
-      {"name":"Rahul Tripathi","name_id":"rahul-tripathi"},
-      {"name":"Shaik Rasheed","name_id":"shaik-rasheed"},
-      {"name":"Andre Siddarth","name_id":"andre-siddarth"},
-      {"name":"Ravindra Jadeja","name_id":"ravindra-jadeja"},
-      {"name":"Shivam Dube","name_id":"shivam-dube"},
-      {"name":"Rachin Ravindra","name_id":"rachin-ravindra"},
-      {"name":"Ravichandran Ashwin","name_id":"ravichandran-ashwin"},
-      {"name":"Sam Curran","name_id":"sam-curran"},
-      {"name":"Deepak Hooda","name_id":"deepak-hooda"},
-      {"name":"Vijay Shankar","name_id":"vijay-shankar"},
-      {"name":"Anshul Kamboj","name_id":"anshul-kamboj"},
-      {"name":"Jamie Overton","name_id":"jamie-overton"},
-      {"name":"Ramakrishna Ghosh","name_id":"ramakrishna-ghosh"},
-      {"name":"MS Dhoni","name_id":"ms-dhoni"},
-      {"name":"Vansh Bedi","name_id":"vansh-bedi"},
-      {"name":"Matheesha Pathirana","name_id":"matheesha-pathirana"},
-      {"name":"Khaleel Ahmed","name_id":"khaleel-ahmed"},
-      {"name":"Noor Ahmad","name_id":"noor-ahmad"},
-      {"name":"Mukesh Choudhary","name_id":"mukesh-choudhary"},
-      {"name":"Gurjapneet Singh","name_id":"gurjapneet-singh"},
-      {"name":"Nathan Ellis","name_id":"nathan-ellis"},
-      {"name":"Shreyas Gopal","name_id":"shreyas-gopal"}
+      {"name":"Ruturaj Gaikwad","name_id":"ruturaj-gaikwad","image_id" :""},
+      {"name":"Devon Conway","name_id":"devon-conway","image_id" :""},
+      {"name":"Rahul Tripathi","name_id":"rahul-tripathi","image_id" :""},
+      {"name":"Shaik Rasheed","name_id":"shaik-rasheed","image_id" :""},
+      {"name":"Andre Siddarth","name_id":"andre-siddarth","image_id" :""},
+      {"name":"Ravindra Jadeja","name_id":"ravindra-jadeja","image_id" :""},
+      {"name":"Shivam Dube","name_id":"shivam-dube","image_id" :""},
+      {"name":"Rachin Ravindra","name_id":"rachin-ravindra","image_id" :""},
+      {"name":"Ravichandran Ashwin","name_id":"ravichandran-ashwin","image_id" :""},
+      {"name":"Sam Curran","name_id":"sam-curran","image_id" :""},
+      {"name":"Deepak Hooda","name_id":"deepak-hooda","image_id" :""},
+      {"name":"Vijay Shankar","name_id":"vijay-shankar","image_id" :""},
+      {"name":"Anshul Kamboj","name_id":"anshul-kamboj","image_id" :""},
+      {"name":"Jamie Overton","name_id":"jamie-overton","image_id" :""},
+      {"name":"Ramakrishna Ghosh","name_id":"ramakrishna-ghosh","image_id" :""},
+      {"name":"MS Dhoni","name_id":"ms-dhoni","image_id" :""},
+      {"name":"Vansh Bedi","name_id":"vansh-bedi","image_id" :""},
+      {"name":"Matheesha Pathirana","name_id":"matheesha-pathirana","image_id" :""},
+      {"name":"Khaleel Ahmed","name_id":"khaleel-ahmed","image_id" :""},
+      {"name":"Noor Ahmad","name_id":"noor-ahmad","image_id" :""},
+      {"name":"Mukesh Choudhary","name_id":"mukesh-choudhary","image_id" :""},
+      {"name":"Gurjapneet Singh","name_id":"gurjapneet-singh","image_id" :""},
+      {"name":"Nathan Ellis","name_id":"nathan-ellis","image_id" :""},
+      {"name":"Shreyas Gopal","name_id":"shreyas-gopal","image_id" :""}
     ]
   },
   "Delhi Capitals": {
-    "Batsmen": [
-      {"name":"KL Rahul","name_id":"kl-rahul"},
-      {"name":"Harry Brook","name_id":"harry-brook"},
-      {"name":"Jake Fraser-McGurk","name_id":"jake-fraser-mcgurk"},
-      {"name":"Faf du Plessis","name_id":"faf-du-plessis"},
-      {"name":"Karun Nair","name_id":"karun-nair"}
-    ],
-    "All Rounders": [
-      {"name":"Axar Patel","name_id":"axar-patel"},
-      {"name":"Tristan Stubbs","name_id":"tristan-stubbs"},
-      {"name":"Abhishek Porel","name_id":"abhishek-porel"},
-      {"name":"Ashutosh Sharma","name_id":"ashutosh-sharma"},
-      {"name":"Sameer Rizvi","name_id":"sameer-rizvi"},
-      {"name":"Ajay Mandal","name_id":"ajay-mandal"},
-      {"name":"Manvanth Kumar","name_id":"manvanth-kumar"},
-      {"name":"Tripurana Vijay","name_id":"tripurana-vijay"},
-      {"name":"Madhav Tiwari","name_id":"madhav-tiwari"}
-    ],
-    "Wicket Keepers": [
-      {"name":"KL Rahul","name_id":"kl-rahul"},
-      {"name":"Tristan Stubbs","name_id":"tristan-stubbs"},
-      {"name":"Abhishek Porel","name_id":"abhishek-porel"}
-    ],
-    "Bowlers": [
-      {"name":"Mitchell Starc","name_id":"mitchell-starc"},
-      {"name":"T Natarajan","name_id":"t-natarajan"},
-      {"name":"Mohit Sharma","name_id":"mohit-sharma"},
-      {"name":"Mukesh Kumar","name_id":"mukesh-kumar"},
-      {"name":"Dushmantha Chameera","name_id":"dushmantha-chameera"},
-      {"name":"Darshan Nalkande","name_id":"darshan-nalkande"},
-      {"name":"Vipraj Nigam","name_id":"vipraj-nigam"}
-    ],
-    "All Players": [
-      {"name":"KL Rahul","name_id":"kl-rahul"},
-      {"name":"Harry Brook","name_id":"harry-brook"},
-      {"name":"Jake Fraser-McGurk","name_id":"jake-fraser-mcgurk"},
-      {"name":"Faf du Plessis","name_id":"faf-du-plessis"},
-      {"name":"Karun Nair","name_id":"karun-nair"},
-      {"name":"Axar Patel","name_id":"axar-patel"},
-      {"name":"Tristan Stubbs","name_id":"tristan-stubbs"},
-      {"name":"Abhishek Porel","name_id":"abhishek-porel"},
-      {"name":"Ashutosh Sharma","name_id":"ashutosh-sharma"},
-      {"name":"Sameer Rizvi","name_id":"sameer-rizvi"},
-      {"name":"Ajay Mandal","name_id":"ajay-mandal"},
-      {"name":"Manvanth Kumar","name_id":"manvanth-kumar"},
-      {"name":"Tripurana Vijay","name_id":"tripurana-vijay"},
-      {"name":"Madhav Tiwari","name_id":"madhav-tiwari"},
-      {"name":"Mitchell Starc","name_id":"mitchell-starc"},
-      {"name":"T Natarajan","name_id":"t-natarajan"},
-      {"name":"Mohit Sharma","name_id":"mohit-sharma"},
-      {"name":"Mukesh Kumar","name_id":"mukesh-kumar"},
-      {"name":"Dushmantha Chameera","name_id":"dushmantha-chameera"},
-      {"name":"Darshan Nalkande","name_id":"darshan-nalkande"},
-      {"name":"Vipraj Nigam","name_id":"vipraj-nigam"}
-    ]
-  },
+  "Batsmen": [
+    {"name":"KL Rahul","name_id":"kl-rahul","image_id":""},
+    {"name":"Harry Brook","name_id":"harry-brook","image_id":""},
+    {"name":"Jake Fraser-McGurk","name_id":"jake-fraser-mcgurk","image_id":""},
+    {"name":"Faf du Plessis","name_id":"faf-du-plessis","image_id":""},
+    {"name":"Karun Nair","name_id":"karun-nair","image_id":""}
+  ],
+  "All Rounders": [
+    {"name":"Axar Patel","name_id":"axar-patel","image_id":""},
+    {"name":"Tristan Stubbs","name_id":"tristan-stubbs","image_id":""},
+    {"name":"Abhishek Porel","name_id":"abhishek-porel","image_id":""},
+    {"name":"Ashutosh Sharma","name_id":"ashutosh-sharma","image_id":""},
+    {"name":"Sameer Rizvi","name_id":"sameer-rizvi","image_id":""},
+    {"name":"Ajay Mandal","name_id":"ajay-mandal","image_id":""},
+    {"name":"Manvanth Kumar","name_id":"manvanth-kumar","image_id":""},
+    {"name":"Tripurana Vijay","name_id":"tripurana-vijay","image_id":""},
+    {"name":"Madhav Tiwari","name_id":"madhav-tiwari","image_id":""}
+  ],
+  "Wicket Keepers": [
+    {"name":"KL Rahul","name_id":"kl-rahul","image_id":""},
+    {"name":"Tristan Stubbs","name_id":"tristan-stubbs","image_id":""},
+    {"name":"Abhishek Porel","name_id":"abhishek-porel","image_id":""}
+  ],
+  "Bowlers": [
+    {"name":"Mitchell Starc","name_id":"mitchell-starc","image_id":""},
+    {"name":"T Natarajan","name_id":"t-natarajan","image_id":""},
+    {"name":"Mohit Sharma","name_id":"mohit-sharma","image_id":""},
+    {"name":"Mukesh Kumar","name_id":"mukesh-kumar","image_id":""},
+    {"name":"Dushmantha Chameera","name_id":"dushmantha-chameera","image_id":""},
+    {"name":"Darshan Nalkande","name_id":"darshan-nalkande","image_id":""},
+    {"name":"Vipraj Nigam","name_id":"vipraj-nigam","image_id":""}
+  ],
+  "All Players": [
+    {"name":"KL Rahul","name_id":"kl-rahul","image_id":""},
+    {"name":"Harry Brook","name_id":"harry-brook","image_id":""},
+    {"name":"Jake Fraser-McGurk","name_id":"jake-fraser-mcgurk","image_id":""},
+    {"name":"Faf du Plessis","name_id":"faf-du-plessis","image_id":""},
+    {"name":"Karun Nair","name_id":"karun-nair","image_id":""},
+    {"name":"Axar Patel","name_id":"axar-patel","image_id":""},
+    {"name":"Tristan Stubbs","name_id":"tristan-stubbs","image_id":""},
+    {"name":"Abhishek Porel","name_id":"abhishek-porel","image_id":""},
+    {"name":"Ashutosh Sharma","name_id":"ashutosh-sharma","image_id":""},
+    {"name":"Sameer Rizvi","name_id":"sameer-rizvi","image_id":""},
+    {"name":"Ajay Mandal","name_id":"ajay-mandal","image_id":""},
+    {"name":"Manvanth Kumar","name_id":"manvanth-kumar","image_id":""},
+    {"name":"Tripurana Vijay","name_id":"tripurana-vijay","image_id":""},
+    {"name":"Madhav Tiwari","name_id":"madhav-tiwari","image_id":""},
+    {"name":"Mitchell Starc","name_id":"mitchell-starc","image_id":""},
+    {"name":"T Natarajan","name_id":"t-natarajan","image_id":""},
+    {"name":"Mohit Sharma","name_id":"mohit-sharma","image_id":""},
+    {"name":"Mukesh Kumar","name_id":"mukesh-kumar","image_id":""},
+    {"name":"Dushmantha Chameera","name_id":"dushmantha-chameera","image_id":""},
+    {"name":"Darshan Nalkande","name_id":"darshan-nalkande","image_id":""},
+    {"name":"Vipraj Nigam","name_id":"vipraj-nigam","image_id":""}
+  ]
+},
   "Gujarat Titans": {
-    "Batsmen": [
-      {"name":"Shubman Gill","name_id":"shubman-gill"},
-      {"name":"Jos Buttler","name_id":"jos-buttler"},
-      {"name":"Sherfane Rutherford","name_id":"sherfane-rutherford"},
-      {"name":"Shahrukh Khan","name_id":"shahrukh-khan"},
-      {"name":"Glenn Phillips","name_id":"glenn-phillips"},
-      {"name":"Kumar Kushagra","name_id":"kumar-kushagra"},
-      {"name":"Anuj Rawat","name_id":"anuj-rawat"},
-      {"name":"Rahul Tewatia","name_id":"rahul-tewatia"},
-      {"name":"Washington Sundar","name_id":"washington-sundar"}
-    ],
-    "All Rounders": [
-      {"name":"Rashid Khan","name_id":"rashid-khan"},
-      {"name":"Gerald Coetzee","name_id":"gerald-coetzee"},
-      {"name":"Sai Sudharsan","name_id":"sai-sudharsan"},
-      {"name":"Kagiso Rabada","name_id":"kagiso-rabada"},
-      {"name":"Jayant Yadav","name_id":"jayant-yadav"},
-      {"name":"Mahipal Lomror","name_id":"mahipal-lomror"},
-      {"name":"Manav Suthar","name_id":"manav-suthar"}
-    ],
-    "Wicket Keepers": [
-      {"name":"Jos Buttler","name_id":"jos-buttler"},
-      {"name":"Anuj Rawat","name_id":"anuj-rawat"}
-    ],
-    "Bowlers": [
-      {"name":"Mohammed Siraj","name_id":"mohammed-siraj"},
-      {"name":"Prasidh Krishna","name_id":"prasidh-krishna"},
-      {"name":"Kagiso Rabada","name_id":"kagiso-rabada"},
-      {"name":"Gerald Coetzee","name_id":"gerald-coetzee"},
-      {"name":"Rahul Tewatia","name_id":"rahul-tewatia"}
-    ],
-    "All Players": [
-      {"name":"Shubman Gill","name_id":"shubman-gill"},
-      {"name":"Jos Buttler","name_id":"jos-buttler"},
-      {"name":"Sherfane Rutherford","name_id":"sherfane-rutherford"},
-      {"name":"Shahrukh Khan","name_id":"shahrukh-khan"},
-      {"name":"Glenn Phillips","name_id":"glenn-phillips"},
-      {"name":"Kumar Kushagra","name_id":"kumar-kushagra"},
-      {"name":"Anuj Rawat","name_id":"anuj-rawat"},
-      {"name":"Rahul Tewatia","name_id":"rahul-tewatia"},
-      {"name":"Rashid Khan","name_id":"rashid-khan"},
-      {"name":"Gerald Coetzee","name_id":"gerald-coetzee"},
-      {"name":"Sai Sudharsan","name_id":"sai-sudharsan"},
-      {"name":"Kagiso Rabada","name_id":"kagiso-rabada"},
-      {"name":"Jayant Yadav","name_id":"jayant-yadav"},
-      {"name":"Mahipal Lomror","name_id":"mahipal-lomror"},
-      {"name":"Manav Suthar","name_id":"manav-suthar"},
-      {"name":"Mohammed Siraj","name_id":"mohammed-siraj"},
-      {"name":"Prasidh Krishna","name_id":"prasidh-krishna"}
-    ]
-  },
-  "Kolkata Knight Riders": {
-    "Batsmen": [
-      {"name":"Ajinkya Rahane","name_id":"ajinkya-rahane"},
-      {"name":"Quinton de Kock","name_id":"quinton-de-kock"},
-      {"name":"Rahmanullah Gurbaz","name_id":"rahmanullah-gurbaz"},
-      {"name":"Manish Pandey","name_id":"manish-pandey"},
-      {"name":"Rinku Singh","name_id":"rinku-singh"},
-      {"name":"Venkatesh Iyer","name_id":"venkatesh-iyer"},
-      {"name":"Rovman Powell","name_id":"rovman-powell"},
-      {"name":"Angkrish Raghuvanshi","name_id":"angkrish-raghuvanshi"},
-      {"name":"Ramandeep Singh","name_id":"ramandeep-singh"}
-    ],
-    "All Rounders": [
-      {"name":"Andre Russell","name_id":"andre-russell"},
-      {"name":"Sunil Narine","name_id":"sunil-narine"},
-      {"name":"Varun Chakravarthy","name_id":"varun-chakaravarthy"},
-      {"name":"Moeen Ali","name_id":"moeen-ali"},
-      {"name":"Harshit Rana","name_id":"harshit-rana"},
-      {"name":"Vaibhav Arora","name_id":"vaibhav-arora"},
-      {"name":"Anukul Roy","name_id":"anukul-roy"},
-      {"name":"Spencer Johnson","name_id":"spencer-johnson"},
-      {"name":"Umran Malik","name_id":"umran-malik"},
-      {"name":"Luvnith Sisodia","name_id":"luvnith-sisodia"},
-      {"name":"Mayank Markande","name_id":"mayank-markande"}
-    ],
-    "Wicket Keepers": [
-      {"name":"Quinton de Kock","name_id":"quinton-de-kock"},
-      {"name":"Rahmanullah Gurbaz","name_id":"rahmanullah-gurbaz"}
-    ],
-    "Bowlers": [
-      {"name":"Anrich Nortje","name_id":"anrich-nortje"},
-      {"name":"Varun Chakravarthy","name_id":"varun-chakaravarthy"},
-      {"name":"Sunil Narine","name_id":"sunil-narine"},
-      {"name":"Andre Russell","name_id":"andre-russell"}
-    ],
-    "All Players": [
-      {"name":"Ajinkya Rahane","name_id":"ajinkya-rahane"},
-      {"name":"Quinton de Kock","name_id":"quinton-de-kock"},
-      {"name":"Rahmanullah Gurbaz","name_id":"rahmanullah-gurbaz"},
-      {"name":"Manish Pandey","name_id":"manish-pandey"},
-      {"name":"Rinku Singh","name_id":"rinku-singh"},
-      {"name":"Venkatesh Iyer","name_id":"venkatesh-iyer"},
-      {"name":"Rovman Powell","name_id":"rovman-powell"},
-      {"name":"Angkrish Raghuvanshi","name_id":"angkrish-raghuvanshi"},
-      {"name":"Ramandeep Singh","name_id":"ramandeep-singh"},
-      {"name":"Andre Russell","name_id":"andre-russell"},
-      {"name":"Sunil Narine","name_id":"sunil-narine"},
-      {"name":"Varun Chakravarthy","name_id":"varun-chakaravarthy"},
-      {"name":"Moeen Ali","name_id":"moeen-ali"},
-      {"name":"Harshit Rana","name_id":"harshit-rana"},
-      {"name":"Vaibhav Arora","name_id":"vaibhav-arora"},
-      {"name":"Anukul Roy","name_id":"anukul-roy"},
-      {"name":"Spencer Johnson","name_id":"spencer-johnson"},
-      {"name":"Umran Malik","name_id":"umran-malik"},
-      {"name":"Luvnith Sisodia","name_id":"luvnith-sisodia"},
-      {"name":"Mayank Markande","name_id":"mayank-markande"},
-      {"name":"Anrich Nortje","name_id":"anrich-nortje"}
-    ]
-  },
+  "Batsmen": [
+    {"name":"Shubman Gill","name_id":"shubman-gill","image_id":""},
+    {"name":"Jos Buttler","name_id":"jos-buttler","image_id":""},
+    {"name":"Sherfane Rutherford","name_id":"sherfane-rutherford","image_id":""},
+    {"name":"Shahrukh Khan","name_id":"shahrukh-khan","image_id":""},
+    {"name":"Glenn Phillips","name_id":"glenn-phillips","image_id":""},
+    {"name":"Kumar Kushagra","name_id":"kumar-kushagra","image_id":""},
+    {"name":"Anuj Rawat","name_id":"anuj-rawat","image_id":""},
+    {"name":"Rahul Tewatia","name_id":"rahul-tewatia","image_id":""},
+    {"name":"Washington Sundar","name_id":"washington-sundar","image_id":""}
+  ],
+  "All Rounders": [
+    {"name":"Rashid Khan","name_id":"rashid-khan","image_id":""},
+    {"name":"Gerald Coetzee","name_id":"gerald-coetzee","image_id":""},
+    {"name":"Sai Sudharsan","name_id":"sai-sudharsan","image_id":""},
+    {"name":"Kagiso Rabada","name_id":"kagiso-rabada","image_id":""},
+    {"name":"Jayant Yadav","name_id":"jayant-yadav","image_id":""},
+    {"name":"Mahipal Lomror","name_id":"mahipal-lomror","image_id":""},
+    {"name":"Manav Suthar","name_id":"manav-suthar","image_id":""}
+  ],
+  "Wicket Keepers": [
+    {"name":"Jos Buttler","name_id":"jos-buttler","image_id":""},
+    {"name":"Anuj Rawat","name_id":"anuj-rawat","image_id":""}
+  ],
+  "Bowlers": [
+    {"name":"Mohammed Siraj","name_id":"mohammed-siraj","image_id":""},
+    {"name":"Prasidh Krishna","name_id":"prasidh-krishna","image_id":""},
+    {"name":"Kagiso Rabada","name_id":"kagiso-rabada","image_id":""},
+    {"name":"Gerald Coetzee","name_id":"gerald-coetzee","image_id":""},
+    {"name":"Rahul Tewatia","name_id":"rahul-tewatia","image_id":""}
+  ],
+  "All Players": [
+    {"name":"Shubman Gill","name_id":"shubman-gill","image_id":""},
+    {"name":"Jos Buttler","name_id":"jos-buttler","image_id":""},
+    {"name":"Sherfane Rutherford","name_id":"sherfane-rutherford","image_id":""},
+    {"name":"Shahrukh Khan","name_id":"shahrukh-khan","image_id":""},
+    {"name":"Glenn Phillips","name_id":"glenn-phillips","image_id":""},
+    {"name":"Kumar Kushagra","name_id":"kumar-kushagra","image_id":""},
+    {"name":"Anuj Rawat","name_id":"anuj-rawat","image_id":""},
+    {"name":"Rahul Tewatia","name_id":"rahul-tewatia","image_id":""},
+    {"name":"Rashid Khan","name_id":"rashid-khan","image_id":""},
+    {"name":"Gerald Coetzee","name_id":"gerald-coetzee","image_id":""},
+    {"name":"Sai Sudharsan","name_id":"sai-sudharsan","image_id":""},
+    {"name":"Kagiso Rabada","name_id":"kagiso-rabada","image_id":""},
+    {"name":"Jayant Yadav","name_id":"jayant-yadav","image_id":""},
+    {"name":"Mahipal Lomror","name_id":"mahipal-lomror","image_id":""},
+    {"name":"Manav Suthar","name_id":"manav-suthar","image_id":""},
+    {"name":"Mohammed Siraj","name_id":"mohammed-siraj","image_id":""},
+    {"name":"Prasidh Krishna","name_id":"prasidh-krishna","image_id":""}
+  ]
+},
+"Kolkata Knight Riders": {
+  "Batsmen": [
+    {"name":"Ajinkya Rahane","name_id":"ajinkya-rahane","image_id":""},
+    {"name":"Quinton de Kock","name_id":"quinton-de-kock","image_id":""},
+    {"name":"Rahmanullah Gurbaz","name_id":"rahmanullah-gurbaz","image_id":""},
+    {"name":"Manish Pandey","name_id":"manish-pandey","image_id":""},
+    {"name":"Rinku Singh","name_id":"rinku-singh","image_id":""},
+    {"name":"Venkatesh Iyer","name_id":"venkatesh-iyer","image_id":""},
+    {"name":"Rovman Powell","name_id":"rovman-powell","image_id":""},
+    {"name":"Angkrish Raghuvanshi","name_id":"angkrish-raghuvanshi","image_id":""},
+    {"name":"Ramandeep Singh","name_id":"ramandeep-singh","image_id":""}
+  ],
+  "All Rounders": [
+    {"name":"Andre Russell","name_id":"andre-russell","image_id":""},
+    {"name":"Sunil Narine","name_id":"sunil-narine","image_id":""},
+    {"name":"Varun Chakravarthy","name_id":"varun-chakaravarthy","image_id":""},
+    {"name":"Moeen Ali","name_id":"moeen-ali","image_id":""},
+    {"name":"Harshit Rana","name_id":"harshit-rana","image_id":""},
+    {"name":"Vaibhav Arora","name_id":"vaibhav-arora","image_id":""},
+    {"name":"Anukul Roy","name_id":"anukul-roy","image_id":""},
+    {"name":"Spencer Johnson","name_id":"spencer-johnson","image_id":""},
+    {"name":"Umran Malik","name_id":"umran-malik","image_id":""},
+    {"name":"Luvnith Sisodia","name_id":"luvnith-sisodia","image_id":""},
+    {"name":"Mayank Markande","name_id":"mayank-markande","image_id":""}
+  ],
+  "Wicket Keepers": [
+    {"name":"Quinton de Kock","name_id":"quinton-de-kock","image_id":""},
+    {"name":"Rahmanullah Gurbaz","name_id":"rahmanullah-gurbaz","image_id":""}
+  ],
+  "Bowlers": [
+    {"name":"Anrich Nortje","name_id":"anrich-nortje","image_id":""},
+    {"name":"Varun Chakravarthy","name_id":"varun-chakaravarthy","image_id":""},
+    {"name":"Sunil Narine","name_id":"sunil-narine","image_id":""},
+    {"name":"Andre Russell","name_id":"andre-russell","image_id":""}
+  ],
+  "All Players": [
+    {"name":"Ajinkya Rahane","name_id":"ajinkya-rahane","image_id":""},
+    {"name":"Quinton de Kock","name_id":"quinton-de-kock","image_id":""},
+    {"name":"Rahmanullah Gurbaz","name_id":"rahmanullah-gurbaz","image_id":""},
+    {"name":"Manish Pandey","name_id":"manish-pandey","image_id":""},
+    {"name":"Rinku Singh","name_id":"rinku-singh","image_id":""},
+    {"name":"Venkatesh Iyer","name_id":"venkatesh-iyer","image_id":""},
+    {"name":"Rovman Powell","name_id":"rovman-powell","image_id":""},
+    {"name":"Angkrish Raghuvanshi","name_id":"angkrish-raghuvanshi","image_id":""},
+    {"name":"Ramandeep Singh","name_id":"ramandeep-singh","image_id":""},
+    {"name":"Andre Russell","name_id":"andre-russell","image_id":""},
+    {"name":"Sunil Narine","name_id":"sunil-narine","image_id":""},
+    {"name":"Varun Chakravarthy","name_id":"varun-chakaravarthy","image_id":""},
+    {"name":"Moeen Ali","name_id":"moeen-ali","image_id":""},
+    {"name":"Harshit Rana","name_id":"harshit-rana","image_id":""},
+    {"name":"Vaibhav Arora","name_id":"vaibhav-arora","image_id":""},
+    {"name":"Anukul Roy","name_id":"anukul-roy","image_id":""},
+    {"name":"Spencer Johnson","name_id":"spencer-johnson","image_id":""},
+    {"name":"Umran Malik","name_id":"umran-malik","image_id":""},
+    {"name":"Luvnith Sisodia","name_id":"luvnith-sisodia","image_id":""},
+    {"name":"Mayank Markande","name_id":"mayank-markande","image_id":""},
+    {"name":"Anrich Nortje","name_id":"anrich-nortje","image_id":""}
+  ]
+},
   "Punjab Kings": {
-    "Batsmen": [
-      {"name":"Shreyas Iyer","name_id":"shreyas-iyer"},
-      {"name":"Prabhsimran Singh","name_id":"prabhsimran-singh"},
-      {"name":"Nehal Wadhera","name_id":"nehal-wadhera"},
-      {"name":"Suryansh Shedge","name_id":"suryansh-shedge"},
-      {"name":"Harnoor Pannu","name_id":"harnoor-pannu"},
-      {"name":"Josh Inglis","name_id":"josh-inglis"},
-      {"name":"Marcus Stoinis","name_id":"marcus-stoinis"},
-      {"name":"Glenn Maxwell","name_id":"glenn-maxwell"}
-    ],
-    "All Rounders": [
-      {"name":"Marcus Stoinis","name_id":"marcus-stoinis"},
-      {"name":"Aaron Hardie","name_id":"aaron-hardie"},
-      {"name":"Kyle Jamieson","name_id":"kyle-jamieson"},
-      {"name":"Vijaykumar Vyshak","name_id":"vijaykumar-vyshak"},
-      {"name":"Lockie Ferguson","name_id":"lockie-ferguson"},
-      {"name":"Sandeep Sharma","name_id":"sandeep-sharma"}
-    ],
-    "Wicket Keepers": [
-      {"name":"Josh Inglis","name_id":"josh-inglis"},
-      {"name":"Prabhsimran Singh","name_id":"prabhsimran-singh"}
-    ],
-    "Bowlers": [
-      {"name":"Arshdeep Singh","name_id":"arshdeep-singh"},
-      {"name":"Yuzvendra Chahal","name_id":"yuzvendra-chahal"},
-      {"name":"Marco Jansen","name_id":"marco-jansen"},
-      {"name":"Harpreet Brar","name_id":"harpreet-brar"},
-      {"name":"Xavier Bartlett","name_id":"xavier-bartlett"},
-      {"name":"Azmatullah Omarzai","name_id":"azmatullah-omarzai"},
-      {"name":"Vijaykumar Vyshak","name_id":"vijaykumar-vyshak"}
-    ],
-    "All Players": [
-      {"name":"Shreyas Iyer","name_id":"shreyas-iyer"},
-      {"name":"Prabhsimran Singh","name_id":"prabhsimran-singh"},
-      {"name":"Nehal Wadhera","name_id":"nehal-wadhera"},
-      {"name":"Suryansh Shedge","name_id":"suryansh-shedge"},
-      {"name":"Harnoor Pannu","name_id":"harnoor-pannu"},
-      {"name":"Josh Inglis","name_id":"josh-inglis"},
-      {"name":"Marcus Stoinis","name_id":"marcus-stoinis"},
-      {"name":"Glenn Maxwell","name_id":"glenn-maxwell"},
-      {"name":"Aaron Hardie","name_id":"aaron-hardie"},
-      {"name":"Kyle Jamieson","name_id":"kyle-jamieson"},
-      {"name":"Vijaykumar Vyshak","name_id":"vijaykumar-vyshak"},
-      {"name":"Lockie Ferguson","name_id":"lockie-ferguson"},
-      {"name":"Sandeep Sharma","name_id":"sandeep-sharma"},
-      {"name":"Arshdeep Singh","name_id":"arshdeep-singh"},
-      {"name":"Yuzvendra Chahal","name_id":"yuzvendra-chahal"},
-      {"name":"Marco Jansen","name_id":"marco-jansen"},
-      {"name":"Harpreet Brar","name_id":"harpreet-brar"},
-      {"name":"Xavier Bartlett","name_id":"xavier-bartlett"},
-      {"name":"Azmatullah Omarzai","name_id":"azmatullah-omarzai"}
-    ]
-  },
-  "Sunrisers Hyderabad": {
-    "Batsmen": [
-      {"name":"Heinrich Klaasen","name_id":"heinrich-klaasen"},
-      {"name":"Travis Head","name_id":"travis-head"},
-      {"name":"Rahul Tripathi","name_id":"rahul-tripathi"},
-      {"name":"Mayank Agarwal","name_id":"mayank-agarwal"},
-      {"name":"Sachin Baby","name_id":"sachin-baby"},
-      {"name":"Anmolpreet Singh","name_id":"anmolpreet-singh"}
-    ],
-    "All Rounders": [
-      {"name":"Abhishek Sharma","name_id":"abhishek-sharma"},
-      {"name":"Nitish Kumar Reddy","name_id":"nitish-kumar-reddy"},
-      {"name":"Pat Cummins","name_id":"pat-cummins"},
-      {"name":"Marco Jansen","name_id":"marco-jansen"},
-      {"name":"Kamindu Mendis","name_id":"kamindu-mendis"},
-      {"name":"Wiaan Mulder","name_id":"wiaan-mulder"},
-      {"name":"Adam Zampa","name_id":"adam-zampa"},
-      {"name":"Atharva Taide","name_id":"atharva-taide"},
-      {"name":"Abhinav Manohar","name_id":"abhinav-manohar"}
-    ],
-    "Wicket Keepers": [
-      {"name":"Heinrich Klaasen","name_id":"heinrich-klaasen"},
-      {"name":"Ishan Kishan","name_id":"ishan-kishan"}
-    ],
-    "Bowlers": [
-      {"name":"Mohammed Shami","name_id":"mohammed-shami"},
-      {"name":"Harshal Patel","name_id":"harshal-patel"},
-      {"name":"Rahul Chahar","name_id":"rahul-chahar"},
-      {"name":"Jaydev Unadkat","name_id":"jaydev-unadkat"},
-      {"name":"Umran Malik","name_id":"umran-malik"},
-      {"name":"YZeSean Ansari","name_id":"zeeshan-ansari"},
-      {"name":"Simarjeet Singh","name_id":"simarjeet-singh"}
-    ],
-    "All Players": [
-      {"name":"Heinrich Klaasen","name_id":"heinrich-klaasen"},
-      {"name":"Travis Head","name_id":"travis-head"},
-      {"name":"Rahul Tripathi","name_id":"rahul-tripathi"},
-      {"name":"Mayank Agarwal","name_id":"mayank-agarwal"},
-      {"name":"Sachin Baby","name_id":"sachin-baby"},
-      {"name":"Anmolpreet Singh","name_id":"anmolpreet-singh"},
-      {"name":"Abhishek Sharma","name_id":"abhishek-sharma"},
-      {"name":"Nitish Kumar Reddy","name_id":"nitish-kumar-reddy"},
-      {"name":"Pat Cummins","name_id":"pat-cummins"},
-      {"name":"Marco Jansen","name_id":"marco-jansen"},
-      {"name":"Kamindu Mendis","name_id":"kamindu-mendis"},
-      {"name":"Wiaan Mulder","name_id":"wiaan-mulder"},
-      {"name":"Adam Zampa","name_id":"adam-zampa"},
-      {"name":"Atharva Taide","name_id":"atharva-taide"},
-      {"name":"Abhinav Manohar","name_id":"abhinav-manohar"},
-      {"name":"Mohammed Shami","name_id":"mohammed-shami"},
-      {"name":"Harshal Patel","name_id":"harshal-patel"},
-      {"name":"Rahul Chahar","name_id":"rahul-chahar"},
-      {"name":"Jaydev Unadkat","name_id":"jaydev-unadkat"},
-      {"name":"Umran Malik","name_id":"umran-malik"},
-      {"name":"Zeeshan Ansari","name_id":"zeeshan-ansari"},
-      {"name":"Simarjeet Singh","name_id":"simarjeet-singh"}
-    ]
-  },
-   "Lucknow Super Giants": {
-    "Batsmen": [
-      {"name":"Rishabh Pant","name_id":"rishabh-pant"},
-      {"name":"David Miller","name_id":"david-miller"},
-      {"name":"Nicholas Pooran","name_id":"nicholas-pooran"},
-      {"name":"Ayush Badoni","name_id":"ayush-badoni"}
-    ],
-    "All Rounders": [
-      {"name":"Deepak Hooda","name_id":"deepak-hooda"},
-      {"name":"Krunal Pandya","name_id":"krunal-pandya"},
-      {"name":"Mitchell Marsh","name_id":"mitchell-marsh"},
-      {"name":"Aiden Markram","name_id":"aiden-markram"},
-      {"name":"Abdul Samad","name_id":"abdul-samad"},
-      {"name":"Aryan Juyal","name_id":"arshin-kulkarni"},
-      {"name":"Digvesh Rathi","name_id":"digvesh-rathi"},
-      {"name":"Himmat Singh","name_id":"himmat-singh"}
-    ],
-    "Wicket Keepers": [
-      {"name":"Rishabh Pant","name_id":"rishabh-pant"},
-      {"name":"Nicholas Pooran","name_id":"nicholas-pooran"},
-      {"name":"Ayush Badoni","name_id":"ayush-badoni"}
-    ],
-    "Bowlers": [
-      {"name":"Ravi Bishnoi","name_id":"ravi-bishnoi"},
-      {"name":"Mayank Yadav","name_id":"mayank-yadav"},
-      {"name":"Mohsin Khan","name_id":"mohsin-khan"},
-      {"name":"Avesh Khan","name_id":"avesh-khan"},
-      {"name":"Akash Deep","name_id":"akash-deep"}
-    ],
-    "All Players": [
-      {"name":"Rishabh Pant","name_id":"rishabh-pant"},
-      {"name":"David Miller","name_id":"david-miller"},
-      {"name":"Nicholas Pooran","name_id":"nicholas-pooran"},
-      {"name":"Ayush Badoni","name_id":"ayush-badoni"},
-      {"name":"Deepak Hooda","name_id":"deepak-hooda"},
-      {"name":"Krunal Pandya","name_id":"krunal-pandya"},
-      {"name":"Mitchell Marsh","name_id":"mitchell-marsh"},
-      {"name":"Aiden Markram","name_id":"aiden-markram"},
-      {"name":"Abdul Samad","name_id":"abdul-samad"},
-      {"name":"Aryan Juyal","name_id":"arshin-kulkarni"},
-      {"name":"Digvesh Rathi","name_id":"digvesh-rathi"},
-      {"name":"Himmat Singh","name_id":"himmat-singh"},
-      {"name":"Ravi Bishnoi","name_id":"ravi-bishnoi"},
-      {"name":"Mayank Yadav","name_id":"mayank-yadav"},
-      {"name":"Mohsin Khan","name_id":"mohsin-khan"},
-      {"name":"Avesh Khan","name_id":"avesh-khan"},
-      {"name":"Akash Deep","name_id":"akash-deep"}
-    ]
-  },
+  "Batsmen": [
+    {"name":"Shreyas Iyer","name_id":"shreyas-iyer","image_id":""},
+    {"name":"Prabhsimran Singh","name_id":"prabhsimran-singh","image_id":""},
+    {"name":"Nehal Wadhera","name_id":"nehal-wadhera","image_id":""},
+    {"name":"Suryansh Shedge","name_id":"suryansh-shedge","image_id":""},
+    {"name":"Harnoor Pannu","name_id":"harnoor-pannu","image_id":""},
+    {"name":"Josh Inglis","name_id":"josh-inglis","image_id":""},
+    {"name":"Marcus Stoinis","name_id":"marcus-stoinis","image_id":""},
+    {"name":"Glenn Maxwell","name_id":"glenn-maxwell","image_id":""}
+  ],
+  "All Rounders": [
+    {"name":"Marcus Stoinis","name_id":"marcus-stoinis","image_id":""},
+    {"name":"Aaron Hardie","name_id":"aaron-hardie","image_id":""},
+    {"name":"Kyle Jamieson","name_id":"kyle-jamieson","image_id":""},
+    {"name":"Vijaykumar Vyshak","name_id":"vijaykumar-vyshak","image_id":""},
+    {"name":"Lockie Ferguson","name_id":"lockie-ferguson","image_id":""},
+    {"name":"Sandeep Sharma","name_id":"sandeep-sharma","image_id":""}
+  ],
+  "Wicket Keepers": [
+    {"name":"Josh Inglis","name_id":"josh-inglis","image_id":""},
+    {"name":"Prabhsimran Singh","name_id":"prabhsimran-singh","image_id":""}
+  ],
+  "Bowlers": [
+    {"name":"Arshdeep Singh","name_id":"arshdeep-singh","image_id":""},
+    {"name":"Yuzvendra Chahal","name_id":"yuzvendra-chahal","image_id":""},
+    {"name":"Marco Jansen","name_id":"marco-jansen","image_id":""},
+    {"name":"Harpreet Brar","name_id":"harpreet-brar","image_id":""},
+    {"name":"Xavier Bartlett","name_id":"xavier-bartlett","image_id":""},
+    {"name":"Azmatullah Omarzai","name_id":"azmatullah-omarzai","image_id":""},
+    {"name":"Vijaykumar Vyshak","name_id":"vijaykumar-vyshak","image_id":""}
+  ],
+  "All Players": [
+    {"name":"Shreyas Iyer","name_id":"shreyas-iyer","image_id":""},
+    {"name":"Prabhsimran Singh","name_id":"prabhsimran-singh","image_id":""},
+    {"name":"Nehal Wadhera","name_id":"nehal-wadhera","image_id":""},
+    {"name":"Suryansh Shedge","name_id":"suryansh-shedge","image_id":""},
+    {"name":"Harnoor Pannu","name_id":"harnoor-pannu","image_id":""},
+    {"name":"Josh Inglis","name_id":"josh-inglis","image_id":""},
+    {"name":"Marcus Stoinis","name_id":"marcus-stoinis","image_id":""},
+    {"name":"Glenn Maxwell","name_id":"glenn-maxwell","image_id":""},
+    {"name":"Aaron Hardie","name_id":"aaron-hardie","image_id":""},
+    {"name":"Kyle Jamieson","name_id":"kyle-jamieson","image_id":""},
+    {"name":"Vijaykumar Vyshak","name_id":"vijaykumar-vyshak","image_id":""},
+    {"name":"Lockie Ferguson","name_id":"lockie-ferguson","image_id":""},
+    {"name":"Sandeep Sharma","name_id":"sandeep-sharma","image_id":""},
+    {"name":"Arshdeep Singh","name_id":"arshdeep-singh","image_id":""},
+    {"name":"Yuzvendra Chahal","name_id":"yuzvendra-chahal","image_id":""},
+    {"name":"Marco Jansen","name_id":"marco-jansen","image_id":""},
+    {"name":"Harpreet Brar","name_id":"harpreet-brar","image_id":""},
+    {"name":"Xavier Bartlett","name_id":"xavier-bartlett","image_id":""},
+    {"name":"Azmatullah Omarzai","name_id":"azmatullah-omarzai","image_id":""}
+  ]
+},
+"Sunrisers Hyderabad": {
+  "Batsmen": [
+    {"name":"Heinrich Klaasen","name_id":"heinrich-klaasen","image_id":""},
+    {"name":"Travis Head","name_id":"travis-head","image_id":""},
+    {"name":"Rahul Tripathi","name_id":"rahul-tripathi","image_id":""},
+    {"name":"Mayank Agarwal","name_id":"mayank-agarwal","image_id":""},
+    {"name":"Sachin Baby","name_id":"sachin-baby","image_id":""},
+    {"name":"Anmolpreet Singh","name_id":"anmolpreet-singh","image_id":""}
+  ],
+  "All Rounders": [
+    {"name":"Abhishek Sharma","name_id":"abhishek-sharma","image_id":""},
+    {"name":"Nitish Kumar Reddy","name_id":"nitish-kumar-reddy","image_id":""},
+    {"name":"Pat Cummins","name_id":"pat-cummins","image_id":""},
+    {"name":"Marco Jansen","name_id":"marco-jansen","image_id":""},
+    {"name":"Kamindu Mendis","name_id":"kamindu-mendis","image_id":""},
+    {"name":"Wiaan Mulder","name_id":"wiaan-mulder","image_id":""},
+    {"name":"Adam Zampa","name_id":"adam-zampa","image_id":""},
+    {"name":"Atharva Taide","name_id":"atharva-taide","image_id":""},
+    {"name":"Abhinav Manohar","name_id":"abhinav-manohar","image_id":""}
+  ],
+  "Wicket Keepers": [
+    {"name":"Heinrich Klaasen","name_id":"heinrich-klaasen","image_id":""},
+    {"name":"Ishan Kishan","name_id":"ishan-kishan","image_id":""}
+  ],
+  "Bowlers": [
+    {"name":"Mohammed Shami","name_id":"mohammed-shami","image_id":""},
+    {"name":"Harshal Patel","name_id":"harshal-patel","image_id":""},
+    {"name":"Rahul Chahar","name_id":"rahul-chahar","image_id":""},
+    {"name":"Jaydev Unadkat","name_id":"jaydev-unadkat","image_id":""},
+    {"name":"Umran Malik","name_id":"umran-malik","image_id":""},
+    {"name":"YZeSean Ansari","name_id":"zeeshan-ansari","image_id":""},
+    {"name":"Simarjeet Singh","name_id":"simarjeet-singh","image_id":""}
+  ],
+  "All Players": [
+    {"name":"Heinrich Klaasen","name_id":"heinrich-klaasen","image_id":""},
+    {"name":"Travis Head","name_id":"travis-head","image_id":""},
+    {"name":"Rahul Tripathi","name_id":"rahul-tripathi","image_id":""},
+    {"name":"Mayank Agarwal","name_id":"mayank-agarwal","image_id":""},
+    {"name":"Sachin Baby","name_id":"sachin-baby","image_id":""},
+    {"name":"Anmolpreet Singh","name_id":"anmolpreet-singh","image_id":""},
+    {"name":"Abhishek Sharma","name_id":"abhishek-sharma","image_id":""},
+    {"name":"Nitish Kumar Reddy","name_id":"nitish-kumar-reddy","image_id":""},
+    {"name":"Pat Cummins","name_id":"pat-cummins","image_id":""},
+    {"name":"Marco Jansen","name_id":"marco-jansen","image_id":""},
+    {"name":"Kamindu Mendis","name_id":"kamindu-mendis","image_id":""},
+    {"name":"Wiaan Mulder","name_id":"wiaan-mulder","image_id":""},
+    {"name":"Adam Zampa","name_id":"adam-zampa","image_id":""},
+    {"name":"Atharva Taide","name_id":"atharva-taide","image_id":""},
+    {"name":"Abhinav Manohar","name_id":"abhinav-manohar","image_id":""},
+    {"name":"Mohammed Shami","name_id":"mohammed-shami","image_id":""},
+    {"name":"Harshal Patel","name_id":"harshal-patel","image_id":""},
+    {"name":"Rahul Chahar","name_id":"rahul-chahar","image_id":""},
+    {"name":"Jaydev Unadkat","name_id":"jaydev-unadkat","image_id":""},
+    {"name":"Umran Malik","name_id":"umran-malik","image_id":""},
+    {"name":"Zeeshan Ansari","name_id":"zeeshan-ansari","image_id":""},
+    {"name":"Simarjeet Singh","name_id":"simarjeet-singh","image_id":""}
+  ]
+},
+"Lucknow Super Giants": {
+  "Batsmen": [
+    {"name":"Rishabh Pant","name_id":"rishabh-pant","image_id":""},
+    {"name":"David Miller","name_id":"david-miller","image_id":""},
+    {"name":"Nicholas Pooran","name_id":"nicholas-pooran","image_id":""},
+    {"name":"Ayush Badoni","name_id":"ayush-badoni","image_id":""}
+  ],
+  "All Rounders": [
+    {"name":"Deepak Hooda","name_id":"deepak-hooda","image_id":""},
+    {"name":"Krunal Pandya","name_id":"krunal-pandya","image_id":""},
+    {"name":"Mitchell Marsh","name_id":"mitchell-marsh","image_id":""},
+    {"name":"Aiden Markram","name_id":"aiden-markram","image_id":""},
+    {"name":"Abdul Samad","name_id":"abdul-samad","image_id":""},
+    {"name":"Aryan Juyal","name_id":"arshin-kulkarni","image_id":""},
+    {"name":"Digvesh Rathi","name_id":"digvesh-rathi","image_id":""},
+    {"name":"Himmat Singh","name_id":"himmat-singh","image_id":""}
+  ],
+  "Wicket Keepers": [
+    {"name":"Rishabh Pant","name_id":"rishabh-pant","image_id":""},
+    {"name":"Nicholas Pooran","name_id":"nicholas-pooran","image_id":""},
+    {"name":"Ayush Badoni","name_id":"ayush-badoni","image_id":""}
+  ],
+  "Bowlers": [
+    {"name":"Ravi Bishnoi","name_id":"ravi-bishnoi","image_id":""},
+    {"name":"Mayank Yadav","name_id":"mayank-yadav","image_id":""},
+    {"name":"Mohsin Khan","name_id":"mohsin-khan","image_id":""},
+    {"name":"Avesh Khan","name_id":"avesh-khan","image_id":""},
+    {"name":"Akash Deep","name_id":"akash-deep","image_id":""}
+  ],
+  "All Players": [
+    {"name":"Rishabh Pant","name_id":"rishabh-pant","image_id":""},
+    {"name":"David Miller","name_id":"david-miller","image_id":""},
+    {"name":"Nicholas Pooran","name_id":"nicholas-pooran","image_id":""},
+    {"name":"Ayush Badoni","name_id":"ayush-badoni","image_id":""},
+    {"name":"Deepak Hooda","name_id":"deepak-hooda","image_id":""},
+    {"name":"Krunal Pandya","name_id":"krunal-pandya","image_id":""},
+    {"name":"Mitchell Marsh","name_id":"mitchell-marsh","image_id":""},
+    {"name":"Aiden Markram","name_id":"aiden-markram","image_id":""},
+    {"name":"Abdul Samad","name_id":"abdul-samad","image_id":""},
+    {"name":"Aryan Juyal","name_id":"arshin-kulkarni","image_id":""},
+    {"name":"Digvesh Rathi","name_id":"digvesh-rathi","image_id":""},
+    {"name":"Himmat Singh","name_id":"himmat-singh","image_id":""},
+    {"name":"Ravi Bishnoi","name_id":"ravi-bishnoi","image_id":""},
+    {"name":"Mayank Yadav","name_id":"mayank-yadav","image_id":""},
+    {"name":"Mohsin Khan","name_id":"mohsin-khan","image_id":""},
+    {"name":"Avesh Khan","name_id":"avesh-khan","image_id":""},
+    {"name":"Akash Deep","name_id":"akash-deep","image_id":""}
+  ]
+},
   "Rajasthan Royals": {
-    "Batsmen": [
-      {"name": "Yashasvi Jaiswal", "name_id": "yashasvi-jaiswal"},
-      {"name": "Shimron Hetmyer", "name_id": "shimron-hetmyer"},
-      {"name": "Shubham Dubey", "name_id": "shubham-dubey"},
-      {"name": "Vaibhav Suryavanshi", "name_id": "vaibhav-suryavanshi"}
-    ],
-    "All Rounders": [
-      {"name": "Riyan Parag", "name_id": "riyan-parag"},
-      {"name": "Nitish Rana", "name_id": "nitish-rana"},
-      {"name": "Yudhvir Singh Charak", "name_id": "yudhvir-singh-charak"}
-    ],
-    "Wicket Keepers": [
-      {"name": "Sanju Samson", "name_id": "sanju-samson"},
-      {"name": "Dhruv Jurel", "name_id": "dhruv-jurel"},
-      {"name": "Kunal Singh Rathore", "name_id": "kunal-singh-rathore"}
-    ],
-    "Bowlers": [
-      {"name": "Sandeep Sharma", "name_id": "sandeep-sharma"},
-      {"name": "Jofra Archer", "name_id": "jofra-archer"},
-      {"name": "Tushar Deshpande", "name_id": "tushar-deshpande"},
-      {"name": "Wanindu Hasaranga", "name_id": "wanindu-hasaranga"},
-      {"name": "Maheesh Theekshana", "name_id": "maheesh-theekshana"},
-      {"name": "Fazalhaq Farooqi", "name_id": "fazalhaq-farooqi"},
-      {"name": "Akash Madhwal", "name_id": "akash-madhwal"},
-      {"name": "Kumar Kartikeya", "name_id": "kumar-kartikeya"},
-      {"name": "Kwena Maphaka", "name_id": "kwena-maphaka"}
-    ],
-    "All Players": [
-      {"name": "Yashasvi Jaiswal", "name_id": "yashasvi-jaiswal"},
-      {"name": "Shimron Hetmyer", "name_id": "shimron-hetmyer"},
-      {"name": "Shubham Dubey", "name_id": "shubham-dubey"},
-      {"name": "Vaibhav Suryavanshi", "name_id": "vaibhav-suryavanshi"},
-      {"name": "Riyan Parag", "name_id": "riyan-parag"},
-      {"name": "Nitish Rana", "name_id": "nitish-rana"},
-      {"name": "Yudhvir Singh Charak", "name_id": "yudhvir-singh-charak"},
-      {"name": "Sanju Samson", "name_id": "sanju-samson"},
-      {"name": "Dhruv Jurel", "name_id": "dhruv-jurel"},
-      {"name": "Kunal Singh Rathore", "name_id": "kunal-singh-rathore"},
-      {"name": "Sandeep Sharma", "name_id": "sandeep-sharma"},
-      {"name": "Jofra Archer", "name_id": "jofra-archer"},
-      {"name": "Tushar Deshpande", "name_id": "tushar-deshpande"},
-      {"name": "Wanindu Hasaranga", "name_id": "wanindu-hasaranga"},
-      {"name": "Maheesh Theekshana", "name_id": "maheesh-theekshana"},
-      {"name": "Fazalhaq Farooqi", "name_id": "fazalhaq-farooqi"},
-      {"name": "Akash Madhwal", "name_id": "akash-madhwal"},
-      {"name": "Kumar Kartikeya", "name_id": "kumar-kartikeya"},
-      {"name": "Kwena Maphaka", "name_id": "kwena-maphaka"}
+  "Batsmen": [
+    {"name": "Yashasvi Jaiswal", "name_id": "yashasvi-jaiswal", "image_id": ""},
+    {"name": "Shimron Hetmyer", "name_id": "shimron-hetmyer", "image_id": ""},
+    {"name": "Shubham Dubey", "name_id": "shubham-dubey", "image_id": ""},
+    {"name": "Vaibhav Suryavanshi", "name_id": "vaibhav-suryavanshi", "image_id": ""}
+  ],
+  "All Rounders": [
+    {"name": "Riyan Parag", "name_id": "riyan-parag", "image_id": ""},
+    {"name": "Nitish Rana", "name_id": "nitish-rana", "image_id": ""},
+    {"name": "Yudhvir Singh Charak", "name_id": "yudhvir-singh-charak", "image_id": ""}
+  ],
+  "Wicket Keepers": [
+    {"name": "Sanju Samson", "name_id": "sanju-samson", "image_id": ""},
+    {"name": "Dhruv Jurel", "name_id": "dhruv-jurel", "image_id": ""},
+    {"name": "Kunal Singh Rathore", "name_id": "kunal-singh-rathore", "image_id": ""}
+  ],
+  "Bowlers": [
+    {"name": "Sandeep Sharma", "name_id": "sandeep-sharma", "image_id": ""},
+    {"name": "Jofra Archer", "name_id": "jofra-archer", "image_id": ""},
+    {"name": "Tushar Deshpande", "name_id": "tushar-deshpande", "image_id": ""},
+    {"name": "Wanindu Hasaranga", "name_id": "wanindu-hasaranga", "image_id": ""},
+    {"name": "Maheesh Theekshana", "name_id": "maheesh-theekshana", "image_id": ""},
+    {"name": "Fazalhaq Farooqi", "name_id": "fazalhaq-farooqi", "image_id": ""},
+    {"name": "Akash Madhwal", "name_id": "akash-madhwal", "image_id": ""},
+    {"name": "Kumar Kartikeya", "name_id": "kumar-kartikeya", "image_id": ""},
+    {"name": "Kwena Maphaka", "name_id": "kwena-maphaka", "image_id": ""}
+  ],
+  "All Players": [
+    {"name": "Yashasvi Jaiswal", "name_id": "yashasvi-jaiswal", "image_id": ""},
+    {"name": "Shimron Hetmyer", "name_id": "shimron-hetmyer", "image_id": ""},
+    {"name": "Shubham Dubey", "name_id": "shubham-dubey", "image_id": ""},
+    {"name": "Vaibhav Suryavanshi", "name_id": "vaibhav-suryavanshi", "image_id": ""},
+    {"name": "Riyan Parag", "name_id": "riyan-parag", "image_id": ""},
+    {"name": "Nitish Rana", "name_id": "nitish-rana", "image_id": ""},
+    {"name": "Yudhvir Singh Charak", "name_id": "yudhvir-singh-charak", "image_id": ""},
+    {"name": "Sanju Samson", "name_id": "sanju-samson", "image_id": ""},
+    {"name": "Dhruv Jurel", "name_id": "dhruv-jurel", "image_id": ""},
+    {"name": "Kunal Singh Rathore", "name_id": "kunal-singh-rathore", "image_id": ""},
+    {"name": "Sandeep Sharma", "name_id": "sandeep-sharma", "image_id": ""},
+    {"name": "Jofra Archer", "name_id": "jofra-archer", "image_id": ""},
+    {"name": "Tushar Deshpande", "name_id": "tushar-deshpande", "image_id": ""},
+    {"name": "Wanindu Hasaranga", "name_id": "wanindu-hasaranga", "image_id": ""},
+    {"name": "Maheesh Theekshana", "name_id": "maheesh-theekshana", "image_id": ""},
+    {"name": "Fazalhaq Farooqi", "name_id": "fazalhaq-farooqi", "image_id": ""},
+    {"name": "Akash Madhwal", "name_id": "akash-madhwal", "image_id": ""},
+    {"name": "Kumar Kartikeya", "name_id": "kumar-kartikeya", "image_id": ""},
+    {"name": "Kwena Maphaka", "name_id": "kwena-maphaka", "image_id": ""}
     ]
   }
 }
