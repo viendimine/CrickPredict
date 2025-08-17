@@ -147,6 +147,47 @@
       color: #f4fcfbff;
     }
 
+    .styled-table-women {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 10px 30px;
+      font-size: 15px;
+      font-family: sans-serif;
+      min-width: 420px;
+      max-width: 420px;
+      box-shadow: #030303ff 2px;
+    }
+
+    .styled-table-women thead tr {
+      background-color: #d2d7d6ff;
+      color: black;
+      text-align: left;
+    }
+
+    .styled-table-women th,
+    .styled-table-women td {
+      padding: 8px 11px;
+    }
+
+    .styled-table-women tbody tr {
+      border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table-women tbody tr:nth-of-type(even) {
+      background-color: white;
+    }
+
+    .styled-table-women tbody tr:last-of-type {
+      border-bottom: 2px solid #eef6f4ff;
+    }
+
+    .styled-table-women tbody tr.active-row {
+      font-weight: bold;
+      color: #f4fcfbff;
+    }
+
     .tab-button {
       padding: 10px 15px;
       background-color: rgba(249, 239, 237, 0.96);
@@ -176,6 +217,7 @@
 
     .tab-content {
       display: block; 
+      margin-top: -25px;
       flex: 1;
       min-width: 300px;
       max-width: 450px;
@@ -198,6 +240,11 @@
       min-width: 500px;
       max-width: 660px;
       margin-left: 1px;
+    }
+
+    .image{
+      width : 45px ;
+      height : 30px ;
     }
 
     .formats{
@@ -294,11 +341,11 @@
         border-spacing: 0;
         border-radius: 10px;
         overflow: hidden;
-        margin: 0px -15px;
-        font-size: 15px;
+        margin: 0px 5px;
+        font-size: 10px;
         font-family: sans-serif;
-        min-width: 400px;
-        max-width: 420px;
+        min-width: 350px;
+        max-width: 370px;
         box-shadow: #030303ff 2px;
       }
 
@@ -330,6 +377,47 @@
         color: #f4fcfbff;
       }
 
+      .styled-table-women {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0px 5px;
+        font-size: 10px;
+        font-family: sans-serif;
+        min-width: 360px;
+        max-width: 360px;
+        box-shadow: #030303ff 2px;
+      }
+
+      .styled-table-women thead tr {
+        background-color: #d2d7d6ff;
+        color: black;
+        text-align: left;
+      }
+
+      .styled-table-women th,
+      .styled-table-women td {
+        padding: 8px 11px;
+      }
+
+      .styled-table-women tbody tr {
+        border-bottom: 1px solid #dddddd;
+      }
+
+      .styled-table-women tbody tr:nth-of-type(even) {
+        background-color: white;
+      }
+
+      .styled-table-women tbody tr:last-of-type {
+        border-bottom: 2px solid #eef6f4ff;
+      }
+
+      .styled-table-women tbody tr.active-row {
+        font-weight: bold;
+        color: #f4fcfbff;
+      }
+
       .formats{
         display: flex;
         gap: 8px;
@@ -353,6 +441,11 @@
       background: green;      
       color: white;
       border-color: green;
+}
+    .image{
+      height: 25px;
+      width: 35px;
+      margin-left: 0px;
 }
 
   </style>
@@ -403,7 +496,7 @@
 
 
 <div class="rankings-wrapper" id="MensTeam">
-  <div style="margin: 0px -10px;" class="formats">
+  <div style="margin: -15px 0px;" class="formats">
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
           onclick="showTab_formats_men('ICCMensT20Is', this)">T20</button>
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
@@ -413,7 +506,7 @@
 </div>
   <div class="rankings-row">
   <div class="tab-content format-pane" id="ICCMensT20Is">
-    <div><center>ICC Men's T20Is</center></div>
+    <h3><center>ICC Men's T20Is</center></h3>
     <table class="styled-table">
       <thead>
         <tr>
@@ -429,7 +522,7 @@
           <td>{{ team.rank }}</td>
           <td>
             <div style="display: flex; align-items: center;">
-              <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              <img src="{{ team.image }}"  alt="{{ team.team }}" style="margin-right: 20px;" class="image">
               <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
@@ -442,7 +535,7 @@
   </div>
 
   <div class="tab-content format-pane" id="ICCMensTests">
-    <div><center>ICC Men's Tests</center></div>
+    <h3><center>ICC Men's Tests</center></h3>
     <table class="styled-table">
       <thead>
         <tr>
@@ -458,7 +551,7 @@
           <td>{{ team.rank }}</td>
           <td>
             <div style="display: flex; align-items: center;">
-              <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              <img src="{{ team.image }}" class="image" alt="{{ team.team }}" style="margin-right: 20px;">
               <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
@@ -471,7 +564,7 @@
   </div>
 
   <div class="tab-content format-pane" id="ICCMensODIs">
-    <div><center>ICC Men's ODIs</center></div>
+    <h3><center>ICC Men's ODIs</center></h3>
     <table class="styled-table">
       <thead>
         <tr>
@@ -487,7 +580,7 @@
           <td>{{ team.rank }}</td>
           <td>
             <div style="display: flex; align-items: center;">
-              <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              <img src="{{ team.image }}" class="image" alt="{{ team.team }}" style="margin-right: 20px;">
               <a href="{% url 'team_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
             </div>
           </td>
@@ -503,7 +596,7 @@
 
 
 <div class="rankings-wrapper" id="WomensTeam">
-  <div style="margin: 0px 0px;" class="formats">
+  <div style="margin: -15px 0px;" class="formats">
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
           onclick="showTab_formats_women('ICCWomenT20Is', this)">T20</button>
   <button class="tab-button team-tab" style=" border-radius:100px; font-size: 10px; width:100px;"
@@ -513,7 +606,7 @@
 
     <div class="tab-content format-pane" id="ICCWomenT20Is">
       <h3><center>ICC Women's T20Is</center></h3>
-      <table class="styled-table women-table">
+      <table class="styled-table-women women-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -527,8 +620,8 @@
           <tr>
             <td>{{ team.rank }}</td>
             <td>
-              <div style="display: flex; align-items: center;">
-                <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+              <div style="display: flex; align-items: left;">
+                <img src="{{ team.image }}" class="image" alt="{{ team.team }}" style="margin-right: 20px;">
                 {{ team.team }}
               </div>
             </td>
@@ -542,7 +635,7 @@
 
     <div class="tab-content format-pane" id="ICCWomenODIs">
       <h3><center>ICC Women's ODIs</center></h3>
-      <table class="styled-table women-table">
+      <table class="styled-table-women women-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -557,7 +650,7 @@
             <td>{{ team.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src="{{ team.image }}" width="45" height="30" alt="{{ team.team }}" style="margin-right: 20px;">
+                <img src="{{ team.image }}" class="image" alt="{{ team.team }}" style="margin-right: 20px;">
                 {{ team.team }}
               </div>
             </td>
@@ -572,14 +665,14 @@
   </div>
 </div>
 
-<div style="margin: -30px 30px;">
+<div style="margin: -5px 30px;">
   <button class="tab-button batter-tab " onclick="showTab_Batters('MensBatsmen')">Men's Batting </button>
   <button class="tab-button batter-tab" onclick="showTab_Batters('WomensBatsmen')">Women's Batting </button>
 </div>
 
 
 <div class="rankings-wrapper" id= "MensBatsmen">
-  <div style="margin: 0px 0px;" class="formats">
+  <div style="margin: -15px 0px;" class="formats">
     <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
       onclick="showTab_formats_men_batting('ICCMensBatT20Is', this)">T20</button>
     <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
@@ -604,7 +697,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">
+      <img src={% static player.image %} class="image" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px">
        <a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
       </div></td>
       <td>{{ player.country }}</td>
@@ -631,7 +724,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-     <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px"><a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
+     <img src={% static player.image %} class="image" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px"><a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
       </div></td>
       <td>{{ player.country }}</td>
       <td>{{ player.points }}</td>
@@ -657,7 +750,7 @@
     <tr>
       <td >{{ player.rank }}</td>
       <td><div style="display: flex; align-items: center;">
-      <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px"><a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
+      <img src={% static player.image %} class="image" alt="{{ player.name }}" style="margin-right: 20px; border-radius:100px"><a href="{% url 'player_details' player.name %}" style="text-decoration : none; color: black;">{{player.name}}</a>
       </div></td>
       <td>{{ player.country }}</td>
       <td>{{ player.points }}</td>
@@ -671,7 +764,7 @@
 </div>
 
 <div class="rankings-wrapper" id="WomensBatsmen">
-  <div style="margin: 0px -10px;" class="formats">
+  <div style="margin: -15px 0px;" class="formats">
     <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
       onclick="showTab_formats_women_batting('ICCWomenBatT20Is', this)">T20</button>
     <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
@@ -682,7 +775,7 @@
 
     <div class="tab-content format-pane" id="ICCWomenBatT20Is">
       <h3><center>ICC Women's T20Is</center></h3>
-      <table class="styled-table women-table">
+      <table class="styled-table-women women-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -697,7 +790,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}"
+                <img src={% static player.image %} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>
@@ -712,7 +805,7 @@
 
     <div class="tab-content format-pane" id="ICCWomenBatODIs">
       <h3><center>ICC Women's ODIs</center></h3>
-      <table class="styled-table women-table">
+      <table class="styled-table-women women-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -727,7 +820,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={% static player.image %} width="45" height="45" alt="{{ player.name }}"
+                <img src={% static player.image %} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>
@@ -743,7 +836,7 @@
   </div>
 </div>
 
-<div style="margin: 0px 30px;">
+<div style="margin: -20px 30px;">
   <button class="tab-button bwoler-tab " onclick="showTab_Bowlers('MensBowler')">Men's Bowling </button>
   <button class="tab-button bowler-tab" onclick="showTab_Bowlers('WomensBowler')">Women's Bowling </button>
 </div>
@@ -778,7 +871,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                <img src={{player.image}} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>
@@ -808,7 +901,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                <img src={{player.image}} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>
@@ -838,7 +931,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                <img src={{player.image}} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>
@@ -855,7 +948,7 @@
 </div>
 
 <div class="rankings-wrapper" id="WomensBowler">
-  <div style="margin: 0px -10px;" class="formats">
+  <div style="margin: -15px 0px;" class="formats">
     <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
       onclick="showTab_formats_women_bowling('ICCWomenBowlT20Is', this)">T20</button>
     <button class="tab-button team-tab" style="border-radius:100px; font-size: 10px; width:100px;"
@@ -866,7 +959,7 @@
 
     <div class="tab-content format-pane" id="ICCWomenBowlT20Is">
       <h3><center>ICC Women's T20Is</center></h3>
-      <table class="styled-table women-table">
+      <table class="styled-table-women women-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -881,7 +974,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                <img src={{player.image}} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>
@@ -896,7 +989,7 @@
 
     <div class="tab-content format-pane" id="ICCWomenBowlODIs">
       <h3><center>ICC Women's ODIs</center></h3>
-      <table class="styled-table women-table">
+      <table class="styled-table-women women-table">
         <thead>
           <tr>
             <th>Rank</th>
@@ -911,7 +1004,7 @@
             <td>{{ player.rank }}</td>
             <td>
               <div style="display: flex; align-items: center;">
-                <img src={{player.image}} width="45" height="45" alt="{{ player.name }}"
+                <img src={{player.image}} class="image" alt="{{ player.name }}"
                   style="margin-right: 20px; border-radius:100px">
                 {{ player.name }}
               </div>

@@ -8,7 +8,7 @@
       margin: 0;
       padding: 0;
       font-family: Arial, sans-serif;
-      background-color: rgba(255, 239, 237, 0.96);
+      background-color: rgba(244, 237, 255, 0.96);
       height: 100vh;
     }
 
@@ -59,6 +59,7 @@
 
 .menu-bar .nav-link:hover {
   color: #ffffff;
+  
 }
 
 
@@ -234,11 +235,20 @@
     color: #f4fcfbff;
 }
 
+  .team-details{
+      text-decoration : none;
+      color : black;
+  }
+
+  .team-details:hover{
+    text-decoration : underline;
+  }
+
 
  .match-slider-wrapper {
   position: relative;
-  width: 100%;            /* wrapper takes full visible width */
-  overflow: hidden;       /* hides overflow */
+  width: 100%;            
+  overflow: hidden;       
   padding: 10px 30px;
   box-sizing: border-box;
   z-index: 1;
@@ -353,11 +363,11 @@
 
   <div class="team-banner">
     <div class="team-logo-box">
-      <img src="{% static 'Team_Images/IPL.jpg' %}" alt="India Logo" style="width: 350px; object-fit: contain; margin-top: -30px;"/>
+      <img src="{% static 'Team_Images/IPL.jpg' %}" alt="IPL Logo" style="width: 350px; object-fit: contain; margin-top: -30px;"/>
 
     </div>
     <div class="team-image-box">
-      <img src="{% static 'IPL/IPL.jpg' %}" alt="India Banner" style="width: 100%; height:100%;"/>
+      <img src="{% static 'IPL/IPL.jpg' %}" alt="IPL Banner" style="width: 100%; height:100%;"/>
     </div>
   </div>  
 
@@ -366,7 +376,7 @@
       <div style="margin: -20px 10px; margin-left: 10px;">
         <button class="tab-button team-tab" onclick="IPL('Home')">Home</button>
         <button class="tab-button team-tab" onclick="IPL('Stats')">Stats</button>
-        <button class="tab-button team-tab" onclick="IPL('Teams')">Teams</button>
+        <button class="tab-button team-tab" onclick="IPL('Squads')">Squads</button>
         <button class="tab-button team-tab" onclick="IPL('Matches')">Matches</button>
         <button class="tab-button team-tab" onclick="IPL('Winners')">Winners</button>
       </div>
@@ -386,7 +396,33 @@
   {% endfor %}
 </div>
 
-  <table class="styled-table" style="height: 5px; width: 100px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-top: -10px;">
+<div style="margin-top: -10px; margin-left: 10px; background: #f3ededff; ">
+  {% for match in matches %}
+    {% if match.match_no == 74 %}
+    <div class="match-card" style="background: #f3ededff; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+      <div style="display: flex; justify-content: space-between;">
+        <div>
+            <p style="font-size: 15px; color:black;">IPL 2025 • Final</p>
+          
+          <p style="font-size: 12px; color: gray;">{{ match.venue|title }} • Narendra Modi Stadium</p>
+        </div>
+      </div>
+      <div class="team-score">
+        <div><img src="{% static match.image1 %}" style="height:30px ; width:30px; margin-right: 5px;">{{ match.team1 }}&nbsp; 🏆&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</div>
+        <div>{{match.score1}}</div>
+      </div>
+      <div class="team-score">
+        <div><img src="{% static match.image2 %}" style="height:30px ; width:30px; margin-right: 5px;">{{ match.team2 }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |</div>
+        <div>{{match.score2}}</div>
+      </div>
+      <div style="color: red; font-size: 12px; text-align: center">{{ match.result }}</div>
+      <a href="{% url 'IPLScorecard' match.match_no %}" style="font-size: 12px; color: #007BFF; text-decoration: none;">Scorecard</a>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+
+  <table class="styled-table" style="height: 5px; width: 100px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); margin-top: 10px; margin-left: 0px;">
       <thead>
         <tr>
           <th>Rank</th>
@@ -407,7 +443,7 @@
           <td>
             <div style="display: flex; align-items: center;">
               <img src="{% static team.image %}" style="height:30px ; width:30px; margin-right: 5px;">
-              <a href="{% url 'IPLteam_details' team.team %}" style="text-decoration : none; color: black;">{{ team.team }}</a>
+              <a href="{% url 'IPLteam_details' team.team %}"  class="team-details">{{ team.team }}</a>
             </div>
           </td>
           <td>{{ team.gp }}</td>
@@ -421,7 +457,9 @@
         {% endfor %}
       </tbody>
     </table>
-  </div></div>
+  </div>
+</div>
+</div>
       <div id="Stats" class="tab-content"><br>
     <div style="display: flex; flex-direction: row;">
     <table class="styled-table" style=" font-size: 13px; margin-left : -10px;" >
@@ -457,6 +495,7 @@
       </tbody>
     </table>
 
+
     <br>
     <br>
     <table class="styled-table" style=" font-size: 13px; margin-left : -10px;" >
@@ -490,7 +529,8 @@
       </tbody>
     </table>
   </div></div>
-      <div id="Teams" class="tab-content"><div style="display: flex; flex-wrap: wrap; gap:10px; padding: 0 50px; margin-top: 40px;margin-left: -10px;">
+      <div id="Squads" class="tab-content">
+        <h3>Teams</h3><div style="display: flex; flex-wrap: wrap; gap:10px; padding: 0 50px; margin-top: 40px;margin-left: -10px;">
   {% for team in Teams %}
     <div style="width: 270px;height:80px; background: rgba(249, 242, 242, 0.96); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: row;">
       <img src={% static team.image %} alt="news image" style="width: 50px; height: 70px; margin-left:10px;margin-top: 0px;">
@@ -499,7 +539,34 @@
       </div>
     </div>
   {% endfor %}
-</div></div>
+</div>
+
+<h3>Squad</h3>
+<div style="padding: 0 50px; margin-top: 40px;">
+  {% for team, players in processed_data.items %}
+    <h3 style="margin-top: 30px;">{{ team }}</h3>
+    <div style="display: flex; flex-wrap: wrap; gap:10px; margin-left: -10px;">
+      {% for player in players %}
+        <div style="width: 270px;height:80px; background: rgba(249, 242, 242, 0.96); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: flex; flex-direction: row;">
+          {# Uncomment if you later add player images #}
+          <img src="{% static player.image %}" alt="player image" style="width: 70px; height: 70px; margin-left:10px; border-radius : 50px; margin-top:10px;">
+          <div style="padding: 10px;">
+            <div style="margin-top: 20px;">{{ player.name }}</div>
+            <div style="font-size: 13px;"> {{ player.role }} </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</div>
+
+
+
+
+
+
+
+</div>
       <div id="Matches" class="tab-content">
         <button class="slider-arrow left-arrow" onclick="scrollSlider('completed', -1)">&#10094;</button>
         <br>
@@ -556,7 +623,7 @@
   }
 
     function IPL(tabId) {
-      const sections = ['Home', 'Stats', 'Teams', 'Matches', 'Winners'];
+      const sections = ['Home', 'Stats', 'Squadss', 'Matches', 'Winners'];
       sections.forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = 'none';

@@ -5,6 +5,10 @@ from django.http import JsonResponse
 from django.conf import settings
 import os
 # Create your views here.
+new_api = 'cecebb53b2msh007a4f06e067cddp11f465jsn4cc70ce7f2da'
+old_api = '7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0'
+
+
 
 def Homepage(request):
      return render(request, 'Users/home.html')
@@ -66,7 +70,7 @@ def Dashboard(request):
     all_leagues_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
 
     headers = {
-	    "x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
+	    "x-rapidapi-key": old_api,
 	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
     }
 
@@ -138,7 +142,7 @@ def Dashboard(request):
     url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
 
     headers = {
-	"x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
+	"x-rapidapi-key": old_api,
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
@@ -172,7 +176,7 @@ def Dashboard(request):
     live_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live"
 
     headers = {
-	    "x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
+	    "x-rapidapi-key": old_api,
 	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
     }
 
@@ -266,7 +270,7 @@ def Dashboard(request):
     url = "https://cricbuzz-cricket.p.rapidapi.com/news/v1/index"
 
     headers = {
-	"x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
+	"x-rapidapi-key": old_api,
 	"x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
 }
 
@@ -356,6 +360,61 @@ def IPL(request):
                     "image": f"IPL/logo/{team['team']}.jpg",
                 })
     # print(all_stats)
+    
+    with open("Users/Data/IPL/Players.json", "r") as f:
+        players_data = json.load(f)
+
+
+    processed_data = {}
+
+    # Iterate over teams
+    for team_name, team_data in players_data.items():
+        processed_data[team_name] = []
+
+        # Handle Batsmen
+        for player in team_data.get("Batsmen", []):
+            processed_data[team_name].append({
+                "name": player["name"],
+                "name_id": player["name_id"],
+                "role": "BAT",
+                "image": f"IPL/Captains/Profile.jpg"
+            })
+
+        # Handle Bowlers
+        for player in team_data.get("Bowlers", []):
+            processed_data[team_name].append({
+                "name": player["name"],
+                "name_id": player["name_id"],
+                "role": "BOWL",
+                "image": f"IPL/Captains/Profile.jpg"
+            })
+
+        # Handle All Rounders
+        for player in team_data.get("All Rounders", []):
+            processed_data[team_name].append({
+                "name": player["name"],
+                "name_id": player["name_id"],
+                "role": "ALL-R",
+                "image": f"IPL/Captains/Profile.jpg"
+            })
+
+        # Handle Wicket Keepers
+        for player in team_data.get("Wicket Keepers", []):
+            processed_data[team_name].append({
+                "name": player["name"],
+                "name_id": player["name_id"],
+                "role": "WK",
+                "image": f"IPL/Captains/Profile.jpg"
+            })
+
+    print(processed_data)
+
+
+        
+
+
+
+
 
     with open("Users/Data/IPL/2024.json", "r") as f:
         data = json.load(f)
@@ -456,7 +515,8 @@ def IPL(request):
         "IPL_News" : IPL_News,
         "Most_Runs" : Most_Runs,
         "Most_Wickets" : Most_Wickets,
-        "Teams" : Teams
+        "Teams" : Teams,
+        "processed_data" : processed_data
         }
     )
 
@@ -652,6 +712,7 @@ def profile_view(request):
 
 def Rankings(request):
 
+
     # url = "https://cricket-live-line1.p.rapidapi.com/teamRanking/1"
 
     # headers = {
@@ -664,7 +725,7 @@ def Rankings(request):
     all_leagues_url = "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/recent"
 
     headers = {
-	    "x-rapidapi-key": "7c4159ab2cmsh2354a8bf3633633p1c0c43jsn515e8d6ecbb0",
+	    "x-rapidapi-key": old_api,
 	    "x-rapidapi-host": "cricbuzz-cricket.p.rapidapi.com"
     }
 
