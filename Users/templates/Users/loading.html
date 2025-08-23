@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .spinner {
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top: 4px solid #00d8ff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="spinner"></div>
+  <p>Loading application...</p>
+  <script>
+    // Poll the backend until it's ready
+    async function checkBackend() {
+      try {
+        const response = await fetch("/health-check");
+        if (response.ok) {
+          window.location.href = "/"; // Redirect to actual site
+        } else {
+          setTimeout(checkBackend, 2000); // Retry in 2 seconds
+        }
+      } catch (e) {
+        setTimeout(checkBackend, 2000);
+      }
+    }
+    checkBackend();
+  </script>
+</body>
+</html>
