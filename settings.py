@@ -15,12 +15,12 @@ SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://crickpredict.onrender.com'
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://crickpredict.onrender.com'
+# ]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # Application definition
 INSTALLED_APPS = [
