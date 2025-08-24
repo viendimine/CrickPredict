@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8
 #     '127.0.0.1'
 # ]
 
-ALLOWED_HOSTS = [*]
+ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://crickpredict.onrender.com'
