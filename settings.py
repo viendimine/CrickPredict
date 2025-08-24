@@ -7,11 +7,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-q^uk(3%49k#h5f02gibsln&^d=k_s2*4xxxm7vj$!c5pj5w&_8'
 
-ALLOWED_HOSTS = [
-    'crickpredict.onrender.com',  # Your Render domain
-    'localhost',
-    '127.0.0.1'
-]
+# ALLOWED_HOSTS = [
+#     'crickpredict.onrender.com',  # Your Render domain
+#     'localhost',
+#     '127.0.0.1'
+# ]
+
+ALLOWED_HOSTS = [*]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://crickpredict.onrender.com'
